@@ -1,0 +1,10 @@
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\bin\Debug\OracleDBManager.dll.config
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\bin\Debug\OracleDBManager.dll
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\bin\Debug\OracleDBManager.pdb
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.csprojAssemblyReference.cache
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.Properties.Resources.resources
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.csproj.GenerateResource.cache
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.csproj.CopyComplete
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.dll
+C:\Users\Hero\source\repos\insaProjecct_v2\OracleDBManager\obj\Debug\OracleDBManager.pdb
