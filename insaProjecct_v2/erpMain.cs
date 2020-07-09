@@ -108,16 +108,22 @@ namespace insaProjecct_v2
         private void button1_Click(object sender, EventArgs e)
         {
             mode = "insert";
+            CRUD_Enabled(false);
+            APPLY_Enabled(true);
         }
 
         private void update_btn_Click(object sender, EventArgs e)
         {
             mode = "update";
+            CRUD_Enabled(false);
+            APPLY_Enabled(true);
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
             mode = "delete";
+            CRUD_Enabled(false);
+            APPLY_Enabled(true);
         }
 
         private void apply_btn_Click(object sender, EventArgs e)
@@ -139,12 +145,28 @@ namespace insaProjecct_v2
                     method = type.GetMethod("DB_Delete");
                 }
                 method.Invoke(now_form, null);
+                APPLY_Enabled(false);
+                CRUD_Enabled(true);
             }
         }
 
         private void erpMain_Load(object sender, EventArgs e)
         {
+            APPLY_Enabled(false);
+            CRUD_Enabled(true);
+        }
 
+        private void CRUD_Enabled(Boolean check)
+        {
+            insert_btn.Enabled = check;
+            update_btn.Enabled = check;
+            delete_btn.Enabled = check;
+        }
+
+        private void APPLY_Enabled(Boolean check)
+        {
+            apply_btn.Enabled = check;
+            cancel_btn.Enabled = check;
         }
     }
 }

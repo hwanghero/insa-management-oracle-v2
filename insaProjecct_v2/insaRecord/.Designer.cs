@@ -244,6 +244,7 @@
             this.mil_catagory_box.Name = "mil_catagory_box";
             this.mil_catagory_box.Size = new System.Drawing.Size(64, 20);
             this.mil_catagory_box.TabIndex = 21;
+            this.mil_catagory_box.Tag = "MIL";
             // 
             // mil_ok_box
             // 
@@ -258,6 +259,7 @@
             this.mil_ok_box.Name = "mil_ok_box";
             this.mil_ok_box.Size = new System.Drawing.Size(64, 20);
             this.mil_ok_box.TabIndex = 20;
+            this.mil_ok_box.Tag = "";
             // 
             // label18
             // 
@@ -382,6 +384,7 @@
             this.bank2_combox.Name = "bank2_combox";
             this.bank2_combox.Size = new System.Drawing.Size(84, 20);
             this.bank2_combox.TabIndex = 17;
+            this.bank2_combox.Tag = "BNK";
             // 
             // bank_combox
             // 
@@ -392,6 +395,7 @@
             this.bank_combox.Name = "bank_combox";
             this.bank_combox.Size = new System.Drawing.Size(84, 20);
             this.bank_combox.TabIndex = 14;
+            this.bank_combox.Tag = "BNK";
             // 
             // label52
             // 
@@ -1220,6 +1224,7 @@
             this.rank_combox.Name = "rank_combox";
             this.rank_combox.Size = new System.Drawing.Size(90, 20);
             this.rank_combox.TabIndex = 24;
+            this.rank_combox.Tag = "POS";
             // 
             // contract_box
             // 
@@ -1241,6 +1246,7 @@
             this.sts_combox.Name = "sts_combox";
             this.sts_combox.Size = new System.Drawing.Size(88, 20);
             this.sts_combox.TabIndex = 32;
+            this.sts_combox.Tag = "STS";
             // 
             // dept_combox
             // 
@@ -1259,6 +1265,7 @@
             this.dut_combox.Name = "dut_combox";
             this.dut_combox.Size = new System.Drawing.Size(90, 20);
             this.dut_combox.TabIndex = 25;
+            this.dut_combox.Tag = "DUT";
             // 
             // groupBox4
             // 
@@ -1332,7 +1339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(901, 549);
+            this.ClientSize = new System.Drawing.Size(901, 553);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.mil_group);
@@ -1344,6 +1351,7 @@
             this.Tag = "인사기본사항";
             this.Text = "인사기본사항";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.insaBasic_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);

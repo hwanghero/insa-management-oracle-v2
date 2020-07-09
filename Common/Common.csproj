@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Control.cs" />
     <Compile Include="Registry.cs" />
     <Compile Include="_Common.cs" />
     <Compile Include="Program.cs" />

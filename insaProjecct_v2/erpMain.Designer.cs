@@ -66,7 +66,7 @@
             this.status.Location = new System.Drawing.Point(0, 615);
             this.status.Name = "status";
             this.status.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.status.Size = new System.Drawing.Size(1394, 22);
+            this.status.Size = new System.Drawing.Size(1311, 22);
             this.status.TabIndex = 1;
             this.status.Text = "statusStrip1";
             // 
@@ -76,7 +76,7 @@
             this.timerLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.timerLabel.Enabled = false;
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(1350, 17);
+            this.timerLabel.Size = new System.Drawing.Size(1298, 17);
             this.timerLabel.Spring = true;
             // 
             // id_Label
@@ -159,7 +159,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(1104, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 553);
+            this.panel2.Size = new System.Drawing.Size(206, 553);
             this.panel2.TabIndex = 5;
             // 
             // erpMain
@@ -167,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1394, 637);
+            this.ClientSize = new System.Drawing.Size(1311, 637);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.apply_btn);
