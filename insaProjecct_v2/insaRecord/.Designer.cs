@@ -1256,6 +1256,7 @@
             this.dept_combox.Name = "dept_combox";
             this.dept_combox.Size = new System.Drawing.Size(90, 20);
             this.dept_combox.TabIndex = 26;
+            this.dept_combox.Tag = "DEPT";
             // 
             // dut_combox
             // 

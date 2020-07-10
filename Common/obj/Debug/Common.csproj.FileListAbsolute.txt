@@ -22,3 +22,11 @@ C:\Users\Hero\Desktop\github\insa-management-oracle-v2\Common\obj\Debug\Common.P
 C:\Users\Hero\Desktop\github\insa-management-oracle-v2\Common\obj\Debug\Common.csproj.GenerateResource.cache
 C:\Users\Hero\Desktop\github\insa-management-oracle-v2\Common\obj\Debug\Common.dll
 C:\Users\Hero\Desktop\github\insa-management-oracle-v2\Common\obj\Debug\Common.pdb
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\bin\Debug\Common.dll.config
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\bin\Debug\Common.dll
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\bin\Debug\Common.pdb
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\obj\Debug\Common.Properties.Resources.resources
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\obj\Debug\Common.csproj.GenerateResource.cache
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\obj\Debug\Common.dll
+C:\Users\Mac_1\Desktop\insa-management-oracle-v2\Common\obj\Debug\Common.pdb
