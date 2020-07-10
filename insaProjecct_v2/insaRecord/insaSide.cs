@@ -16,5 +16,11 @@ namespace insaProjecct_v2
         {
             InitializeComponent();
         }
+
+        private void searchBox_Click(object sender, MouseEventArgs e)
+        {
+            searchBox.ResetText();
+            searchBox.ForeColor = Color.Black;
+        }
     }
 }

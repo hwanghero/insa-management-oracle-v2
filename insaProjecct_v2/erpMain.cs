@@ -15,7 +15,11 @@ namespace insaProjecct_v2
         Form saveform;
         object now_form;
 
+        // CRUD MODE
         static public string mode { get; set; }
+
+        // SIDE FORM
+        insaSide side_form = new insaSide();
 
         // 폼 여러개 추가
         public void add_form(Form form)
@@ -30,6 +34,7 @@ namespace insaProjecct_v2
             now_form = form;
             saveform = form;
         }
+
         public erpMain()
         {
             InitializeComponent();
@@ -44,6 +49,8 @@ namespace insaProjecct_v2
                 _getMenu getMenu = new _getMenu();
                 getMenu.parent_menu(treeView1);
                 getMenu.child_menu(treeView1, "인사기록관리");
+
+
 
                 Enabled_Check = true;
             }
@@ -104,7 +111,7 @@ namespace insaProjecct_v2
         }
         #endregion
 
-        // 입력문.
+        #region CRUD 버튼 클릭시
         private void button1_Click(object sender, EventArgs e)
         {
             mode = "insert";
@@ -149,9 +156,14 @@ namespace insaProjecct_v2
                 CRUD_Enabled(true);
             }
         }
+        #endregion
 
         private void erpMain_Load(object sender, EventArgs e)
         {
+            side_form.TopLevel = false;
+            side_form.Parent = this.panel2;
+            side_form.Show();
+
             APPLY_Enabled(false);
             CRUD_Enabled(true);
         }

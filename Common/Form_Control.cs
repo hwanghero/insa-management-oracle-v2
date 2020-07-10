@@ -9,6 +9,7 @@ namespace Common
 {
     public class Form_Control
     {
+        // 폼의 컨트롤을 담을 리스트
         public List<Control> get_control_list = new List<Control>();
 
         #region 컨트롤 Null값 체크
@@ -102,7 +103,6 @@ namespace Common
             }
         }
         #endregion
-
         #region 코드 변환을 위한 콤보 박스만 가져오기
         public void get_Combobox(Form form)
         {
