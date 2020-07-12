@@ -1,1 +1,9 @@
-OracleDBManager.cs
+_Database/OracleDBManager.cs
+_Database/bin
+_Database/obj
+
+Common/bin
+Common/obj
+
+insaProjecct_v2/bin
+insaProjecct_v2/obj
