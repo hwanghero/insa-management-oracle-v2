@@ -17,9 +17,8 @@ namespace insaProjecct_v2
 
         // CRUD MODE
         static public string mode { get; set; }
-
         // SIDE FORM
-        insaSide side_form = new insaSide();
+        insaSide side_form = insaSide.Instance();
 
         // 폼 여러개 추가
         public void add_form(Form form)
@@ -49,8 +48,6 @@ namespace insaProjecct_v2
                 _getMenu getMenu = new _getMenu();
                 getMenu.parent_menu(treeView1);
                 getMenu.child_menu(treeView1, "인사기록관리");
-
-
 
                 Enabled_Check = true;
             }
@@ -96,8 +93,10 @@ namespace insaProjecct_v2
             List<Form> ltForm = new List<Form>();
             foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
             {
-                // 인터페이스는 상속받는게 없기때문에 BaseType에서 오류가남.
-                if (!t.ToString().Contains("Interface"))
+                // 상속받는게 없기때문에 BaseType에서 오류가남.
+                // insaside = 싱글톤 에러
+                // interface = 생성자 에러
+                if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
                 {
                     if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
                     {
