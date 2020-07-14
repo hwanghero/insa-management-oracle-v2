@@ -21,6 +21,9 @@ namespace insaProjecct_v2
         static Object[] empno_info;
         // DB 접속
         OracleDBManager _DB = new OracleDBManager();
+        // 폼 컨트롤
+        Form_Control from_control = new Form_Control();
+        _Common common = new _Common();
 
 
         public insaBasic()
@@ -111,7 +114,6 @@ namespace insaProjecct_v2
         {
             try
             {
-                Form_Control from_control = new Form_Control();
                 from_control.get_control(this, false);
                 if (!from_control.control_nullcheck())
                 {
@@ -126,7 +128,7 @@ namespace insaProjecct_v2
                         StringToCode(dept_combox), note_box.Text, now_rank_box.Value.ToString("yyyyMMdd"), now_spot_box.Value.ToString("yyyyMMdd"), now_department_box.Value.ToString("yyyyMMdd"),
                         now_newbie_box.Value.ToString("yyyyMMdd"), nowtime, "A", "userid") == 0)
                     {
-                        MessageBox.Show("입력이 완료되었습니다.");
+                        common.MsgboxShow("입력이 완료되었습니다.");
                         from_control.control_reset();
                         erpMain.getResult = true;
                     }
@@ -134,23 +136,85 @@ namespace insaProjecct_v2
             }
             catch (Exception a)
             {
-                MessageBox.Show("입력에 실패하였습니다.\n\n" + a);
+                common.MsgboxShow("입력에 실패하였습니다.\n\n" + a);
                 erpMain.getResult = false;
             }
         }
 
-        public void DB_Update()
+        #region 인사기본사항 수정
+        public int thrm_bas_update(String empno, String resno, String name, String cname, String ename, String fix, String zip, String addr, String residence, String hdpno, String telno, String email, String mil_sta, String mil_mil, String mil_rnk, String mar,
+           String acc_bank1, String acc_name1, String acc_no1, String acc_bank2, String acc_name2, String acc_no2, String cont, String intern, int intern_no, String emp_sdate, String emp_edate, String entdate,
+           String resdate, String levdate, String reidate, String wsta, String sts, String pos, String dut, String dept, String rmk, String pos_dt, String dut_dt, String dept_dt, String intern_dt, String datasys1, String datasys2, String datasys3)
         {
-            MessageBox.Show(insaSide.select_empno);
-            Control_Input_Date();
+            int check = 1;
+            try
+            {
+                if (_DB.GetConnection() == true)
+                {
+                    using (OracleCommand comm = new OracleCommand())
+                    {
+                        comm.Connection = _DB.Connection;
+                        comm.CommandText = @"update thrm_bas_hwy set 
+                                                bas_resno='" + resno +
+                                                "',bas_name='" + name +
+                                                "',bas_cname='" + cname +
+                                                 "',bas_ename='" + ename +
+                                                  "',bas_fix='" + fix +
+                                                   "',bas_zip='" + zip +
+                                                    "',bas_addr='" + addr +
+                                                     "',bas_residence='" + residence +
+                                                      "',bas_hdpno='" + hdpno +
+                                                       "',bas_telno='" + telno +
+                                                        "',bas_email='" + email +
+                                                         "',bas_mil_sta='" + mil_sta +
+                                                          "',bas_mil_mil='" + mil_mil +
+                                                           "',bas_mil_rnk='" + mil_rnk +
+                                                            "',bas_mar='" + mar +
+                                                             "',bas_acc_bank1='" + acc_bank1 +
+                                                              "',bas_acc_name1='" + acc_name1 +
+                                                               "',bas_acc_no1='" + acc_no1 +
+                                                                "',bas_acc_bank2='" + acc_bank2 +
+                                                                 "',bas_acc_name2='" + acc_name2 +
+                                                                  "',bas_acc_no2='" + acc_no2 +
+                                                                   "',bas_cont='" + cont +
+                                                                    "',bas_intern='" + intern +
+                                                                     "',bas_intern_no='" + intern_no +
+                                                                      "',bas_emp_sdate='" + emp_sdate +
+                                                                       "',bas_emp_edate='" + emp_edate +
+                                                                        "',bas_entdate='" + entdate +
+                                                                         "',bas_resdate='" + resdate +
+                                                                          "',bas_levdate='" + levdate +
+                                                                           "',bas_reidate='" + reidate +
+                                                                            "',bas_wsta='" + wsta +
+                                                                             "',bas_sts='" + sts +
+                                                                             "',bas_pos='" + pos +
+                                                                              "',bas_dut='" + dut +
+                                                                               "',bas_dept='" + dept +
+                                                                                "',bas_rmk='" + rmk +
+                                                                                 "',bas_pos_dt='" + pos_dt +
+                                                                                  "',bas_dut_dt='" + dut_dt +
+                                                                                   "',bas_dept_dt='" + dept_dt +
+                                                                                    "',bas_intern_dt='" + intern_dt +
+                                                                                     "' where bas_empno='" + empno + "'";
+                        var a = comm.ExecuteNonQuery();
+                        check = 0;
+                    }
+                }
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a);
+            }
+            return check;
         }
-
+        #endregion
         #region 인사기본사항 사원 정보 불러오기
 
         //  업데이트시 상태일경우 넣어야지
         public void Control_Input_Date()
         {
             empno_info = thrm_bas_select(insaSide.select_empno);
+            e_no_box.Text = empno_info[0].ToString();
             rrn_box.Text = empno_info[1].ToString();
             kor_name_box.Text = empno_info[2].ToString();
             chn_name_box.Text = empno_info[3].ToString();
@@ -172,7 +236,6 @@ namespace insaProjecct_v2
             mil_ok_box.Text = empno_info[12].ToString();
             mil_catagory_box.Text = empno_info[13].ToString();
             CodeToString("MIL", empno_info[13].ToString(), mil_catagory_box);
-            Console.WriteLine(empno_info[13].ToString());
             mil_rank_box.Text = empno_info[14].ToString();
             note_box.Text = empno_info[36].ToString();
             contract_box.Text = empno_info[22].ToString();
@@ -224,9 +287,76 @@ namespace insaProjecct_v2
         }
         #endregion
 
+        public void DB_Update()
+        {
+            try
+            {
+                from_control.get_control(this, false);
+                String nowtime = DateTime.Now.ToString("yyyyMMdd");
+                int nmbox = Convert.ToInt32(newbie_month_box.Text);
+                if (thrm_bas_update(e_no_box.Text, rrn_box.Text, kor_name_box.Text, chn_name_box.Text, eng_name_box.Text,
+                        sexxbox.Text, zip_box.Text, address_box.Text, residence_box.Text, phone_box.Text, home_box.Text, email1_box.Text,
+                        mil_ok_box.Text, StringToCode(mil_catagory_box), mil_rank_box.Text, marry_box.Text, StringToCode(bank_combox), bank_master_box.Text,
+                        bank_number_box.Text, StringToCode(bank2_combox), bank_master_box2.Text, bank_number_box2.Text, contract_box.Text,
+                        newbie_check_box.Text, nmbox, slave_start.Value.ToString("yyyyMMdd"), slave_end.Value.ToString("yyyyMMdd"),
+                        join_box.Value.ToString("yyyyMMdd"), goodbye_box.Value.ToString("yyyyMMdd"), "", "", state_box.Text, StringToCode(sts_combox), StringToCode(rank_combox), StringToCode(dut_combox),
+                        StringToCode(dept_combox), note_box.Text, now_rank_box.Value.ToString("yyyyMMdd"), now_spot_box.Value.ToString("yyyyMMdd"), now_department_box.Value.ToString("yyyyMMdd"),
+                        now_newbie_box.Value.ToString("yyyyMMdd"), nowtime, "A", "userid") == 0)
+                {
+                    common.MsgboxShow("수정이 완료되었습니다.");
+                    from_control.control_reset();
+                    erpMain.getResult = true;
+                }
+            }
+            catch (Exception a)
+            {
+                common.MsgboxShow("입력에 실패하였습니다.\n\n" + a);
+            }
+        }
+
+        #region 인사기본사항 삭제
+        public int thrm_bas_delete(String empno)
+        {
+            int check = 1;
+            try
+            {
+                if (_DB.GetConnection() == true)
+                {
+                    using (OracleCommand comm = new OracleCommand())
+                    {
+                        comm.Connection = _DB.Connection;
+                        comm.CommandText = @"delete from thrm_bas_hwy where bas_empno='" + empno + "'";
+                        var a = comm.ExecuteNonQuery();
+                        check = 0;
+                        Console.WriteLine(comm.CommandText);
+                    }
+                }
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a);
+            }
+            return check;
+        }
+        #endregion
+
         public void DB_Delete()
         {
-            MessageBox.Show("basic delete");
+            try
+            {
+                if (MessageBox.Show("정말로 삭제하시겠습니까?", "ERP - Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (thrm_bas_delete(e_no_box.Text) == 0)
+                    {
+                        common.MsgboxShow("삭제에 성공하였습니다.");
+                    }
+                    erpMain.getResult = true;
+                }
+            }
+            catch (Exception a)
+            {
+                common.MsgboxShow("삭제에 실패하였습니다.\n\n" + a);
+            }
         }
 
         #region 폼 로드시에 콤보박스 값 넣기 (DB 한번 사용)
@@ -314,7 +444,6 @@ namespace insaProjecct_v2
             return combo;
         }
         #endregion
-
         #region 콤보박스 코드 변환
         public string StringToCode(ComboBox getBox)
         {
@@ -339,7 +468,6 @@ namespace insaProjecct_v2
                         if (b.Equals(empno_data))
                         {
                             getCombobox.Text = a[2] + "-" + a[1];
-                            Console.WriteLine(a[2] + "-" + a[1]);
                         }
                     }
                 }

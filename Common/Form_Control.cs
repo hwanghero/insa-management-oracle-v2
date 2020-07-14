@@ -21,7 +21,8 @@ namespace Common
                 {
                     if (string.IsNullOrEmpty(b.Text))
                     {
-                        MessageBox.Show("빈값을 넣을 수 없습니다.");
+                        _Common common = new _Common();
+                        common.MsgboxShow("빈값을 넣을 수 없습니다.");
                         b.Focus();
                         if (b.GetType() == typeof(ComboBox))
                         {

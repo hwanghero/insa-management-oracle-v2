@@ -1,4 +1,5 @@
-﻿using insaRecord;
+﻿using Common;
+using insaRecord;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace insaProjecct_v2.insaRecord
 {
     public partial class insaFamily : Form,  Iinsa_Interface
     {
+        _Common common = new _Common();
+
         public insaFamily()
         {
             InitializeComponent();

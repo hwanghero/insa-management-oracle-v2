@@ -130,7 +130,6 @@
             this.dut_combox = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.goodbye_box = new System.Windows.Forms.DateTimePicker();
-            this.dept_search = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.mil_group.SuspendLayout();
@@ -142,10 +141,10 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("굴림", 9F);
-            this.label33.Location = new System.Drawing.Point(630, 186);
-            this.label33.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label33.Location = new System.Drawing.Point(551, 149);
+            this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(67, 15);
+            this.label33.Size = new System.Drawing.Size(53, 12);
             this.label33.TabIndex = 31;
             this.label33.Text = "재직상태";
             // 
@@ -153,10 +152,10 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("굴림", 8F);
-            this.label55.Location = new System.Drawing.Point(271, 214);
-            this.label55.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label55.Location = new System.Drawing.Point(237, 171);
+            this.label55.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(216, 14);
+            this.label55.Size = new System.Drawing.Size(168, 11);
             this.label55.TabIndex = 91;
             this.label55.Text = "(찾기를 눌러 주소를 찾아주세요)";
             // 
@@ -164,10 +163,10 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("굴림", 8F);
-            this.label50.Location = new System.Drawing.Point(391, 278);
-            this.label50.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label50.Location = new System.Drawing.Point(342, 222);
+            this.label50.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(96, 14);
+            this.label50.Size = new System.Drawing.Size(73, 11);
             this.label50.TabIndex = 90;
             this.label50.Text = "(20글자 이내)";
             // 
@@ -175,10 +174,10 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("굴림", 8F);
-            this.label48.Location = new System.Drawing.Point(309, 378);
-            this.label48.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label48.Location = new System.Drawing.Point(270, 302);
+            this.label48.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(82, 14);
+            this.label48.Size = new System.Drawing.Size(62, 11);
             this.label48.TabIndex = 89;
             this.label48.Text = "(30자 이내)";
             // 
@@ -186,10 +185,10 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("굴림", 8F);
-            this.label47.Location = new System.Drawing.Point(309, 344);
-            this.label47.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label47.Location = new System.Drawing.Point(270, 275);
+            this.label47.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(60, 14);
+            this.label47.Size = new System.Drawing.Size(44, 11);
             this.label47.TabIndex = 89;
             this.label47.Text = "(- 없이)";
             // 
@@ -197,41 +196,41 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("굴림", 8F);
-            this.label46.Location = new System.Drawing.Point(309, 309);
-            this.label46.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label46.Location = new System.Drawing.Point(270, 247);
+            this.label46.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(60, 14);
+            this.label46.Size = new System.Drawing.Size(44, 11);
             this.label46.TabIndex = 89;
             this.label46.Text = "(- 없이)";
             // 
             // bank_number_box
             // 
-            this.bank_number_box.Location = new System.Drawing.Point(181, 72);
-            this.bank_number_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bank_number_box.Location = new System.Drawing.Point(158, 58);
+            this.bank_number_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bank_number_box.MaxLength = 10;
             this.bank_number_box.Name = "bank_number_box";
-            this.bank_number_box.Size = new System.Drawing.Size(130, 25);
+            this.bank_number_box.Size = new System.Drawing.Size(114, 21);
             this.bank_number_box.TabIndex = 16;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("굴림", 9F);
-            this.label15.Location = new System.Drawing.Point(23, 75);
-            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Location = new System.Drawing.Point(20, 60);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 15);
+            this.label15.Size = new System.Drawing.Size(63, 12);
             this.label15.TabIndex = 7;
             this.label15.Text = "병역(계급)";
             // 
             // note_box
             // 
-            this.note_box.Location = new System.Drawing.Point(9, 28);
-            this.note_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.note_box.Location = new System.Drawing.Point(8, 22);
+            this.note_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.note_box.MaxLength = 200;
             this.note_box.Multiline = false;
             this.note_box.Name = "note_box";
-            this.note_box.Size = new System.Drawing.Size(452, 75);
+            this.note_box.Size = new System.Drawing.Size(396, 61);
             this.note_box.TabIndex = 23;
             this.note_box.Text = "";
             // 
@@ -239,10 +238,10 @@
             // 
             this.mil_catagory_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mil_catagory_box.FormattingEnabled = true;
-            this.mil_catagory_box.Location = new System.Drawing.Point(181, 46);
-            this.mil_catagory_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mil_catagory_box.Location = new System.Drawing.Point(158, 37);
+            this.mil_catagory_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mil_catagory_box.Name = "mil_catagory_box";
-            this.mil_catagory_box.Size = new System.Drawing.Size(73, 23);
+            this.mil_catagory_box.Size = new System.Drawing.Size(64, 20);
             this.mil_catagory_box.TabIndex = 21;
             this.mil_catagory_box.Tag = "MIL";
             // 
@@ -254,10 +253,10 @@
             "군필",
             "미필",
             "면제"});
-            this.mil_ok_box.Location = new System.Drawing.Point(181, 22);
-            this.mil_ok_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mil_ok_box.Location = new System.Drawing.Point(158, 18);
+            this.mil_ok_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mil_ok_box.Name = "mil_ok_box";
-            this.mil_ok_box.Size = new System.Drawing.Size(73, 23);
+            this.mil_ok_box.Size = new System.Drawing.Size(64, 20);
             this.mil_ok_box.TabIndex = 20;
             this.mil_ok_box.Tag = "";
             // 
@@ -265,10 +264,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("굴림", 9F);
-            this.label18.Location = new System.Drawing.Point(23, 52);
-            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label18.Location = new System.Drawing.Point(20, 42);
+            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 15);
+            this.label18.Size = new System.Drawing.Size(99, 12);
             this.label18.TabIndex = 4;
             this.label18.Text = "계좌사항(예금주)";
             // 
@@ -281,20 +280,20 @@
             "일병",
             "상병",
             "병장"});
-            this.mil_rank_box.Location = new System.Drawing.Point(181, 71);
-            this.mil_rank_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mil_rank_box.Location = new System.Drawing.Point(158, 57);
+            this.mil_rank_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mil_rank_box.Name = "mil_rank_box";
-            this.mil_rank_box.Size = new System.Drawing.Size(73, 23);
+            this.mil_rank_box.Size = new System.Drawing.Size(64, 20);
             this.mil_rank_box.TabIndex = 23;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("굴림", 9F);
-            this.label28.Location = new System.Drawing.Point(630, 99);
-            this.label28.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label28.Location = new System.Drawing.Point(551, 79);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 15);
+            this.label28.Size = new System.Drawing.Size(65, 12);
             this.label28.TabIndex = 36;
             this.label28.Text = "계약종료일";
             // 
@@ -302,10 +301,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("굴림", 9F);
-            this.label32.Location = new System.Drawing.Point(630, 156);
-            this.label32.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label32.Location = new System.Drawing.Point(551, 125);
+            this.label32.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(67, 15);
+            this.label32.Size = new System.Drawing.Size(53, 12);
             this.label32.TabIndex = 32;
             this.label32.Text = "복직일자";
             // 
@@ -313,10 +312,10 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("굴림", 9F);
-            this.label31.Location = new System.Drawing.Point(630, 128);
-            this.label31.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label31.Location = new System.Drawing.Point(551, 102);
+            this.label31.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(67, 15);
+            this.label31.Size = new System.Drawing.Size(53, 12);
             this.label31.TabIndex = 33;
             this.label31.Text = "휴직일자";
             // 
@@ -324,10 +323,10 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("굴림", 8F);
-            this.label45.Location = new System.Drawing.Point(309, 152);
-            this.label45.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label45.Location = new System.Drawing.Point(270, 122);
+            this.label45.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(96, 14);
+            this.label45.Size = new System.Drawing.Size(73, 11);
             this.label45.TabIndex = 88;
             this.label45.Text = "(50글자 이내)";
             // 
@@ -335,10 +334,10 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("굴림", 9F);
-            this.label27.Location = new System.Drawing.Point(630, 69);
-            this.label27.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label27.Location = new System.Drawing.Point(551, 55);
+            this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(82, 15);
+            this.label27.Size = new System.Drawing.Size(65, 12);
             this.label27.TabIndex = 37;
             this.label27.Text = "계약시작일";
             // 
@@ -346,10 +345,10 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("굴림", 8F);
-            this.label44.Location = new System.Drawing.Point(309, 122);
-            this.label44.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label44.Location = new System.Drawing.Point(270, 98);
+            this.label44.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(96, 14);
+            this.label44.Size = new System.Drawing.Size(73, 11);
             this.label44.TabIndex = 88;
             this.label44.Text = "(20글자 이내)";
             // 
@@ -357,10 +356,10 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("굴림", 8F);
-            this.label53.Location = new System.Drawing.Point(322, 169);
-            this.label53.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label53.Location = new System.Drawing.Point(282, 135);
+            this.label53.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(96, 14);
+            this.label53.Size = new System.Drawing.Size(73, 11);
             this.label53.TabIndex = 89;
             this.label53.Text = "(20글자 이내)";
             // 
@@ -368,10 +367,10 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("굴림", 8F);
-            this.label54.Location = new System.Drawing.Point(322, 142);
-            this.label54.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label54.Location = new System.Drawing.Point(282, 114);
+            this.label54.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(96, 14);
+            this.label54.Size = new System.Drawing.Size(73, 11);
             this.label54.TabIndex = 90;
             this.label54.Text = "(10글자 이내)";
             // 
@@ -379,10 +378,10 @@
             // 
             this.bank2_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bank2_combox.FormattingEnabled = true;
-            this.bank2_combox.Location = new System.Drawing.Point(181, 111);
-            this.bank2_combox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank2_combox.Location = new System.Drawing.Point(158, 89);
+            this.bank2_combox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bank2_combox.Name = "bank2_combox";
-            this.bank2_combox.Size = new System.Drawing.Size(95, 23);
+            this.bank2_combox.Size = new System.Drawing.Size(84, 20);
             this.bank2_combox.TabIndex = 17;
             this.bank2_combox.Tag = "BNK";
             // 
@@ -390,10 +389,10 @@
             // 
             this.bank_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bank_combox.FormattingEnabled = true;
-            this.bank_combox.Location = new System.Drawing.Point(181, 22);
-            this.bank_combox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank_combox.Location = new System.Drawing.Point(158, 18);
+            this.bank_combox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bank_combox.Name = "bank_combox";
-            this.bank_combox.Size = new System.Drawing.Size(95, 23);
+            this.bank_combox.Size = new System.Drawing.Size(84, 20);
             this.bank_combox.TabIndex = 14;
             this.bank_combox.Tag = "BNK";
             // 
@@ -401,10 +400,10 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("굴림", 8F);
-            this.label52.Location = new System.Drawing.Point(322, 80);
-            this.label52.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label52.Location = new System.Drawing.Point(282, 64);
+            this.label52.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(96, 14);
+            this.label52.Size = new System.Drawing.Size(73, 11);
             this.label52.TabIndex = 88;
             this.label52.Text = "(20글자 이내)";
             // 
@@ -412,29 +411,29 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("굴림", 8F);
-            this.label51.Location = new System.Drawing.Point(322, 55);
-            this.label51.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label51.Location = new System.Drawing.Point(282, 44);
+            this.label51.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(96, 14);
+            this.label51.Size = new System.Drawing.Size(73, 11);
             this.label51.TabIndex = 88;
             this.label51.Text = "(10글자 이내)";
             // 
             // bank_number_box2
             // 
-            this.bank_number_box2.Location = new System.Drawing.Point(181, 162);
-            this.bank_number_box2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bank_number_box2.Location = new System.Drawing.Point(158, 130);
+            this.bank_number_box2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bank_number_box2.MaxLength = 10;
             this.bank_number_box2.Name = "bank_number_box2";
-            this.bank_number_box2.Size = new System.Drawing.Size(130, 25);
+            this.bank_number_box2.Size = new System.Drawing.Size(114, 21);
             this.bank_number_box2.TabIndex = 19;
             // 
             // bank_master_box
             // 
-            this.bank_master_box.Location = new System.Drawing.Point(181, 46);
-            this.bank_master_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bank_master_box.Location = new System.Drawing.Point(158, 37);
+            this.bank_master_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bank_master_box.MaxLength = 10;
             this.bank_master_box.Name = "bank_master_box";
-            this.bank_master_box.Size = new System.Drawing.Size(130, 25);
+            this.bank_master_box.Size = new System.Drawing.Size(114, 21);
             this.bank_master_box.TabIndex = 15;
             // 
             // groupBox3
@@ -455,11 +454,11 @@
             this.groupBox3.Controls.Add(this.bank_number_box);
             this.groupBox3.Controls.Add(this.bank_master_box);
             this.groupBox3.Controls.Add(this.bank_master_box2);
-            this.groupBox3.Location = new System.Drawing.Point(545, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox3.Location = new System.Drawing.Point(477, 5);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox3.Size = new System.Drawing.Size(472, 202);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(413, 162);
             this.groupBox3.TabIndex = 110;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "계좌";
@@ -468,10 +467,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("굴림", 9F);
-            this.label17.Location = new System.Drawing.Point(23, 28);
-            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label17.Location = new System.Drawing.Point(20, 22);
+            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(124, 15);
+            this.label17.Size = new System.Drawing.Size(99, 12);
             this.label17.TabIndex = 5;
             this.label17.Text = "계좌사항(은행명)";
             // 
@@ -479,10 +478,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("굴림", 9F);
-            this.label20.Location = new System.Drawing.Point(23, 79);
-            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label20.Location = new System.Drawing.Point(20, 63);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(139, 15);
+            this.label20.Size = new System.Drawing.Size(111, 12);
             this.label20.TabIndex = 20;
             this.label20.Text = "계좌사항(계좌번호)";
             // 
@@ -490,10 +489,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("굴림", 9F);
-            this.label21.Location = new System.Drawing.Point(23, 115);
-            this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label21.Location = new System.Drawing.Point(20, 92);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 15);
+            this.label21.Size = new System.Drawing.Size(105, 12);
             this.label21.TabIndex = 22;
             this.label21.Text = "계좌사항(은행명2)";
             // 
@@ -501,10 +500,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("굴림", 9F);
-            this.label22.Location = new System.Drawing.Point(23, 141);
-            this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label22.Location = new System.Drawing.Point(20, 113);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(132, 15);
+            this.label22.Size = new System.Drawing.Size(105, 12);
             this.label22.TabIndex = 41;
             this.label22.Text = "계좌사항(예금주2)";
             // 
@@ -512,30 +511,30 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("굴림", 9F);
-            this.label23.Location = new System.Drawing.Point(23, 168);
-            this.label23.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label23.Location = new System.Drawing.Point(20, 134);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(147, 15);
+            this.label23.Size = new System.Drawing.Size(117, 12);
             this.label23.TabIndex = 23;
             this.label23.Text = "계좌사항(계좌번호2)";
             // 
             // bank_master_box2
             // 
-            this.bank_master_box2.Location = new System.Drawing.Point(181, 136);
-            this.bank_master_box2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bank_master_box2.Location = new System.Drawing.Point(158, 109);
+            this.bank_master_box2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bank_master_box2.MaxLength = 10;
             this.bank_master_box2.Name = "bank_master_box2";
-            this.bank_master_box2.Size = new System.Drawing.Size(130, 25);
+            this.bank_master_box2.Size = new System.Drawing.Size(114, 21);
             this.bank_master_box2.TabIndex = 18;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("굴림", 8F);
-            this.label49.Location = new System.Drawing.Point(66, 1);
-            this.label49.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label49.Location = new System.Drawing.Point(58, 1);
+            this.label49.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(90, 14);
+            this.label49.Size = new System.Drawing.Size(68, 11);
             this.label49.TabIndex = 90;
             this.label49.Text = "(200자 이내)";
             // 
@@ -546,21 +545,21 @@
             this.marry_box.Items.AddRange(new object[] {
             "기혼",
             "미혼"});
-            this.marry_box.Location = new System.Drawing.Point(130, 402);
-            this.marry_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.marry_box.Location = new System.Drawing.Point(114, 322);
+            this.marry_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.marry_box.Name = "marry_box";
-            this.marry_box.Size = new System.Drawing.Size(60, 23);
+            this.marry_box.Size = new System.Drawing.Size(53, 20);
             this.marry_box.TabIndex = 13;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label49);
             this.groupBox5.Controls.Add(this.note_box);
-            this.groupBox5.Location = new System.Drawing.Point(545, 334);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox5.Location = new System.Drawing.Point(477, 267);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox5.Size = new System.Drawing.Size(472, 114);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(413, 91);
             this.groupBox5.TabIndex = 113;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "참고사항";
@@ -573,11 +572,11 @@
             this.mil_group.Controls.Add(this.mil_catagory_box);
             this.mil_group.Controls.Add(this.mil_ok_box);
             this.mil_group.Controls.Add(this.mil_rank_box);
-            this.mil_group.Location = new System.Drawing.Point(545, 216);
-            this.mil_group.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mil_group.Location = new System.Drawing.Point(477, 173);
+            this.mil_group.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mil_group.Name = "mil_group";
-            this.mil_group.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.mil_group.Size = new System.Drawing.Size(472, 111);
+            this.mil_group.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_group.Size = new System.Drawing.Size(413, 89);
             this.mil_group.TabIndex = 111;
             this.mil_group.TabStop = false;
             this.mil_group.Text = "군대";
@@ -586,10 +585,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("굴림", 9F);
-            this.label13.Location = new System.Drawing.Point(23, 26);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Location = new System.Drawing.Point(20, 21);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 15);
+            this.label13.Size = new System.Drawing.Size(87, 12);
             this.label13.TabIndex = 9;
             this.label13.Text = "병역(복무구분)";
             // 
@@ -597,10 +596,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("굴림", 9F);
-            this.label14.Location = new System.Drawing.Point(23, 50);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(20, 40);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 15);
+            this.label14.Size = new System.Drawing.Size(63, 12);
             this.label14.TabIndex = 8;
             this.label14.Text = "병역(군별)";
             // 
@@ -608,10 +607,10 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("굴림", 8F);
-            this.label43.Location = new System.Drawing.Point(309, 92);
-            this.label43.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label43.Location = new System.Drawing.Point(270, 74);
+            this.label43.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(96, 14);
+            this.label43.Size = new System.Drawing.Size(73, 11);
             this.label43.TabIndex = 88;
             this.label43.Text = "(20글자 이내)";
             // 
@@ -619,10 +618,10 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("굴림", 8F);
-            this.label37.Location = new System.Drawing.Point(309, 60);
-            this.label37.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label37.Location = new System.Drawing.Point(270, 48);
+            this.label37.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(149, 14);
+            this.label37.Size = new System.Drawing.Size(114, 11);
             this.label37.TabIndex = 88;
             this.label37.Text = "(- 없이 주민등록번호)";
             // 
@@ -630,19 +629,18 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("굴림", 8F);
-            this.label26.Location = new System.Drawing.Point(309, 29);
-            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Location = new System.Drawing.Point(270, 23);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(88, 14);
+            this.label26.Size = new System.Drawing.Size(67, 11);
             this.label26.TabIndex = 88;
             this.label26.Text = "(5글자 이내)";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 206);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(175, 165);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 29);
+            this.button1.Size = new System.Drawing.Size(54, 23);
             this.button1.TabIndex = 87;
             this.button1.Text = "찾기";
             this.button1.UseVisualStyleBackColor = true;
@@ -652,10 +650,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 9F);
-            this.label1.Location = new System.Drawing.Point(16, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(14, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 2;
             this.label1.Text = "사원번호";
             // 
@@ -663,10 +661,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 9F);
-            this.label2.Location = new System.Drawing.Point(16, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(14, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(77, 12);
             this.label2.TabIndex = 21;
             this.label2.Text = "주민등록번호";
             // 
@@ -674,10 +672,10 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("굴림", 9F);
-            this.label29.Location = new System.Drawing.Point(326, 35);
-            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label29.Location = new System.Drawing.Point(285, 28);
+            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(67, 15);
+            this.label29.Size = new System.Drawing.Size(53, 12);
             this.label29.TabIndex = 35;
             this.label29.Text = "입사일자";
             // 
@@ -685,10 +683,10 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("굴림", 9F);
-            this.label30.Location = new System.Drawing.Point(326, 68);
-            this.label30.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label30.Location = new System.Drawing.Point(285, 54);
+            this.label30.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(67, 15);
+            this.label30.Size = new System.Drawing.Size(53, 12);
             this.label30.TabIndex = 34;
             this.label30.Text = "퇴사일자";
             // 
@@ -696,10 +694,10 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("굴림", 9F);
-            this.label35.Location = new System.Drawing.Point(16, 31);
-            this.label35.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label35.Location = new System.Drawing.Point(14, 25);
+            this.label35.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(79, 15);
+            this.label35.Size = new System.Drawing.Size(63, 12);
             this.label35.TabIndex = 29;
             this.label35.Text = "직급(현재)";
             // 
@@ -708,30 +706,30 @@
             this.badtime_box.CustomFormat = "yyyy-MM-dd";
             this.badtime_box.Enabled = false;
             this.badtime_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.badtime_box.Location = new System.Drawing.Point(754, 151);
-            this.badtime_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.badtime_box.Location = new System.Drawing.Point(660, 121);
+            this.badtime_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.badtime_box.Name = "badtime_box";
-            this.badtime_box.Size = new System.Drawing.Size(106, 25);
+            this.badtime_box.Size = new System.Drawing.Size(93, 21);
             this.badtime_box.TabIndex = 40;
             // 
             // slave_end
             // 
             this.slave_end.CustomFormat = "yyyy-MM-dd";
             this.slave_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.slave_end.Location = new System.Drawing.Point(754, 92);
-            this.slave_end.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.slave_end.Location = new System.Drawing.Point(660, 74);
+            this.slave_end.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slave_end.Name = "slave_end";
-            this.slave_end.Size = new System.Drawing.Size(106, 25);
+            this.slave_end.Size = new System.Drawing.Size(93, 21);
             this.slave_end.TabIndex = 38;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("굴림", 9F);
-            this.label19.Location = new System.Drawing.Point(15, 62);
-            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label19.Location = new System.Drawing.Point(13, 50);
+            this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(79, 15);
+            this.label19.Size = new System.Drawing.Size(63, 12);
             this.label19.TabIndex = 28;
             this.label19.Text = "직위(현재)";
             // 
@@ -739,10 +737,10 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("굴림", 9F);
-            this.label36.Location = new System.Drawing.Point(15, 91);
-            this.label36.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label36.Location = new System.Drawing.Point(13, 73);
+            this.label36.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(79, 15);
+            this.label36.Size = new System.Drawing.Size(63, 12);
             this.label36.TabIndex = 28;
             this.label36.Text = "부서(현재)";
             // 
@@ -750,10 +748,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("굴림", 9F);
-            this.label24.Location = new System.Drawing.Point(326, 128);
-            this.label24.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label24.Location = new System.Drawing.Point(285, 102);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 15);
+            this.label24.Size = new System.Drawing.Size(53, 12);
             this.label24.TabIndex = 40;
             this.label24.Text = "계약구분";
             // 
@@ -762,20 +760,20 @@
             this.goodtime_box.CustomFormat = "yyyy-MM-dd";
             this.goodtime_box.Enabled = false;
             this.goodtime_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.goodtime_box.Location = new System.Drawing.Point(754, 121);
-            this.goodtime_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.goodtime_box.Location = new System.Drawing.Point(660, 97);
+            this.goodtime_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.goodtime_box.Name = "goodtime_box";
-            this.goodtime_box.Size = new System.Drawing.Size(106, 25);
+            this.goodtime_box.Size = new System.Drawing.Size(93, 21);
             this.goodtime_box.TabIndex = 39;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 9F);
-            this.label3.Location = new System.Drawing.Point(16, 90);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(14, 72);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
+            this.label3.Size = new System.Drawing.Size(63, 12);
             this.label3.TabIndex = 19;
             this.label3.Text = "성명(한글)";
             // 
@@ -783,10 +781,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 9F);
-            this.label4.Location = new System.Drawing.Point(16, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(14, 95);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 15);
+            this.label4.Size = new System.Drawing.Size(63, 12);
             this.label4.TabIndex = 18;
             this.label4.Text = "성명(한자)";
             // 
@@ -797,20 +795,20 @@
             this.sexxbox.Items.AddRange(new object[] {
             "남",
             "여"});
-            this.sexxbox.Location = new System.Drawing.Point(130, 178);
-            this.sexxbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.sexxbox.Location = new System.Drawing.Point(114, 142);
+            this.sexxbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sexxbox.Name = "sexxbox";
-            this.sexxbox.Size = new System.Drawing.Size(47, 23);
+            this.sexxbox.Size = new System.Drawing.Size(42, 20);
             this.sexxbox.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 9F);
-            this.label5.Location = new System.Drawing.Point(16, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(14, 118);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 15);
+            this.label5.Size = new System.Drawing.Size(63, 12);
             this.label5.TabIndex = 17;
             this.label5.Text = "성명(영문)";
             // 
@@ -818,10 +816,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 9F);
-            this.label6.Location = new System.Drawing.Point(16, 179);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(14, 143);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
+            this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 16;
             this.label6.Text = "성별";
             // 
@@ -829,10 +827,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("굴림", 9F);
-            this.label7.Location = new System.Drawing.Point(16, 210);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(14, 168);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 15);
+            this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 15;
             this.label7.Text = "우편번호";
             // 
@@ -840,20 +838,20 @@
             // 
             this.now_rank_box.CustomFormat = "yyyy-MM-dd";
             this.now_rank_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.now_rank_box.Location = new System.Drawing.Point(129, 120);
-            this.now_rank_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.now_rank_box.Location = new System.Drawing.Point(113, 96);
+            this.now_rank_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.now_rank_box.Name = "now_rank_box";
-            this.now_rank_box.Size = new System.Drawing.Size(102, 25);
+            this.now_rank_box.Size = new System.Drawing.Size(90, 21);
             this.now_rank_box.TabIndex = 27;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("굴림", 9F);
-            this.label16.Location = new System.Drawing.Point(16, 408);
-            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Location = new System.Drawing.Point(14, 326);
+            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 15);
+            this.label16.Size = new System.Drawing.Size(53, 12);
             this.label16.TabIndex = 6;
             this.label16.Text = "결혼여부";
             // 
@@ -861,20 +859,20 @@
             // 
             this.slave_start.CustomFormat = "yyyy-MM-dd";
             this.slave_start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.slave_start.Location = new System.Drawing.Point(754, 62);
-            this.slave_start.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.slave_start.Location = new System.Drawing.Point(660, 50);
+            this.slave_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slave_start.Name = "slave_start";
-            this.slave_start.Size = new System.Drawing.Size(106, 25);
+            this.slave_start.Size = new System.Drawing.Size(93, 21);
             this.slave_start.TabIndex = 37;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("굴림", 9F);
-            this.label42.Location = new System.Drawing.Point(629, 38);
-            this.label42.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label42.Location = new System.Drawing.Point(550, 30);
+            this.label42.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(123, 15);
+            this.label42.Size = new System.Drawing.Size(99, 12);
             this.label42.TabIndex = 38;
             this.label42.Text = "수습/인턴 개월수";
             // 
@@ -917,11 +915,11 @@
             this.groupBox1.Controls.Add(this.email1_box);
             this.groupBox1.Controls.Add(this.home_box);
             this.groupBox1.Controls.Add(this.phone_box);
-            this.groupBox1.Location = new System.Drawing.Point(3, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Location = new System.Drawing.Point(3, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox1.Size = new System.Drawing.Size(533, 441);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(466, 353);
             this.groupBox1.TabIndex = 109;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "기본정보";
@@ -930,10 +928,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("굴림", 9F);
-            this.label8.Location = new System.Drawing.Point(16, 242);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(14, 194);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 15);
+            this.label8.Size = new System.Drawing.Size(29, 12);
             this.label8.TabIndex = 14;
             this.label8.Text = "주소";
             // 
@@ -941,10 +939,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("굴림", 9F);
-            this.label9.Location = new System.Drawing.Point(16, 276);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(14, 221);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 15);
+            this.label9.Size = new System.Drawing.Size(41, 12);
             this.label9.TabIndex = 13;
             this.label9.Text = "거주지";
             // 
@@ -952,10 +950,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("굴림", 9F);
-            this.label10.Location = new System.Drawing.Point(16, 309);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(14, 247);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 15);
+            this.label10.Size = new System.Drawing.Size(63, 12);
             this.label10.TabIndex = 12;
             this.label10.Text = "연락처(폰)";
             // 
@@ -963,10 +961,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("굴림", 9F);
-            this.label11.Location = new System.Drawing.Point(16, 341);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(14, 273);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.Size = new System.Drawing.Size(63, 12);
             this.label11.TabIndex = 11;
             this.label11.Text = "연락처(집)";
             // 
@@ -974,116 +972,116 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("굴림", 9F);
-            this.label12.Location = new System.Drawing.Point(16, 372);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(14, 298);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 15);
+            this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 10;
             this.label12.Text = "이메일주소";
             // 
             // chn_name_box
             // 
-            this.chn_name_box.Location = new System.Drawing.Point(130, 115);
-            this.chn_name_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chn_name_box.Location = new System.Drawing.Point(114, 92);
+            this.chn_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.chn_name_box.MaxLength = 20;
             this.chn_name_box.Name = "chn_name_box";
-            this.chn_name_box.Size = new System.Drawing.Size(166, 25);
+            this.chn_name_box.Size = new System.Drawing.Size(146, 21);
             this.chn_name_box.TabIndex = 4;
             // 
             // kor_name_box
             // 
-            this.kor_name_box.Location = new System.Drawing.Point(130, 86);
-            this.kor_name_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.kor_name_box.Location = new System.Drawing.Point(114, 69);
+            this.kor_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.kor_name_box.MaxLength = 20;
             this.kor_name_box.Name = "kor_name_box";
-            this.kor_name_box.Size = new System.Drawing.Size(166, 25);
+            this.kor_name_box.Size = new System.Drawing.Size(146, 21);
             this.kor_name_box.TabIndex = 3;
             // 
             // rrn_box
             // 
-            this.rrn_box.Location = new System.Drawing.Point(130, 54);
-            this.rrn_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rrn_box.Location = new System.Drawing.Point(114, 43);
+            this.rrn_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.rrn_box.MaxLength = 13;
             this.rrn_box.Name = "rrn_box";
-            this.rrn_box.Size = new System.Drawing.Size(166, 25);
+            this.rrn_box.Size = new System.Drawing.Size(146, 21);
             this.rrn_box.TabIndex = 2;
             // 
             // e_no_box
             // 
-            this.e_no_box.Location = new System.Drawing.Point(130, 22);
-            this.e_no_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.e_no_box.Location = new System.Drawing.Point(114, 18);
+            this.e_no_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.e_no_box.MaxLength = 5;
             this.e_no_box.Name = "e_no_box";
-            this.e_no_box.Size = new System.Drawing.Size(166, 25);
+            this.e_no_box.Size = new System.Drawing.Size(146, 21);
             this.e_no_box.TabIndex = 1;
             // 
             // eng_name_box
             // 
-            this.eng_name_box.Location = new System.Drawing.Point(130, 145);
-            this.eng_name_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.eng_name_box.Location = new System.Drawing.Point(114, 116);
+            this.eng_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.eng_name_box.MaxLength = 50;
             this.eng_name_box.Name = "eng_name_box";
-            this.eng_name_box.Size = new System.Drawing.Size(166, 25);
+            this.eng_name_box.Size = new System.Drawing.Size(146, 21);
             this.eng_name_box.TabIndex = 5;
             // 
             // zip_box
             // 
-            this.zip_box.Location = new System.Drawing.Point(130, 208);
-            this.zip_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.zip_box.Location = new System.Drawing.Point(114, 166);
+            this.zip_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.zip_box.Name = "zip_box";
             this.zip_box.ReadOnly = true;
-            this.zip_box.Size = new System.Drawing.Size(60, 25);
+            this.zip_box.Size = new System.Drawing.Size(53, 21);
             this.zip_box.TabIndex = 7;
             // 
             // address_box
             // 
-            this.address_box.Location = new System.Drawing.Point(130, 239);
-            this.address_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.address_box.Location = new System.Drawing.Point(114, 191);
+            this.address_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.address_box.Name = "address_box";
             this.address_box.ReadOnly = true;
-            this.address_box.Size = new System.Drawing.Size(390, 25);
+            this.address_box.Size = new System.Drawing.Size(342, 21);
             this.address_box.TabIndex = 8;
             // 
             // residence_box
             // 
-            this.residence_box.Location = new System.Drawing.Point(130, 271);
-            this.residence_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.residence_box.Location = new System.Drawing.Point(114, 217);
+            this.residence_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.residence_box.Name = "residence_box";
-            this.residence_box.Size = new System.Drawing.Size(249, 25);
+            this.residence_box.Size = new System.Drawing.Size(218, 21);
             this.residence_box.TabIndex = 9;
             // 
             // email1_box
             // 
-            this.email1_box.Location = new System.Drawing.Point(130, 370);
-            this.email1_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.email1_box.Location = new System.Drawing.Point(114, 296);
+            this.email1_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.email1_box.Name = "email1_box";
-            this.email1_box.Size = new System.Drawing.Size(166, 25);
+            this.email1_box.Size = new System.Drawing.Size(146, 21);
             this.email1_box.TabIndex = 12;
             // 
             // home_box
             // 
-            this.home_box.Location = new System.Drawing.Point(130, 338);
-            this.home_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.home_box.Location = new System.Drawing.Point(114, 270);
+            this.home_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.home_box.Name = "home_box";
-            this.home_box.Size = new System.Drawing.Size(166, 25);
+            this.home_box.Size = new System.Drawing.Size(146, 21);
             this.home_box.TabIndex = 11;
             // 
             // phone_box
             // 
-            this.phone_box.Location = new System.Drawing.Point(130, 304);
-            this.phone_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.phone_box.Location = new System.Drawing.Point(114, 243);
+            this.phone_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.phone_box.Name = "phone_box";
-            this.phone_box.Size = new System.Drawing.Size(166, 25);
+            this.phone_box.Size = new System.Drawing.Size(146, 21);
             this.phone_box.TabIndex = 10;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("굴림", 9F);
-            this.label38.Location = new System.Drawing.Point(15, 121);
-            this.label38.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label38.Location = new System.Drawing.Point(13, 97);
+            this.label38.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(82, 15);
+            this.label38.Size = new System.Drawing.Size(65, 12);
             this.label38.TabIndex = 26;
             this.label38.Text = "현직급일자";
             // 
@@ -1094,10 +1092,10 @@
             this.state_box.Items.AddRange(new object[] {
             "재직",
             "퇴직"});
-            this.state_box.Location = new System.Drawing.Point(754, 182);
-            this.state_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.state_box.Location = new System.Drawing.Point(660, 146);
+            this.state_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.state_box.Name = "state_box";
-            this.state_box.Size = new System.Drawing.Size(106, 23);
+            this.state_box.Size = new System.Drawing.Size(93, 20);
             this.state_box.TabIndex = 41;
             // 
             // newbie_check_box
@@ -1108,30 +1106,30 @@
             "수습",
             "인턴",
             "없음"});
-            this.newbie_check_box.Location = new System.Drawing.Point(431, 151);
-            this.newbie_check_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.newbie_check_box.Location = new System.Drawing.Point(377, 121);
+            this.newbie_check_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newbie_check_box.Name = "newbie_check_box";
-            this.newbie_check_box.Size = new System.Drawing.Size(100, 23);
+            this.newbie_check_box.Size = new System.Drawing.Size(88, 20);
             this.newbie_check_box.TabIndex = 34;
             // 
             // now_spot_box
             // 
             this.now_spot_box.CustomFormat = "yyyy-MM-dd";
             this.now_spot_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.now_spot_box.Location = new System.Drawing.Point(129, 151);
-            this.now_spot_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.now_spot_box.Location = new System.Drawing.Point(113, 121);
+            this.now_spot_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.now_spot_box.Name = "now_spot_box";
-            this.now_spot_box.Size = new System.Drawing.Size(102, 25);
+            this.now_spot_box.Size = new System.Drawing.Size(90, 21);
             this.now_spot_box.TabIndex = 28;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("굴림", 9F);
-            this.label39.Location = new System.Drawing.Point(15, 155);
-            this.label39.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label39.Location = new System.Drawing.Point(13, 124);
+            this.label39.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(82, 15);
+            this.label39.Size = new System.Drawing.Size(65, 12);
             this.label39.TabIndex = 25;
             this.label39.Text = "현직위일자";
             // 
@@ -1139,10 +1137,10 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("굴림", 9F);
-            this.label40.Location = new System.Drawing.Point(15, 185);
-            this.label40.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label40.Location = new System.Drawing.Point(13, 148);
+            this.label40.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(82, 15);
+            this.label40.Size = new System.Drawing.Size(65, 12);
             this.label40.TabIndex = 24;
             this.label40.Text = "현부서일자";
             // 
@@ -1150,10 +1148,10 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("굴림", 9F);
-            this.label41.Location = new System.Drawing.Point(326, 186);
-            this.label41.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label41.Location = new System.Drawing.Point(285, 149);
+            this.label41.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(103, 15);
+            this.label41.Size = new System.Drawing.Size(83, 12);
             this.label41.TabIndex = 42;
             this.label41.Text = "수습/인턴일자";
             // 
@@ -1161,60 +1159,60 @@
             // 
             this.now_department_box.CustomFormat = "yyyy-MM-dd";
             this.now_department_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.now_department_box.Location = new System.Drawing.Point(129, 182);
-            this.now_department_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.now_department_box.Location = new System.Drawing.Point(113, 146);
+            this.now_department_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.now_department_box.Name = "now_department_box";
-            this.now_department_box.Size = new System.Drawing.Size(102, 25);
+            this.now_department_box.Size = new System.Drawing.Size(90, 21);
             this.now_department_box.TabIndex = 29;
             // 
             // now_newbie_box
             // 
             this.now_newbie_box.CustomFormat = "yyyy-MM-dd";
             this.now_newbie_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.now_newbie_box.Location = new System.Drawing.Point(431, 181);
-            this.now_newbie_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.now_newbie_box.Location = new System.Drawing.Point(377, 145);
+            this.now_newbie_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.now_newbie_box.Name = "now_newbie_box";
-            this.now_newbie_box.Size = new System.Drawing.Size(100, 25);
+            this.now_newbie_box.Size = new System.Drawing.Size(88, 21);
             this.now_newbie_box.TabIndex = 35;
             // 
             // join_box
             // 
             this.join_box.CustomFormat = "yyyy-MM-dd";
             this.join_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.join_box.Location = new System.Drawing.Point(431, 31);
-            this.join_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.join_box.Location = new System.Drawing.Point(377, 25);
+            this.join_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.join_box.Name = "join_box";
-            this.join_box.Size = new System.Drawing.Size(100, 25);
+            this.join_box.Size = new System.Drawing.Size(88, 21);
             this.join_box.TabIndex = 30;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("굴림", 9F);
-            this.label34.Location = new System.Drawing.Point(326, 98);
-            this.label34.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label34.Location = new System.Drawing.Point(285, 78);
+            this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(67, 15);
+            this.label34.Size = new System.Drawing.Size(53, 12);
             this.label34.TabIndex = 30;
             this.label34.Text = "신분구분";
             // 
             // newbie_month_box
             // 
-            this.newbie_month_box.Location = new System.Drawing.Point(754, 31);
-            this.newbie_month_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.newbie_month_box.Location = new System.Drawing.Point(660, 25);
+            this.newbie_month_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.newbie_month_box.MaxLength = 1;
             this.newbie_month_box.Name = "newbie_month_box";
-            this.newbie_month_box.Size = new System.Drawing.Size(39, 25);
+            this.newbie_month_box.Size = new System.Drawing.Size(35, 21);
             this.newbie_month_box.TabIndex = 36;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("굴림", 9F);
-            this.label25.Location = new System.Drawing.Point(326, 156);
-            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Location = new System.Drawing.Point(285, 125);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(103, 15);
+            this.label25.Size = new System.Drawing.Size(83, 12);
             this.label25.TabIndex = 39;
             this.label25.Text = "수습/인턴구분";
             // 
@@ -1222,10 +1220,9 @@
             // 
             this.rank_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rank_combox.FormattingEnabled = true;
-            this.rank_combox.Location = new System.Drawing.Point(129, 26);
-            this.rank_combox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rank_combox.Location = new System.Drawing.Point(113, 21);
             this.rank_combox.Name = "rank_combox";
-            this.rank_combox.Size = new System.Drawing.Size(102, 23);
+            this.rank_combox.Size = new System.Drawing.Size(90, 20);
             this.rank_combox.TabIndex = 24;
             this.rank_combox.Tag = "POS";
             // 
@@ -1236,20 +1233,18 @@
             this.contract_box.Items.AddRange(new object[] {
             "정규직",
             "계약직"});
-            this.contract_box.Location = new System.Drawing.Point(431, 121);
-            this.contract_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.contract_box.Location = new System.Drawing.Point(377, 97);
             this.contract_box.Name = "contract_box";
-            this.contract_box.Size = new System.Drawing.Size(100, 23);
+            this.contract_box.Size = new System.Drawing.Size(88, 20);
             this.contract_box.TabIndex = 33;
             // 
             // sts_combox
             // 
             this.sts_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sts_combox.FormattingEnabled = true;
-            this.sts_combox.Location = new System.Drawing.Point(431, 92);
-            this.sts_combox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sts_combox.Location = new System.Drawing.Point(377, 74);
             this.sts_combox.Name = "sts_combox";
-            this.sts_combox.Size = new System.Drawing.Size(100, 23);
+            this.sts_combox.Size = new System.Drawing.Size(88, 20);
             this.sts_combox.TabIndex = 32;
             this.sts_combox.Tag = "STS";
             // 
@@ -1257,10 +1252,9 @@
             // 
             this.dept_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dept_combox.FormattingEnabled = true;
-            this.dept_combox.Location = new System.Drawing.Point(129, 89);
-            this.dept_combox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dept_combox.Location = new System.Drawing.Point(113, 71);
             this.dept_combox.Name = "dept_combox";
-            this.dept_combox.Size = new System.Drawing.Size(102, 23);
+            this.dept_combox.Size = new System.Drawing.Size(90, 20);
             this.dept_combox.TabIndex = 26;
             this.dept_combox.Tag = "DEPT";
             // 
@@ -1268,10 +1262,9 @@
             // 
             this.dut_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dut_combox.FormattingEnabled = true;
-            this.dut_combox.Location = new System.Drawing.Point(129, 58);
-            this.dut_combox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dut_combox.Location = new System.Drawing.Point(113, 46);
             this.dut_combox.Name = "dut_combox";
-            this.dut_combox.Size = new System.Drawing.Size(102, 23);
+            this.dut_combox.Size = new System.Drawing.Size(90, 20);
             this.dut_combox.TabIndex = 25;
             this.dut_combox.Tag = "DUT";
             // 
@@ -1286,7 +1279,6 @@
             this.groupBox4.Controls.Add(this.label29);
             this.groupBox4.Controls.Add(this.label30);
             this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.dept_search);
             this.groupBox4.Controls.Add(this.badtime_box);
             this.groupBox4.Controls.Add(this.slave_end);
             this.groupBox4.Controls.Add(this.label19);
@@ -1314,11 +1306,11 @@
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Location = new System.Drawing.Point(3, 458);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox4.Location = new System.Drawing.Point(3, 366);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox4.Size = new System.Drawing.Size(1014, 221);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(887, 177);
             this.groupBox4.TabIndex = 112;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "계약";
@@ -1327,35 +1319,24 @@
             // 
             this.goodbye_box.CustomFormat = "yyyy-MM-dd";
             this.goodbye_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.goodbye_box.Location = new System.Drawing.Point(431, 62);
-            this.goodbye_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.goodbye_box.Location = new System.Drawing.Point(377, 50);
+            this.goodbye_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.goodbye_box.Name = "goodbye_box";
-            this.goodbye_box.Size = new System.Drawing.Size(100, 25);
+            this.goodbye_box.Size = new System.Drawing.Size(88, 21);
             this.goodbye_box.TabIndex = 31;
-            // 
-            // dept_search
-            // 
-            this.dept_search.Location = new System.Drawing.Point(239, 88);
-            this.dept_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dept_search.Name = "dept_search";
-            this.dept_search.Size = new System.Drawing.Size(62, 29);
-            this.dept_search.TabIndex = 87;
-            this.dept_search.Text = "찾기";
-            this.dept_search.UseVisualStyleBackColor = true;
             // 
             // insaBasic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1030, 691);
+            this.ClientSize = new System.Drawing.Size(901, 553);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.mil_group);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "insaBasic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "인사기본사항";
@@ -1480,6 +1461,5 @@
         public System.Windows.Forms.ComboBox dut_combox;
         public System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.DateTimePicker goodbye_box;
-        public System.Windows.Forms.Button dept_search;
     }
 }

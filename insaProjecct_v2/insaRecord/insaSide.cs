@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _Database;
+using Common;
 
 namespace insaProjecct_v2
 {
@@ -48,7 +50,17 @@ namespace insaProjecct_v2
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             select_empno = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            label1.Text = "선택한 사원: "+ dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            label1.Text = "선택한 사원: " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (erpMain.now_form == (erpMain.now_form as insaBasic))
+            {
+                Type type = erpMain.now_form.GetType();
+                MethodInfo method = type.GetMethod("Control_Input_Date");
+                method.Invoke(erpMain.now_form, null);
+                // 폼 컨트롤
+                Form_Control control = new Form_Control();
+                control.get_control(erpMain.now_form as Form, true);
+                control.control_enabled(true);
+            }
         }
     }
 }

@@ -14,16 +14,17 @@ namespace insaProjecct_v2
 
         // 패널에 띄울 폼, 리플랙션 할 오브젝트
         Form saveform;
-        object now_form;
+        static public object now_form;
 
         // CRUD MODE
         static public string mode { get; set; }
-        // SIDE FORM
+        // SIDE FORM (싱글톤 패턴)
         insaSide side_form = insaSide.Instance();
         // 폼 컨트롤
         Form_Control control = new Form_Control();
         // 결과값 전달
         static public Boolean getResult { get; set; }
+        _Common common = new _Common();
 
 
         // 폼 여러개 추가
@@ -65,6 +66,7 @@ namespace insaProjecct_v2
         {
             timerLabel.Text = String.Format("{0}시 {1:0#}분 {2}초", DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second.ToString().PadLeft(2, '0'));
         }
+
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -138,13 +140,13 @@ namespace insaProjecct_v2
                 CRUD_Enabled(false);
                 APPLY_Enabled(true);
                 control.control_enabled(true);
-                MessageBox.Show(now_form.ToString());
 
+                // 인사기본사항 업데이트 누를 경우 사원 정보 불러옴
                 if(now_form == (now_form as insaBasic))
                 {
-                    if (insaSide.select_empno != null)
+                    if (insaSide.select_empno == null)
                     {
-                        MessageBox.Show("not null");
+                        common.MsgboxShow("사원을 선택해주세요.");
                     }
                 }
             }
@@ -165,6 +167,11 @@ namespace insaProjecct_v2
         {
             if (now_form != null)
             {
+                if (insaSide.select_empno == null)
+                {
+                    common.MsgboxShow("사원을 선택해주세요.");
+                    return;
+                }
                 Type type = now_form.GetType();
                 MethodInfo method = type.GetMethod("null");
                 if (mode.Equals("insert"))
@@ -185,6 +192,7 @@ namespace insaProjecct_v2
                     APPLY_Enabled(false);
                     CRUD_Enabled(true);
                     control.control_enabled(false);
+                    control.control_reset();
                     side_form.insaSide_Refresh();
                 }
             }

@@ -40,7 +40,7 @@ namespace _Database
             return dict;
         }
         #endregion
-
+        #region CD_GRPCD 코드 담아서 문자로 변환
         public List<string[]> getCodeList()
         {
             List<string[]> CODELIST = new List<string[]>();
@@ -81,5 +81,6 @@ namespace _Database
             }
             return CODELIST;
         }
+        #endregion
     }
 }
