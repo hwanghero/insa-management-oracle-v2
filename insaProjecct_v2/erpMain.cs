@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
 using _Database;
+using Common;
 
 namespace insaProjecct_v2
 {
@@ -19,6 +20,11 @@ namespace insaProjecct_v2
         static public string mode { get; set; }
         // SIDE FORM
         insaSide side_form = insaSide.Instance();
+        // 폼 컨트롤
+        Form_Control control = new Form_Control();
+        // 결과값 전달
+        static public Boolean getResult { get; set; }
+
 
         // 폼 여러개 추가
         public void add_form(Form form)
@@ -32,6 +38,8 @@ namespace insaProjecct_v2
             form.Show();
             now_form = form;
             saveform = form;
+            control.get_control(form, false);
+            control.control_enabled(false);
         }
 
         public erpMain()
@@ -113,23 +121,44 @@ namespace insaProjecct_v2
         #region CRUD 버튼 클릭시
         private void button1_Click(object sender, EventArgs e)
         {
-            mode = "insert";
-            CRUD_Enabled(false);
-            APPLY_Enabled(true);
+            if (now_form != null)
+            {
+                mode = "insert";
+                CRUD_Enabled(false);
+                APPLY_Enabled(true);
+                control.control_enabled(true);
+            }
         }
 
         private void update_btn_Click(object sender, EventArgs e)
         {
-            mode = "update";
-            CRUD_Enabled(false);
-            APPLY_Enabled(true);
+            if (now_form != null)
+            {
+                mode = "update";
+                CRUD_Enabled(false);
+                APPLY_Enabled(true);
+                control.control_enabled(true);
+                MessageBox.Show(now_form.ToString());
+
+                if(now_form == (now_form as insaBasic))
+                {
+                    if (insaSide.select_empno != null)
+                    {
+                        MessageBox.Show("not null");
+                    }
+                }
+            }
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
-            mode = "delete";
-            CRUD_Enabled(false);
-            APPLY_Enabled(true);
+            if (now_form != null)
+            {
+                mode = "delete";
+                CRUD_Enabled(false);
+                APPLY_Enabled(true);
+                control.control_enabled(true);
+            }
         }
 
         private void apply_btn_Click(object sender, EventArgs e)
@@ -151,22 +180,22 @@ namespace insaProjecct_v2
                     method = type.GetMethod("DB_Delete");
                 }
                 method.Invoke(now_form, null);
-                APPLY_Enabled(false);
-                CRUD_Enabled(true);
+                if (getResult == true)
+                {
+                    APPLY_Enabled(false);
+                    CRUD_Enabled(true);
+                    control.control_enabled(false);
+                    side_form.insaSide_Refresh();
+                }
             }
         }
-        #endregion
-
-        private void erpMain_Load(object sender, EventArgs e)
+        private void cancel_btn_Click(object sender, EventArgs e)
         {
-            side_form.TopLevel = false;
-            side_form.Parent = this.panel2;
-            side_form.Show();
-
             APPLY_Enabled(false);
             CRUD_Enabled(true);
+            control.control_enabled(false);
+            control.control_reset();
         }
-
         private void CRUD_Enabled(Boolean check)
         {
             insert_btn.Enabled = check;
@@ -178,6 +207,17 @@ namespace insaProjecct_v2
         {
             apply_btn.Enabled = check;
             cancel_btn.Enabled = check;
+        }
+        #endregion
+
+        private void erpMain_Load(object sender, EventArgs e)
+        {
+            side_form.TopLevel = false;
+            side_form.Parent = this.panel2;
+            side_form.Show();
+
+            APPLY_Enabled(false);
+            CRUD_Enabled(true);
         }
     }
 }

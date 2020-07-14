@@ -50,10 +50,10 @@
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeView1.Location = new System.Drawing.Point(0, 64);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.treeView1.Location = new System.Drawing.Point(0, 80);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(203, 553);
+            this.treeView1.Size = new System.Drawing.Size(253, 691);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
@@ -63,10 +63,10 @@
             this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.timerLabel,
             this.id_Label});
-            this.status.Location = new System.Drawing.Point(0, 615);
+            this.status.Location = new System.Drawing.Point(0, 774);
             this.status.Name = "status";
-            this.status.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.status.Size = new System.Drawing.Size(1311, 22);
+            this.status.Padding = new System.Windows.Forms.Padding(1, 0, 15, 0);
+            this.status.Size = new System.Drawing.Size(1639, 22);
             this.status.TabIndex = 1;
             this.status.Text = "statusStrip1";
             // 
@@ -76,13 +76,13 @@
             this.timerLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.timerLabel.Enabled = false;
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(1298, 17);
+            this.timerLabel.Size = new System.Drawing.Size(1623, 16);
             this.timerLabel.Spring = true;
             // 
             // id_Label
             // 
             this.id_Label.Name = "id_Label";
-            this.id_Label.Size = new System.Drawing.Size(0, 17);
+            this.id_Label.Size = new System.Drawing.Size(0, 16);
             // 
             // panel1
             // 
@@ -90,18 +90,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(203, 64);
+            this.panel1.Location = new System.Drawing.Point(254, 80);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(901, 553);
+            this.panel1.Size = new System.Drawing.Size(1126, 691);
             this.panel1.TabIndex = 2;
             // 
             // insert_btn
             // 
             this.insert_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("insert_btn.BackgroundImage")));
             this.insert_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.insert_btn.Location = new System.Drawing.Point(220, 16);
+            this.insert_btn.Location = new System.Drawing.Point(275, 20);
+            this.insert_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.insert_btn.Name = "insert_btn";
-            this.insert_btn.Size = new System.Drawing.Size(37, 34);
+            this.insert_btn.Size = new System.Drawing.Size(46, 42);
             this.insert_btn.TabIndex = 3;
             this.insert_btn.UseVisualStyleBackColor = true;
             this.insert_btn.Click += new System.EventHandler(this.button1_Click);
@@ -110,9 +112,10 @@
             // 
             this.update_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_btn.BackgroundImage")));
             this.update_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.update_btn.Location = new System.Drawing.Point(264, 16);
+            this.update_btn.Location = new System.Drawing.Point(330, 20);
+            this.update_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(34, 34);
+            this.update_btn.Size = new System.Drawing.Size(42, 42);
             this.update_btn.TabIndex = 4;
             this.update_btn.UseVisualStyleBackColor = true;
             this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
@@ -121,9 +124,10 @@
             // 
             this.delete_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_btn.BackgroundImage")));
             this.delete_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.delete_btn.Location = new System.Drawing.Point(304, 16);
+            this.delete_btn.Location = new System.Drawing.Point(380, 20);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(35, 34);
+            this.delete_btn.Size = new System.Drawing.Size(44, 42);
             this.delete_btn.TabIndex = 4;
             this.delete_btn.UseVisualStyleBackColor = true;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
@@ -137,9 +141,10 @@
             // 
             this.apply_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("apply_btn.BackgroundImage")));
             this.apply_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.apply_btn.Location = new System.Drawing.Point(365, 16);
+            this.apply_btn.Location = new System.Drawing.Point(456, 20);
+            this.apply_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.apply_btn.Name = "apply_btn";
-            this.apply_btn.Size = new System.Drawing.Size(35, 34);
+            this.apply_btn.Size = new System.Drawing.Size(44, 42);
             this.apply_btn.TabIndex = 4;
             this.apply_btn.UseVisualStyleBackColor = true;
             this.apply_btn.Click += new System.EventHandler(this.apply_btn_Click);
@@ -148,26 +153,29 @@
             // 
             this.cancel_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel_btn.BackgroundImage")));
             this.cancel_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cancel_btn.Location = new System.Drawing.Point(406, 16);
+            this.cancel_btn.Location = new System.Drawing.Point(508, 20);
+            this.cancel_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancel_btn.Name = "cancel_btn";
-            this.cancel_btn.Size = new System.Drawing.Size(35, 34);
+            this.cancel_btn.Size = new System.Drawing.Size(44, 42);
             this.cancel_btn.TabIndex = 4;
             this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(1104, 64);
+            this.panel2.Location = new System.Drawing.Point(1380, 80);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 553);
+            this.panel2.Size = new System.Drawing.Size(257, 691);
             this.panel2.TabIndex = 5;
             // 
             // erpMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1311, 637);
+            this.ClientSize = new System.Drawing.Size(1639, 796);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.apply_btn);
@@ -177,7 +185,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.status);
             this.Controls.Add(this.treeView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "erpMain";

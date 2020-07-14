@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,12 @@
     <Compile Include="insaRecord\.Designer.cs">
       <DependentUpon>insaBasic.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaBasic_Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaBasic_Address.Designer.cs">
+      <DependentUpon>insaBasic_Address.cs</DependentUpon>
     </Compile>
     <Compile Include="insaRecord\insaFamily.cs">
       <SubType>Form</SubType>
@@ -91,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaBasic.resx">
       <DependentUpon>insaBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaBasic_Address.resx">
+      <DependentUpon>insaBasic_Address.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaFamily.resx">
       <DependentUpon>insaFamily.cs</DependentUpon>

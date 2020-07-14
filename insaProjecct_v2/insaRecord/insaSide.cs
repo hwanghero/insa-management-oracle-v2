@@ -19,6 +19,11 @@ namespace insaProjecct_v2
         protected insaSide()
         {
             InitializeComponent();
+            insaSide_Refresh();
+        }
+
+        public void insaSide_Refresh()
+        {
             _Side DB_SIDE = new _Side();
             dataGridView1.DataSource = DB_SIDE.sideUserload();
             dataGridView1.Columns[0].HeaderText = "사원번호";
@@ -31,7 +36,6 @@ namespace insaProjecct_v2
             {
                 _instance = new insaSide();
             }
-
             return _instance;
         }
 

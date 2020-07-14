@@ -12,7 +12,7 @@ namespace Common
         // 폼의 컨트롤을 담을 리스트
         public List<Control> get_control_list = new List<Control>();
 
-        #region 컨트롤 Null값 체크
+        #region 컨트롤 Null값 체크 (true일 경우 Null)
         public Boolean control_nullcheck()
         {
             foreach (Control b in get_control_list)
@@ -28,7 +28,6 @@ namespace Common
                             (b as ComboBox).Select();
                             (b as ComboBox).DroppedDown = true;
                         }
-                        Console.WriteLine(b.Name + ":" + b.Text);
                         return true;
 
                     }
@@ -44,7 +43,6 @@ namespace Common
         {
             foreach (Control b in get_control_list)
             {
-                Console.WriteLine("reset:" + b.Name);
                 b.ResetText();
                 if (b.GetType() == typeof(ComboBox)) (b as ComboBox).SelectedItem = null;
                 if (b.GetType() == typeof(RichTextBox)) (b as RichTextBox).Clear();
@@ -93,7 +91,7 @@ namespace Common
                         }
                         else
                         {
-                            if (b.GetType() == typeof(TextBox) || b.GetType() == typeof(RichTextBox) || b.GetType() == typeof(ComboBox) || b.GetType() == typeof(MaskedTextBox))
+                            if (b.GetType() == typeof(TextBox) || b.GetType() == typeof(RichTextBox) || b.GetType() == typeof(ComboBox) || b.GetType() == typeof(MaskedTextBox) || b.GetType() == typeof(DateTimePicker))
                             {
                                 get_control_list.Add(b);
                             }

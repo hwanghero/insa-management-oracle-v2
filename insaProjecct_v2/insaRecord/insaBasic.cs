@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using _Database;
 using Common;
 using Oracle.ManagedDataAccess.Client;
+using insaProjecct_v2.insaRecord;
 
 namespace insaProjecct_v2
 {
@@ -12,15 +13,21 @@ namespace insaProjecct_v2
     {
         // 콤보박스 DB 저장용
         static List<Control> CODE_STORE = new List<Control>();
-        // 코드 DB 저장용
+        // 콤보박스 코드 DB 저장용
         static List<string[,]> CODE_ = new List<string[,]>();
-
+        // 콤보박스에 코드 변환 DB 저장용
+        static List<string[]> CODELIST = new List<string[]>();
+        // 불러온 사원 데이터 저장용
+        static Object[] empno_info;
         // DB 접속
         OracleDBManager _DB = new OracleDBManager();
+
+
         public insaBasic()
         {
             InitializeComponent();
         }
+
         #region 인사기본사항 정보 입력
         /*
          *  인사기본사항
@@ -99,43 +106,128 @@ namespace insaProjecct_v2
             return check;
         }
         #endregion
+
         public void DB_Insert()
         {
             try
             {
-                //int nmbox = Convert.ToInt32(newbie_month_box.Text);
-                //if (thrm_bas_add(e_no_box.Text, rrn_box.Text, kor_name_box.Text, chn_name_box.Text, eng_name_box.Text,
-                //    sexxbox.Text, zip_box.Text, address_box.Text, residence_box.Text, phone_box.Text, home_box.Text, email1_box.Text,
-                //    mil_ok_box.Text, save_keys[3], mil_rank_box.Text, marry_box.Text, save_keys[4], bank_master_box.Text,
-                //    bank_number_box.Text, save_keys[5], bank_master_box2.Text, bank_number_box2.Text, contract_box.Text,
-                //    newbie_check_box.Text, nmbox, slave_start.Value.ToString("yyyyMMdd"), slave_end.Value.ToString("yyyyMMdd"),
-                //    join_box.Value.ToString("yyyyMMdd"), goodbye_box.Value.ToString("yyyyMMdd"), "", "", state_box.Text, save_keys[1], save_keys[0], save_keys[2],
-                //    dept_keys, note_box.Text, now_rank_box.Value.ToString("yyyyMMdd"), now_spot_box.Value.ToString("yyyyMMdd"), now_department_box.Value.ToString("yyyyMMdd"),
-                //    now_newbie_box.Value.ToString("yyyyMMdd"), nowtime, "A", "userid") == 0)
-                //{
-                //    MessageBox.Show("입력이 완료되었습니다.");
-                //    from_control.get_control(this, false);
-                //    from_control.control_reset();
-                //}
+                Form_Control from_control = new Form_Control();
+                from_control.get_control(this, false);
+                if (!from_control.control_nullcheck())
+                {
+                    String nowtime = DateTime.Now.ToString("yyyyMMdd");
+                    int nmbox = Convert.ToInt32(newbie_month_box.Text);
+                    if (thrm_bas_add(e_no_box.Text, rrn_box.Text, kor_name_box.Text, chn_name_box.Text, eng_name_box.Text,
+                        sexxbox.Text, zip_box.Text, address_box.Text, residence_box.Text, phone_box.Text, home_box.Text, email1_box.Text,
+                        mil_ok_box.Text, StringToCode(mil_catagory_box), mil_rank_box.Text, marry_box.Text, StringToCode(bank_combox), bank_master_box.Text,
+                        bank_number_box.Text, StringToCode(bank2_combox), bank_master_box2.Text, bank_number_box2.Text, contract_box.Text,
+                        newbie_check_box.Text, nmbox, slave_start.Value.ToString("yyyyMMdd"), slave_end.Value.ToString("yyyyMMdd"),
+                        join_box.Value.ToString("yyyyMMdd"), goodbye_box.Value.ToString("yyyyMMdd"), "", "", state_box.Text, StringToCode(sts_combox), StringToCode(rank_combox), StringToCode(dut_combox),
+                        StringToCode(dept_combox), note_box.Text, now_rank_box.Value.ToString("yyyyMMdd"), now_spot_box.Value.ToString("yyyyMMdd"), now_department_box.Value.ToString("yyyyMMdd"),
+                        now_newbie_box.Value.ToString("yyyyMMdd"), nowtime, "A", "userid") == 0)
+                    {
+                        MessageBox.Show("입력이 완료되었습니다.");
+                        from_control.control_reset();
+                        erpMain.getResult = true;
+                    }
+                }
             }
             catch (Exception a)
             {
                 MessageBox.Show("입력에 실패하였습니다.\n\n" + a);
+                erpMain.getResult = false;
             }
-            MessageBox.Show("basic insert");
         }
-
 
         public void DB_Update()
         {
-            MessageBox.Show("basic update");
+            MessageBox.Show(insaSide.select_empno);
+            Control_Input_Date();
         }
+
+        #region 인사기본사항 사원 정보 불러오기
+
+        //  업데이트시 상태일경우 넣어야지
+        public void Control_Input_Date()
+        {
+            empno_info = thrm_bas_select(insaSide.select_empno);
+            rrn_box.Text = empno_info[1].ToString();
+            kor_name_box.Text = empno_info[2].ToString();
+            chn_name_box.Text = empno_info[3].ToString();
+            eng_name_box.Text = empno_info[4].ToString();
+            sexxbox.Text = empno_info[5].ToString();
+            zip_box.Text = empno_info[6].ToString();
+            address_box.Text = empno_info[7].ToString();
+            residence_box.Text = empno_info[8].ToString();
+            phone_box.Text = empno_info[9].ToString();
+            home_box.Text = empno_info[10].ToString();
+            email1_box.Text = empno_info[11].ToString();
+            marry_box.Text = empno_info[15].ToString();
+            CodeToString("BNK", empno_info[16].ToString(), bank_combox);
+            bank_master_box.Text = empno_info[17].ToString();
+            bank_number_box.Text = empno_info[18].ToString();
+            CodeToString("BNK", empno_info[19].ToString(), bank2_combox);
+            bank_master_box2.Text = empno_info[20].ToString();
+            bank_number_box2.Text = empno_info[21].ToString();
+            mil_ok_box.Text = empno_info[12].ToString();
+            mil_catagory_box.Text = empno_info[13].ToString();
+            CodeToString("MIL", empno_info[13].ToString(), mil_catagory_box);
+            Console.WriteLine(empno_info[13].ToString());
+            mil_rank_box.Text = empno_info[14].ToString();
+            note_box.Text = empno_info[36].ToString();
+            contract_box.Text = empno_info[22].ToString();
+            newbie_check_box.Text = empno_info[23].ToString();
+            newbie_month_box.Text = empno_info[24].ToString();
+            slave_start.Value = DateTime.ParseExact(empno_info[25].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            slave_end.Value = DateTime.ParseExact(empno_info[26].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            join_box.Value = DateTime.ParseExact(empno_info[27].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            goodbye_box.Value = DateTime.ParseExact(empno_info[28].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            state_box.Text = empno_info[31].ToString();
+            CodeToString("STS", empno_info[32].ToString(), sts_combox);
+            CodeToString("POS", empno_info[33].ToString(), rank_combox);
+            CodeToString("DUT", empno_info[34].ToString(), dut_combox);
+            CodeToString("DEPT", empno_info[35].ToString(), dept_combox);
+            now_rank_box.Value = DateTime.ParseExact(empno_info[37].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            now_spot_box.Value = DateTime.ParseExact(empno_info[38].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            now_department_box.Value = DateTime.ParseExact(empno_info[39].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+            now_newbie_box.Value = DateTime.ParseExact(empno_info[40].ToString() as String, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+        }
+
+        public Object[] thrm_bas_select(String emp_no)
+        {
+            Object[] date = new Object[44];
+
+            try
+            {
+                if (_DB.GetConnection() == true)
+                {
+                    using (OracleCommand cmd = new OracleCommand())
+                    {
+                        cmd.Connection = _DB.Connection;
+                        cmd.CommandText = "select * from thrm_bas_hwy where bas_empno = '" + emp_no + "'";
+
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                reader.GetValues(date);
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+            return date;
+        }
+        #endregion
 
         public void DB_Delete()
         {
             MessageBox.Show("basic delete");
         }
-
 
         #region 폼 로드시에 콤보박스 값 넣기 (DB 한번 사용)
         private void insaBasic_Load(object sender, EventArgs e)
@@ -155,11 +247,6 @@ namespace insaProjecct_v2
                 CODE_INPUT("MIL");
                 CODE_INPUT("BNK");
                 CODE_INPUT("DEPT");
-            }
-
-            foreach (string[,] b in CODE_)
-            {
-                Console.WriteLine(b[0,0] +":"+ b[1, 0]);
             }
 
             // 리스트에 있는거 가져오기
@@ -205,7 +292,7 @@ namespace insaProjecct_v2
                         {
                             while (reader.Read())
                             {
-                                combo.Items.Add(reader["CD_CODNMS"].ToString());
+                                combo.Items.Add(reader["CD_CODE"].ToString() + "-" + reader["CD_CODNMS"].ToString());
                             }
                         }
                     }
@@ -216,7 +303,7 @@ namespace insaProjecct_v2
                         {
                             while (reader.Read())
                             {
-                                combo.Items.Add(reader["dept_name"].ToString());
+                                combo.Items.Add(reader["DEPT_CODE"].ToString() + "-" + reader["dept_name"].ToString());
                             }
                         }
                     }
@@ -227,5 +314,43 @@ namespace insaProjecct_v2
             return combo;
         }
         #endregion
+
+        #region 콤보박스 코드 변환
+        public string StringToCode(ComboBox getBox)
+        {
+            string[] result = getBox.SelectedItem.ToString().Split('-');
+            return result[0];
+        }
+
+        public void CodeToString(string getCode, String empno_data, ComboBox getCombobox)
+        {
+            if (CODELIST.Count == 0)
+            {
+                _Code _Code = new _Code();
+                CODELIST = _Code.getCodeList();
+            }
+
+            foreach (string[] a in CODELIST)
+            {
+                if (a[0].Contains(getCode))
+                {
+                    foreach (string b in a)
+                    {
+                        if (b.Equals(empno_data))
+                        {
+                            getCombobox.Text = a[2] + "-" + a[1];
+                            Console.WriteLine(a[2] + "-" + a[1]);
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            insaBasic_Address form_address = new insaBasic_Address(this);
+            form_address.Show();
+        }
     }
 }
