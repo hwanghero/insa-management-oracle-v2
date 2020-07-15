@@ -73,6 +73,11 @@ namespace insaProjecct_v2
                 MethodInfo method = type.GetMethod("ShowCareer_Data");
                 method.Invoke(erpMain.now_form, null);
             }
+            else if (erpMain.now_form == (erpMain.now_form as insaPoint))
+            {
+                MethodInfo method = type.GetMethod("ShowData");
+                method.Invoke(erpMain.now_form, null);
+            }
         }
     }
 }

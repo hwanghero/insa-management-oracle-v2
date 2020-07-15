@@ -85,6 +85,12 @@
       <DependentUpon>insaFamily.cs</DependentUpon>
     </Compile>
     <Compile Include="insaRecord\Iinsa_Interface.cs" />
+    <Compile Include="insaRecord\insaPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaPoint.Designer.cs">
+      <DependentUpon>insaPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaSide.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaFamily.resx">
       <DependentUpon>insaFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaPoint.resx">
+      <DependentUpon>insaPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaSide.resx">
       <DependentUpon>insaSide.cs</DependentUpon>

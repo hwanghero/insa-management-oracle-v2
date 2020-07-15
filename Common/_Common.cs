@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -60,5 +61,13 @@ namespace Common
             return ltForm;
         }
         #endregion
+
+        public DateTime ParseString(string data_string, string format)
+        {
+            DateTime result_time;
+            if (data_string.Length > 8) result_time = DateTime.ParseExact(data_string, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            else result_time = DateTime.ParseExact(data_string, format, CultureInfo.InvariantCulture);
+            return result_time;
+        }
     }
 }
