@@ -1,6 +1,5 @@
 ﻿using _Database;
 using insaRecord;
-using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,19 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common;
+using Oracle.ManagedDataAccess.Client;
 
 namespace insaProjecct_v2
 {
-    public partial class insaPoint : Form, Iinsa_Interface
+    public partial class insaSchool : Form, Iinsa_Interface
     {
         OracleDBManager _DB = new OracleDBManager();
         // 삭제 정보 저장
         List<string> getDeleteREL = new List<string>();
         DateTimePicker dtp;
-
         _Common common = new _Common();
-
-        public insaPoint()
+        public insaSchool()
         {
             InitializeComponent();
             if (insaSide.select_empno != null)
@@ -45,12 +43,12 @@ namespace insaProjecct_v2
                 using (OracleCommand cmd = new OracleCommand())
                 {
                     cmd.Connection = _DB.Connection;
-                    cmd.CommandText = "select AWARD_DATE, AWARD_TYPE, AWARD_NO, AWARD_KIND, AWARD_ORGAN, AWARD_CONTENT, AWARD_INOUT, AWARD_POS, AWARD_DEPT from thrm_award_hwy where AWARD_EMPNO='" + insaSide.select_empno + "'";
+                    cmd.CommandText = "select EDU_LOE, EDU_ENTDATE, EDU_GRADATE, EDU_SCHNM, EDU_DEPT, EDU_DEGREE, EDU_GRADE, EDU_GRA, EDU_LAST from thrm_edu_hwy where EDU_EMPNO='" + insaSide.select_empno + "'";
                     using (OracleDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            dataGridView1.Rows.Add(reader["AWARD_DATE"], reader["AWARD_TYPE"], reader["AWARD_NO"], reader["AWARD_KIND"], reader["AWARD_ORGAN"], reader["AWARD_CONTENT"], reader["AWARD_INOUT"], reader["AWARD_POS"], reader["AWARD_DEPT"], "");
+                            dataGridView1.Rows.Add(reader["EDU_LOE"], reader["EDU_ENTDATE"], reader["EDU_GRADATE"], reader["EDU_SCHNM"], reader["EDU_DEPT"], reader["EDU_DEGREE"], reader["EDU_GRADE"], reader["EDU_GRA"], reader["EDU_LAST"], "");
                         }
                     }
                 }
@@ -63,24 +61,24 @@ namespace insaProjecct_v2
         {
             foreach (DataGridViewRow dtRow in dataGridView1.Rows)
             {
-                String AWARD_DATE = dtRow.Cells["상벌일자"].FormattedValue.ToString();
-                String AWARD_TYPE = dtRow.Cells["상벌구분"].FormattedValue.ToString();
-                String AWARD_NO = dtRow.Cells["상벌번호"].FormattedValue.ToString();
-                String AWARD_KIND = dtRow.Cells["상벌종별"].FormattedValue.ToString();
-                String AWARD_ORGAN = dtRow.Cells["시행처"].FormattedValue.ToString();
-                String AWARD_CONTENT = dtRow.Cells["상벌내용"].FormattedValue.ToString();
-                String AWARD_INOUT = dtRow.Cells["내외구분"].FormattedValue.ToString();
-                String AWARD_POS = dtRow.Cells["직급"].FormattedValue.ToString();
-                String AWARD_DEPT = dtRow.Cells["소속"].FormattedValue.ToString();
+                String EDU_LOE = dtRow.Cells["학력구분"].FormattedValue.ToString();
+                String EDU_ENTDATE = dtRow.Cells["입학일자"].FormattedValue.ToString();
+                String EDU_GRADATE = dtRow.Cells["졸업일자"].FormattedValue.ToString();
+                String EDU_SCHNM = dtRow.Cells["학교명"].FormattedValue.ToString();
+                String EDU_DEPT = dtRow.Cells["학과"].FormattedValue.ToString();
+                String EDU_DEGREE = dtRow.Cells["학위"].FormattedValue.ToString();
+                String EDU_GRADE = dtRow.Cells["성적"].FormattedValue.ToString();
+                String EDU_GRA = dtRow.Cells["졸업구분"].FormattedValue.ToString();
+                String EDU_LAST = dtRow.Cells["최종여부"].FormattedValue.ToString();
                 String check = dtRow.Cells["정보상태"].FormattedValue.ToString();
 
                 if (check.Equals("Insert"))
                 {
-                    thrm_add(insaSide.select_empno, common.ParseString(AWARD_DATE, "yyyyMMdd"), AWARD_TYPE, AWARD_NO, AWARD_KIND, AWARD_ORGAN, AWARD_CONTENT, AWARD_INOUT, AWARD_POS, AWARD_DEPT);
+                    thrm_add(insaSide.select_empno, EDU_LOE, common.ParseString(EDU_ENTDATE,"yyyyMMdd") , common.ParseString(EDU_GRADATE, "yyyyMMdd"), EDU_SCHNM, EDU_DEPT, EDU_DEGREE, EDU_GRADE, EDU_GRA, EDU_LAST);
                 }
                 else if (check.Equals("Update"))
                 {
-                    thrm_update(insaSide.select_empno, common.ParseString(AWARD_DATE, "yyyyMMdd"), AWARD_TYPE, AWARD_NO, AWARD_KIND, AWARD_ORGAN, AWARD_CONTENT, AWARD_INOUT, AWARD_POS, AWARD_DEPT);
+                    thrm_update(insaSide.select_empno, EDU_LOE, common.ParseString(EDU_ENTDATE, "yyyyMMdd"), common.ParseString(EDU_GRADATE, "yyyyMMdd"), EDU_SCHNM, EDU_DEPT, EDU_DEGREE, EDU_GRADE, EDU_GRA, EDU_LAST);
                 }
             }
 
@@ -96,7 +94,7 @@ namespace insaProjecct_v2
 
         #region 입력, 수정, 삭제 DB 접속
         // 입력
-        public int thrm_add(String empno, DateTime car_com, String car_region, String car_yyyymm_f, String car_yyyymm_t, String car_pos, String car_dept, String car_job, String car_reason, String award_dept)
+        public int thrm_add(String empno, String car_com, DateTime car_region, DateTime car_yyyymm_f, String car_yyyymm_t, String car_pos, String car_dept, String car_job, String car_reason, String award_dept)
         {
             int check = 1;
             try
@@ -106,11 +104,11 @@ namespace insaProjecct_v2
                     OracleCommand comm = new OracleCommand();
                     comm.Connection = _DB.Connection;
 
-                    comm.CommandText = @"INSERT INTO thrm_award_hwy values(:empno, :resno, :name, :cname, :ename, :datasys1, :datasys2, :datasys3, :car_reason, :award_dept)";
+                    comm.CommandText = @"INSERT INTO thrm_edu_hwy values(:empno, :resno, :name, :cname, :ename, :datasys1, :datasys2, :datasys3, :car_reason, :award_dept)";
                     comm.Parameters.Add("empno", empno);
-                    comm.Parameters.Add("resno", car_com.ToString("yyyyMMdd"));
-                    comm.Parameters.Add("name", car_region);
-                    comm.Parameters.Add("cname", car_yyyymm_f);
+                    comm.Parameters.Add("resno", car_com);
+                    comm.Parameters.Add("name", car_region.ToString("yyyyMMdd"));
+                    comm.Parameters.Add("cname", car_yyyymm_f.ToString("yyyyMMdd"));
                     comm.Parameters.Add("ename", car_yyyymm_t);
                     comm.Parameters.Add("datasys1", car_pos);
                     comm.Parameters.Add("datasys2", car_dept);
@@ -132,7 +130,7 @@ namespace insaProjecct_v2
             return check;
         }
 
-        public int thrm_update(String empno, DateTime car_com, String car_region, String car_yyyymm_f, String car_yyyymm_t, String car_pos, String car_dept, String car_job, String car_reason, String award_dept)
+        public int thrm_update(String empno, String car_com, DateTime car_region, DateTime car_yyyymm_f, String car_yyyymm_t, String car_pos, String car_dept, String car_job, String car_reason, String award_dept)
         {
             int check = 1;
             try
@@ -142,7 +140,7 @@ namespace insaProjecct_v2
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
-                        comm.CommandText = @"update thrm_award_hwy set AWARD_DATE='" + car_com.ToString("yyyyMMdd") + "', AWARD_TYPE='" + car_region + "', AWARD_NO='" + car_yyyymm_f + "', AWARD_KIND='" + car_yyyymm_t + "', AWARD_ORGAN='" + car_pos + "', AWARD_CONTENT='" + car_dept + "', AWARD_INOUT='" + car_job + "', AWARD_POS='" + car_reason + "', AWARD_DEPT='" + award_dept + "' where AWARD_EMPNO='" + empno + "' and AWARD_NO='" + car_yyyymm_f + "'";
+                        comm.CommandText = @"update thrm_edu_hwy set EDU_LOE='" + car_com + "', EDU_ENTDATE='" + car_region.ToString("yyyyMMdd") + "', EDU_GRADATE='" + car_yyyymm_f.ToString("yyyyMMdd") + "', EDU_SCHNM='" + car_yyyymm_t + "', EDU_DEPT='" + car_pos + "', EDU_DEGREE='" + car_dept + "', EDU_GRADE='" + car_job + "', EDU_GRA='" + car_reason + "', EDU_LAST='" + award_dept + "' where EDU_EMPNO='" + empno + "' and EDU_SCHNM='" + car_yyyymm_t + "'";
                         var a = comm.ExecuteNonQuery();
                         check = 0;
                         Console.WriteLine(comm.CommandText);
@@ -167,7 +165,7 @@ namespace insaProjecct_v2
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
-                        comm.CommandText = @"delete from thrm_award_hwy where AWARD_EMPNO='" + empno + "' and AWARD_NO='" + CAR_COM + "'";
+                        comm.CommandText = @"delete from thrm_edu_hwy where EDU_EMPNO='" + empno + "' and EDU_SCHNM='" + CAR_COM + "'";
                         var a = comm.ExecuteNonQuery();
                         check = 0;
                         Console.WriteLine(comm.CommandText);
@@ -197,6 +195,7 @@ namespace insaProjecct_v2
         {
 
         }
+
         #region 추가버튼 누를시
         private void button1_Click(object sender, EventArgs e)
         {
@@ -213,7 +212,7 @@ namespace insaProjecct_v2
         {
             if (e.ColumnIndex > -1)
             {
-                if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("상벌일자"))
+                if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("입학일자") || dataGridView1.Columns[e.ColumnIndex].Name.Equals("졸업일자"))
                 {
                     dtp = new DateTimePicker();
                     dtp.Format = DateTimePickerFormat.Short;
@@ -227,7 +226,6 @@ namespace insaProjecct_v2
                 }
             }
         }
-
         private void dtp_OnTextChange(object sender, EventArgs e)
         {
             dataGridView1.CurrentCell.Value = dtp.Text.ToString();
@@ -235,12 +233,6 @@ namespace insaProjecct_v2
         private void dtp_CloseUp(object sender, EventArgs e)
         {
             dtp.Visible = false;
-        }
-
-        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            DataGridViewRow row = dataGridView1.Rows[e.Row.Index];
-            getDeleteREL.Add(row.Cells[2].Value.ToString());
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -259,14 +251,10 @@ namespace insaProjecct_v2
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            DataGridViewRow row = dataGridView1.Rows[e.Row.Index];
+            getDeleteREL.Add(row.Cells[4].Value.ToString());
         }
     }
 }

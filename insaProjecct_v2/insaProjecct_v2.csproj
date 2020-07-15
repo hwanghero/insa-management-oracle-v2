@@ -91,6 +91,12 @@
     <Compile Include="insaRecord\insaPoint.Designer.cs">
       <DependentUpon>insaPoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="insaRecord\insaSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaSchool.Designer.cs">
+      <DependentUpon>insaSchool.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaSide.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaPoint.resx">
       <DependentUpon>insaPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaSchool.resx">
+      <DependentUpon>insaSchool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaSide.resx">
       <DependentUpon>insaSide.cs</DependentUpon>
