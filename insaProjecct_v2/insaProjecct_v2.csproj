@@ -72,6 +72,12 @@
     <Compile Include="insaRecord\insaBasic_Address.Designer.cs">
       <DependentUpon>insaBasic_Address.cs</DependentUpon>
     </Compile>
+    <Compile Include="insaRecord\insaCareer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaCareer.Designer.cs">
+      <DependentUpon>insaCareer.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaFamily.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaBasic_Address.resx">
       <DependentUpon>insaBasic_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaCareer.resx">
+      <DependentUpon>insaCareer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaFamily.resx">
       <DependentUpon>insaFamily.cs</DependentUpon>

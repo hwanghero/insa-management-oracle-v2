@@ -14,6 +14,8 @@ namespace insaProjecct_v2
 
         // 패널에 띄울 폼, 리플랙션 할 오브젝트
         Form saveform;
+
+        // 현재 폼 저장인데 판단이 이상하네?
         static public object now_form;
 
         // CRUD MODE
@@ -26,7 +28,6 @@ namespace insaProjecct_v2
         static public Boolean getResult { get; set; }
         _Common common = new _Common();
 
-
         // 폼 여러개 추가
         public void add_form(Form form)
         {
@@ -37,19 +38,15 @@ namespace insaProjecct_v2
             form.TopLevel = false;
             form.Parent = this.panel1;
             form.Show();
-            now_form = form;
             saveform = form;
             control.get_control(form, false);
             control.control_enabled(false);
 
             // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
             // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
-            if (now_form != (now_form as insaBasic))
-            {
+            if (now_form != (now_form as insaBasic)){
                 CRUD_Hide(false);
-            }
-            else
-            {
+            }else{
                 CRUD_Hide(true);
             }
         }
@@ -81,34 +78,49 @@ namespace insaProjecct_v2
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            List<Form> ltList = GetAssemblyFormList();
-            foreach (Form load in ltList)
+            List<Form> ltForm = new List<Form>();
+            foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
             {
-                if (e.Node.Text.Equals(load.Tag))
+                // 상속받는게 없기때문에 BaseType에서 오류가남.
+                // insaside = 싱글톤 에러
+                // interface = 생성자 에러
+                if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
                 {
-                    add_form(load);
+                    if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
+                    {
+                        object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
+                        Form f = o as Form;
+                        if (now_form != f)
+                        {
+                            if (now_form != null) Console.WriteLine("now_form 현재값: " + now_form.ToString());
+                            Console.WriteLine("now_form 목록: " + t.ToString());
+                            if (e.Node.Text.Equals(f.Tag))
+                            {
+                                now_form = f;
+                                Console.WriteLine("now_form 확정: " + now_form.ToString());
+                                add_form(f);
+                                break;
+                            }
+                        }
+
+                    }
                 }
             }
+
+            //List<Form> ltList = GetAssemblyFormList();
+            //foreach (Form load in ltList)
+            //{
+            //    if (e.Node.Text.Equals(load.Tag))
+            //    {
+            //        now_form = load;
+            //        add_form(load);
+            //        MessageBox.Show("NodeMouse:"+now_form.ToString());
+            //        break;
+            //    }
+            //}
         }
 
         #region 프로젝트 폼 목록 읽어 오기
-        public static Form GetAssemblyForm(string strFormName)
-        {
-            Form f = null;
-            foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
-            {
-                //프로젝트 내 폼 중에서 찾을 이름과 같으면..
-                if (t.Name == strFormName)
-                {
-                    //인스턴스 개체 생성 
-                    object o = Activator.CreateInstance(t);
-                    //인스턴스 개체 폼 형식으로 캐스팅
-                    f = o as Form;
-                }
-            }
-            return f;
-        }
-
         public static List<Form> GetAssemblyFormList()
         {
             List<Form> ltForm = new List<Form>();
@@ -122,6 +134,7 @@ namespace insaProjecct_v2
                     if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
                     {
                         object o = Activator.CreateInstance(t);
+                        MessageBox.Show(t.ToString());
                         Form f = o as Form;
                         ltForm.Add(f);
                     }

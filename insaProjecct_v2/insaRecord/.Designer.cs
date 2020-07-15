@@ -206,7 +206,7 @@
             // bank_number_box
             // 
             this.bank_number_box.Location = new System.Drawing.Point(158, 58);
-            this.bank_number_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank_number_box.Margin = new System.Windows.Forms.Padding(5);
             this.bank_number_box.MaxLength = 10;
             this.bank_number_box.Name = "bank_number_box";
             this.bank_number_box.Size = new System.Drawing.Size(114, 21);
@@ -226,7 +226,7 @@
             // note_box
             // 
             this.note_box.Location = new System.Drawing.Point(8, 22);
-            this.note_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.note_box.Margin = new System.Windows.Forms.Padding(4);
             this.note_box.MaxLength = 200;
             this.note_box.Multiline = false;
             this.note_box.Name = "note_box";
@@ -239,7 +239,7 @@
             this.mil_catagory_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mil_catagory_box.FormattingEnabled = true;
             this.mil_catagory_box.Location = new System.Drawing.Point(158, 37);
-            this.mil_catagory_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_catagory_box.Margin = new System.Windows.Forms.Padding(4);
             this.mil_catagory_box.Name = "mil_catagory_box";
             this.mil_catagory_box.Size = new System.Drawing.Size(64, 20);
             this.mil_catagory_box.TabIndex = 21;
@@ -254,7 +254,7 @@
             "미필",
             "면제"});
             this.mil_ok_box.Location = new System.Drawing.Point(158, 18);
-            this.mil_ok_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_ok_box.Margin = new System.Windows.Forms.Padding(4);
             this.mil_ok_box.Name = "mil_ok_box";
             this.mil_ok_box.Size = new System.Drawing.Size(64, 20);
             this.mil_ok_box.TabIndex = 20;
@@ -281,7 +281,7 @@
             "상병",
             "병장"});
             this.mil_rank_box.Location = new System.Drawing.Point(158, 57);
-            this.mil_rank_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_rank_box.Margin = new System.Windows.Forms.Padding(4);
             this.mil_rank_box.Name = "mil_rank_box";
             this.mil_rank_box.Size = new System.Drawing.Size(64, 20);
             this.mil_rank_box.TabIndex = 23;
@@ -379,7 +379,7 @@
             this.bank2_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bank2_combox.FormattingEnabled = true;
             this.bank2_combox.Location = new System.Drawing.Point(158, 89);
-            this.bank2_combox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bank2_combox.Margin = new System.Windows.Forms.Padding(4);
             this.bank2_combox.Name = "bank2_combox";
             this.bank2_combox.Size = new System.Drawing.Size(84, 20);
             this.bank2_combox.TabIndex = 17;
@@ -390,7 +390,7 @@
             this.bank_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bank_combox.FormattingEnabled = true;
             this.bank_combox.Location = new System.Drawing.Point(158, 18);
-            this.bank_combox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bank_combox.Margin = new System.Windows.Forms.Padding(4);
             this.bank_combox.Name = "bank_combox";
             this.bank_combox.Size = new System.Drawing.Size(84, 20);
             this.bank_combox.TabIndex = 14;
@@ -421,7 +421,7 @@
             // bank_number_box2
             // 
             this.bank_number_box2.Location = new System.Drawing.Point(158, 130);
-            this.bank_number_box2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank_number_box2.Margin = new System.Windows.Forms.Padding(5);
             this.bank_number_box2.MaxLength = 10;
             this.bank_number_box2.Name = "bank_number_box2";
             this.bank_number_box2.Size = new System.Drawing.Size(114, 21);
@@ -430,7 +430,7 @@
             // bank_master_box
             // 
             this.bank_master_box.Location = new System.Drawing.Point(158, 37);
-            this.bank_master_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank_master_box.Margin = new System.Windows.Forms.Padding(5);
             this.bank_master_box.MaxLength = 10;
             this.bank_master_box.Name = "bank_master_box";
             this.bank_master_box.Size = new System.Drawing.Size(114, 21);
@@ -455,9 +455,9 @@
             this.groupBox3.Controls.Add(this.bank_master_box);
             this.groupBox3.Controls.Add(this.bank_master_box2);
             this.groupBox3.Location = new System.Drawing.Point(477, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(413, 162);
             this.groupBox3.TabIndex = 110;
             this.groupBox3.TabStop = false;
@@ -521,7 +521,7 @@
             // bank_master_box2
             // 
             this.bank_master_box2.Location = new System.Drawing.Point(158, 109);
-            this.bank_master_box2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bank_master_box2.Margin = new System.Windows.Forms.Padding(5);
             this.bank_master_box2.MaxLength = 10;
             this.bank_master_box2.Name = "bank_master_box2";
             this.bank_master_box2.Size = new System.Drawing.Size(114, 21);
@@ -546,7 +546,7 @@
             "기혼",
             "미혼"});
             this.marry_box.Location = new System.Drawing.Point(114, 322);
-            this.marry_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marry_box.Margin = new System.Windows.Forms.Padding(4);
             this.marry_box.Name = "marry_box";
             this.marry_box.Size = new System.Drawing.Size(53, 20);
             this.marry_box.TabIndex = 13;
@@ -556,9 +556,9 @@
             this.groupBox5.Controls.Add(this.label49);
             this.groupBox5.Controls.Add(this.note_box);
             this.groupBox5.Location = new System.Drawing.Point(477, 267);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(413, 91);
             this.groupBox5.TabIndex = 113;
             this.groupBox5.TabStop = false;
@@ -573,9 +573,9 @@
             this.mil_group.Controls.Add(this.mil_ok_box);
             this.mil_group.Controls.Add(this.mil_rank_box);
             this.mil_group.Location = new System.Drawing.Point(477, 173);
-            this.mil_group.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_group.Margin = new System.Windows.Forms.Padding(4);
             this.mil_group.Name = "mil_group";
-            this.mil_group.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mil_group.Padding = new System.Windows.Forms.Padding(4);
             this.mil_group.Size = new System.Drawing.Size(413, 89);
             this.mil_group.TabIndex = 111;
             this.mil_group.TabStop = false;
@@ -707,7 +707,7 @@
             this.badtime_box.Enabled = false;
             this.badtime_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.badtime_box.Location = new System.Drawing.Point(660, 121);
-            this.badtime_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.badtime_box.Margin = new System.Windows.Forms.Padding(4);
             this.badtime_box.Name = "badtime_box";
             this.badtime_box.Size = new System.Drawing.Size(93, 21);
             this.badtime_box.TabIndex = 40;
@@ -717,7 +717,7 @@
             this.slave_end.CustomFormat = "yyyy-MM-dd";
             this.slave_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.slave_end.Location = new System.Drawing.Point(660, 74);
-            this.slave_end.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.slave_end.Margin = new System.Windows.Forms.Padding(4);
             this.slave_end.Name = "slave_end";
             this.slave_end.Size = new System.Drawing.Size(93, 21);
             this.slave_end.TabIndex = 38;
@@ -761,7 +761,7 @@
             this.goodtime_box.Enabled = false;
             this.goodtime_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.goodtime_box.Location = new System.Drawing.Point(660, 97);
-            this.goodtime_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goodtime_box.Margin = new System.Windows.Forms.Padding(4);
             this.goodtime_box.Name = "goodtime_box";
             this.goodtime_box.Size = new System.Drawing.Size(93, 21);
             this.goodtime_box.TabIndex = 39;
@@ -796,7 +796,7 @@
             "남",
             "여"});
             this.sexxbox.Location = new System.Drawing.Point(114, 142);
-            this.sexxbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexxbox.Margin = new System.Windows.Forms.Padding(4);
             this.sexxbox.Name = "sexxbox";
             this.sexxbox.Size = new System.Drawing.Size(42, 20);
             this.sexxbox.TabIndex = 6;
@@ -839,7 +839,7 @@
             this.now_rank_box.CustomFormat = "yyyy-MM-dd";
             this.now_rank_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.now_rank_box.Location = new System.Drawing.Point(113, 96);
-            this.now_rank_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.now_rank_box.Margin = new System.Windows.Forms.Padding(4);
             this.now_rank_box.Name = "now_rank_box";
             this.now_rank_box.Size = new System.Drawing.Size(90, 21);
             this.now_rank_box.TabIndex = 27;
@@ -860,7 +860,7 @@
             this.slave_start.CustomFormat = "yyyy-MM-dd";
             this.slave_start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.slave_start.Location = new System.Drawing.Point(660, 50);
-            this.slave_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.slave_start.Margin = new System.Windows.Forms.Padding(4);
             this.slave_start.Name = "slave_start";
             this.slave_start.Size = new System.Drawing.Size(93, 21);
             this.slave_start.TabIndex = 37;
@@ -916,13 +916,13 @@
             this.groupBox1.Controls.Add(this.home_box);
             this.groupBox1.Controls.Add(this.phone_box);
             this.groupBox1.Location = new System.Drawing.Point(3, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(466, 353);
             this.groupBox1.TabIndex = 109;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "기본정보";
+            this.groupBox1.Text = "인사기본사항";
             // 
             // label8
             // 
@@ -982,7 +982,7 @@
             // chn_name_box
             // 
             this.chn_name_box.Location = new System.Drawing.Point(114, 92);
-            this.chn_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.chn_name_box.Margin = new System.Windows.Forms.Padding(5);
             this.chn_name_box.MaxLength = 20;
             this.chn_name_box.Name = "chn_name_box";
             this.chn_name_box.Size = new System.Drawing.Size(146, 21);
@@ -991,7 +991,7 @@
             // kor_name_box
             // 
             this.kor_name_box.Location = new System.Drawing.Point(114, 69);
-            this.kor_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.kor_name_box.Margin = new System.Windows.Forms.Padding(5);
             this.kor_name_box.MaxLength = 20;
             this.kor_name_box.Name = "kor_name_box";
             this.kor_name_box.Size = new System.Drawing.Size(146, 21);
@@ -1000,7 +1000,7 @@
             // rrn_box
             // 
             this.rrn_box.Location = new System.Drawing.Point(114, 43);
-            this.rrn_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rrn_box.Margin = new System.Windows.Forms.Padding(5);
             this.rrn_box.MaxLength = 13;
             this.rrn_box.Name = "rrn_box";
             this.rrn_box.Size = new System.Drawing.Size(146, 21);
@@ -1009,7 +1009,7 @@
             // e_no_box
             // 
             this.e_no_box.Location = new System.Drawing.Point(114, 18);
-            this.e_no_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.e_no_box.Margin = new System.Windows.Forms.Padding(5);
             this.e_no_box.MaxLength = 5;
             this.e_no_box.Name = "e_no_box";
             this.e_no_box.Size = new System.Drawing.Size(146, 21);
@@ -1018,7 +1018,7 @@
             // eng_name_box
             // 
             this.eng_name_box.Location = new System.Drawing.Point(114, 116);
-            this.eng_name_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.eng_name_box.Margin = new System.Windows.Forms.Padding(5);
             this.eng_name_box.MaxLength = 50;
             this.eng_name_box.Name = "eng_name_box";
             this.eng_name_box.Size = new System.Drawing.Size(146, 21);
@@ -1027,7 +1027,7 @@
             // zip_box
             // 
             this.zip_box.Location = new System.Drawing.Point(114, 166);
-            this.zip_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.zip_box.Margin = new System.Windows.Forms.Padding(5);
             this.zip_box.Name = "zip_box";
             this.zip_box.ReadOnly = true;
             this.zip_box.Size = new System.Drawing.Size(53, 21);
@@ -1036,7 +1036,7 @@
             // address_box
             // 
             this.address_box.Location = new System.Drawing.Point(114, 191);
-            this.address_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.address_box.Margin = new System.Windows.Forms.Padding(5);
             this.address_box.Name = "address_box";
             this.address_box.ReadOnly = true;
             this.address_box.Size = new System.Drawing.Size(342, 21);
@@ -1045,7 +1045,7 @@
             // residence_box
             // 
             this.residence_box.Location = new System.Drawing.Point(114, 217);
-            this.residence_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.residence_box.Margin = new System.Windows.Forms.Padding(5);
             this.residence_box.Name = "residence_box";
             this.residence_box.Size = new System.Drawing.Size(218, 21);
             this.residence_box.TabIndex = 9;
@@ -1053,7 +1053,7 @@
             // email1_box
             // 
             this.email1_box.Location = new System.Drawing.Point(114, 296);
-            this.email1_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.email1_box.Margin = new System.Windows.Forms.Padding(5);
             this.email1_box.Name = "email1_box";
             this.email1_box.Size = new System.Drawing.Size(146, 21);
             this.email1_box.TabIndex = 12;
@@ -1061,7 +1061,7 @@
             // home_box
             // 
             this.home_box.Location = new System.Drawing.Point(114, 270);
-            this.home_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.home_box.Margin = new System.Windows.Forms.Padding(5);
             this.home_box.Name = "home_box";
             this.home_box.Size = new System.Drawing.Size(146, 21);
             this.home_box.TabIndex = 11;
@@ -1069,7 +1069,7 @@
             // phone_box
             // 
             this.phone_box.Location = new System.Drawing.Point(114, 243);
-            this.phone_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.phone_box.Margin = new System.Windows.Forms.Padding(5);
             this.phone_box.Name = "phone_box";
             this.phone_box.Size = new System.Drawing.Size(146, 21);
             this.phone_box.TabIndex = 10;
@@ -1093,7 +1093,7 @@
             "재직",
             "퇴직"});
             this.state_box.Location = new System.Drawing.Point(660, 146);
-            this.state_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.state_box.Margin = new System.Windows.Forms.Padding(4);
             this.state_box.Name = "state_box";
             this.state_box.Size = new System.Drawing.Size(93, 20);
             this.state_box.TabIndex = 41;
@@ -1107,7 +1107,7 @@
             "인턴",
             "없음"});
             this.newbie_check_box.Location = new System.Drawing.Point(377, 121);
-            this.newbie_check_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newbie_check_box.Margin = new System.Windows.Forms.Padding(4);
             this.newbie_check_box.Name = "newbie_check_box";
             this.newbie_check_box.Size = new System.Drawing.Size(88, 20);
             this.newbie_check_box.TabIndex = 34;
@@ -1117,7 +1117,7 @@
             this.now_spot_box.CustomFormat = "yyyy-MM-dd";
             this.now_spot_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.now_spot_box.Location = new System.Drawing.Point(113, 121);
-            this.now_spot_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.now_spot_box.Margin = new System.Windows.Forms.Padding(4);
             this.now_spot_box.Name = "now_spot_box";
             this.now_spot_box.Size = new System.Drawing.Size(90, 21);
             this.now_spot_box.TabIndex = 28;
@@ -1160,7 +1160,7 @@
             this.now_department_box.CustomFormat = "yyyy-MM-dd";
             this.now_department_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.now_department_box.Location = new System.Drawing.Point(113, 146);
-            this.now_department_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.now_department_box.Margin = new System.Windows.Forms.Padding(4);
             this.now_department_box.Name = "now_department_box";
             this.now_department_box.Size = new System.Drawing.Size(90, 21);
             this.now_department_box.TabIndex = 29;
@@ -1170,7 +1170,7 @@
             this.now_newbie_box.CustomFormat = "yyyy-MM-dd";
             this.now_newbie_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.now_newbie_box.Location = new System.Drawing.Point(377, 145);
-            this.now_newbie_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.now_newbie_box.Margin = new System.Windows.Forms.Padding(4);
             this.now_newbie_box.Name = "now_newbie_box";
             this.now_newbie_box.Size = new System.Drawing.Size(88, 21);
             this.now_newbie_box.TabIndex = 35;
@@ -1180,7 +1180,7 @@
             this.join_box.CustomFormat = "yyyy-MM-dd";
             this.join_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.join_box.Location = new System.Drawing.Point(377, 25);
-            this.join_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.join_box.Margin = new System.Windows.Forms.Padding(4);
             this.join_box.Name = "join_box";
             this.join_box.Size = new System.Drawing.Size(88, 21);
             this.join_box.TabIndex = 30;
@@ -1199,7 +1199,7 @@
             // newbie_month_box
             // 
             this.newbie_month_box.Location = new System.Drawing.Point(660, 25);
-            this.newbie_month_box.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.newbie_month_box.Margin = new System.Windows.Forms.Padding(5);
             this.newbie_month_box.MaxLength = 1;
             this.newbie_month_box.Name = "newbie_month_box";
             this.newbie_month_box.Size = new System.Drawing.Size(35, 21);
@@ -1307,9 +1307,9 @@
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Location = new System.Drawing.Point(3, 366);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(887, 177);
             this.groupBox4.TabIndex = 112;
             this.groupBox4.TabStop = false;
@@ -1320,7 +1320,7 @@
             this.goodbye_box.CustomFormat = "yyyy-MM-dd";
             this.goodbye_box.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.goodbye_box.Location = new System.Drawing.Point(377, 50);
-            this.goodbye_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goodbye_box.Margin = new System.Windows.Forms.Padding(4);
             this.goodbye_box.Name = "goodbye_box";
             this.goodbye_box.Size = new System.Drawing.Size(88, 21);
             this.goodbye_box.TabIndex = 31;
