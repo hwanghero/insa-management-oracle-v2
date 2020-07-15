@@ -41,6 +41,17 @@ namespace insaProjecct_v2
             saveform = form;
             control.get_control(form, false);
             control.control_enabled(false);
+
+            // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
+            // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
+            if (now_form != (now_form as insaBasic))
+            {
+                CRUD_Hide(false);
+            }
+            else
+            {
+                CRUD_Hide(true);
+            }
         }
 
         public erpMain()
@@ -129,6 +140,13 @@ namespace insaProjecct_v2
                 CRUD_Enabled(false);
                 APPLY_Enabled(true);
                 control.control_enabled(true);
+                if (now_form == (now_form as insaBasic))
+                {
+                    if (insaSide.select_empno == null)
+                    {
+                        common.MsgboxShow("사원을 선택해주세요.");
+                    }
+                }
             }
         }
 
@@ -156,10 +174,25 @@ namespace insaProjecct_v2
         {
             if (now_form != null)
             {
-                mode = "delete";
-                CRUD_Enabled(false);
-                APPLY_Enabled(true);
-                control.control_enabled(true);
+                // 가족사항은 그리드뷰라 삭제를 따로 해야함.
+                if (now_form == (now_form as insaFamily))
+                {
+                    if (insaSide.select_empno == null)
+                    {
+                        common.MsgboxShow("사원을 선택해주세요.");
+                    }
+                    else
+                    {
+                        common.MsgboxShow("사원을 여러개 및 한개 선택 후\nDelete키를 사용하시면 됩니다.");
+                    }
+                }
+                else
+                {
+                    mode = "delete";
+                    CRUD_Enabled(false);
+                    APPLY_Enabled(true);
+                    control.control_enabled(true);
+                }
             }
         }
 
@@ -172,6 +205,7 @@ namespace insaProjecct_v2
                     common.MsgboxShow("사원을 선택해주세요.");
                     return;
                 }
+
                 Type type = now_form.GetType();
                 MethodInfo method = type.GetMethod("null");
                 if (mode.Equals("insert"))
@@ -226,6 +260,11 @@ namespace insaProjecct_v2
 
             APPLY_Enabled(false);
             CRUD_Enabled(true);
+        }
+
+        public void CRUD_Hide(Boolean check)
+        {
+            update_btn.Visible = check;
         }
     }
 }
