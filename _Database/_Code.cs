@@ -82,5 +82,38 @@ namespace _Database
             return CODELIST;
         }
         #endregion
+
+        #region 코드그룹 코드들 가져오기
+        public List<string> GetCodeList(params string[] value)
+        {
+            List<string> result = new List<string>();
+            List<string> mode_item = new List<string>();
+            foreach(string get_item in value)
+            {
+                mode_item.Add(get_item);
+                Console.WriteLine(get_item);
+            }
+            if (GetConnection() == true)
+            {
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    cmd.Connection = Connection;
+                    cmd.CommandText = "SELECT * FROM tieas_cdg_hwy";
+
+                    using (OracleDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (!mode_item.Contains(reader["cdg_grpcd"].ToString()))
+                            {
+                                result.Add(reader["cdg_grpcd"].ToString() + "-" + reader["CDG_GRPNM"]);
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+        #endregion
     }
 }

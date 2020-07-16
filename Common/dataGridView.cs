@@ -30,7 +30,7 @@ namespace Common
         #endregion
 
         #region 데이터값 그리드뷰에 뿌려주기
-        public void ShowData(String DB_Tablename, String DB_Column)
+        public void ShowData(String DB_Column, String DB_Tablename)
         {
             if (dataGridView1.Rows.Count > 0)
             {
@@ -42,15 +42,19 @@ namespace Common
                 using (OracleCommand cmd = new OracleCommand())
                 {
                     cmd.Connection = _DB.Connection;
-                    cmd.CommandText = "select "+ DB_Column+" from " + DB_Tablename;
+                    cmd.CommandText = "select " + DB_Column + " from " + DB_Tablename;
+                    Console.WriteLine(cmd.CommandText);
                     using (OracleDataReader reader = cmd.ExecuteReader())
                     {
-                        ArrayList rowList = new ArrayList();
+                        //ArrayList rowList = new ArrayList();
                         object[] row;
                         while (reader.Read())
                         {
-                            row = new object[reader.FieldCount];
+                            row = new object[reader.FieldCount + 1];
                             reader.GetValues(row);
+                            // 안넣으면 get null 에러뜸
+                            row[reader.FieldCount] = "";
+
                             // 체크박스는 여기서 알아서 넣어줘야할듯 강제로
                             dataGridView1.Rows.Add(row);
                         }
@@ -125,11 +129,25 @@ namespace Common
         {
             dtp.Visible = false;
         }
-        
+
         public void DGV_EventHandler()
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(dgv_CellClick);
+            dataGridView1.CellValueChanged += new DataGridViewCellEventHandler(CellValueChanged);
             dataGridView1.UserDeletingRow += new DataGridViewRowCancelEventHandler(UserDeletingRow);
+        }
+
+        private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count != 0)
+            {
+                int row_index = e.RowIndex;
+                if (!dataGridView1[dataGridView1.Columns.Count - 1, row_index].Value.ToString().Equals("Insert"))
+                {
+                    dataGridView1.Rows[row_index].Cells["정보상태"].Value = "Update";
+                    dataGridView1.Rows[row_index].DefaultCellStyle.BackColor = Color.Aqua;
+                }
+            }
         }
 
         private void UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -144,7 +162,6 @@ namespace Common
             Delete_static = delete_col;
         }
         #endregion
-
 
     }
 }

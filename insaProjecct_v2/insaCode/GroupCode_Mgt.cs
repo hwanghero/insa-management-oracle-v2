@@ -16,7 +16,6 @@ namespace insaProjecct_v2.insaCode
     public partial class GroupCode_Mgt : Form, ICode_Interface
     {
         OracleDBManager _DB = new OracleDBManager();
-        
         dataGridView dgv = new dataGridView();
 
         public GroupCode_Mgt()
@@ -28,7 +27,7 @@ namespace insaProjecct_v2.insaCode
             dgv.Delete_Column_set("코드");
             // 이벤트 핸들러
             dgv.DGV_EventHandler();
-            dgv.ShowData("tieas_cdg_hwy", "*");
+            dgv.ShowData("*", "tieas_cdg_hwy");
         }
 
         #region 데이터값 상태 체크 후 입력, 수정, 삭제
@@ -152,17 +151,12 @@ namespace insaProjecct_v2.insaCode
         public void Apply()
         {
             gird_data_binding();
-            dgv.ShowData("tieas_cdg_hwy", "*");
+            dgv.ShowData("*", "tieas_cdg_hwy");
         }
 
         public void Cancel()
         {
-            dgv.ShowData("tieas_cdg_hwy", "*");
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dgv.ShowData("*", "tieas_cdg_hwy");
         }
 
         #region 추가버튼 누를시
