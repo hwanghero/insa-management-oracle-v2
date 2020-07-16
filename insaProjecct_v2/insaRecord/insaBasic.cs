@@ -31,6 +31,8 @@ namespace insaProjecct_v2
             InitializeComponent();
         }
 
+        public void ShowData() { }
+
         #region 인사기본사항 정보 입력
         /*
          *  인사기본사항

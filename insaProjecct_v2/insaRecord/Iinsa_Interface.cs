@@ -11,5 +11,6 @@ namespace insaRecord
         void DB_Insert();
         void DB_Update();
         void DB_Delete();
+        void ShowData();
     }
 }

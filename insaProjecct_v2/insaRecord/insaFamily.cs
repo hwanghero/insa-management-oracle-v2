@@ -31,12 +31,12 @@ namespace insaProjecct_v2
 
             if (insaSide.select_empno != null)
             {
-                ShowFamily_Data();
+                ShowData();
             }
         }
 
         #region 데이터값 그리드뷰에 뿌려주기
-        public void ShowFamily_Data()
+        public void ShowData()
         {
             if (dataGridView1.Rows.Count > 0)
             {
@@ -243,7 +243,7 @@ namespace insaProjecct_v2
         public void DB_Insert()
         {
             gird_data_binding();
-            ShowFamily_Data();
+            ShowData();
             erpMain.getResult = true;
         }
         #endregion

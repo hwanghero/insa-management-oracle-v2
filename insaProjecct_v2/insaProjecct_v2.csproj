@@ -78,6 +78,12 @@
     <Compile Include="insaRecord\insaCareer.Designer.cs">
       <DependentUpon>insaCareer.cs</DependentUpon>
     </Compile>
+    <Compile Include="insaRecord\insaCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaCert.Designer.cs">
+      <DependentUpon>insaCert.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaFamily.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
       <DependentUpon>insaFamily.cs</DependentUpon>
     </Compile>
     <Compile Include="insaRecord\Iinsa_Interface.cs" />
+    <Compile Include="insaRecord\insaLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaLanguage.Designer.cs">
+      <DependentUpon>insaLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaPoint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </Compile>
     <Compile Include="insaRecord\insaSchool.Designer.cs">
       <DependentUpon>insaSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaRecord\insaSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaRecord\insaSelect.Designer.cs">
+      <DependentUpon>insaSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="insaRecord\insaSide.cs">
       <SubType>Form</SubType>
@@ -123,14 +141,23 @@
     <EmbeddedResource Include="insaRecord\insaCareer.resx">
       <DependentUpon>insaCareer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaCert.resx">
+      <DependentUpon>insaCert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaFamily.resx">
       <DependentUpon>insaFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaLanguage.resx">
+      <DependentUpon>insaLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaPoint.resx">
       <DependentUpon>insaPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaSchool.resx">
       <DependentUpon>insaSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaRecord\insaSelect.resx">
+      <DependentUpon>insaSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaSide.resx">
       <DependentUpon>insaSide.cs</DependentUpon>

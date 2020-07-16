@@ -28,6 +28,9 @@ namespace insaProjecct_v2
         static public Boolean getResult { get; set; }
         _Common common = new _Common();
 
+        // 통합에게 폼 보내기 - 통합은 맨 밑에 있어서 모든 폼을 불러오고 break를 함.
+        static public List<Form> FormList = new List<Form>();
+
         // 폼 여러개 추가
         public void add_form(Form form)
         {
@@ -44,9 +47,12 @@ namespace insaProjecct_v2
 
             // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
             // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
-            if (now_form != (now_form as insaBasic)){
+            if (now_form != (now_form as insaBasic))
+            {
                 CRUD_Hide(false);
-            }else{
+            }
+            else
+            {
                 CRUD_Hide(true);
             }
         }
@@ -90,59 +96,20 @@ namespace insaProjecct_v2
                     {
                         object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
                         Form f = o as Form;
-                        if (now_form != f)
+                        if (FormList.Count < 10) FormList.Add(f);
+                        now_form = f;
+
+                        Console.WriteLine("Assembly 목록: " + t.ToString());
+                        if (e.Node.Text.Equals(f.Tag))
                         {
-                            if (now_form != null) Console.WriteLine("now_form 현재값: " + now_form.ToString());
-                            Console.WriteLine("now_form 목록: " + t.ToString());
-                            if (e.Node.Text.Equals(f.Tag))
-                            {
-                                now_form = f;
-                                Console.WriteLine("now_form 확정: " + now_form.ToString());
-                                add_form(f);
-                                break;
-                            }
+                            Console.WriteLine("NowForm 확정: " + now_form.ToString());
+                            add_form(f);
+                            break;
                         }
-
                     }
                 }
             }
-
-            //List<Form> ltList = GetAssemblyFormList();
-            //foreach (Form load in ltList)
-            //{
-            //    if (e.Node.Text.Equals(load.Tag))
-            //    {
-            //        now_form = load;
-            //        add_form(load);
-            //        MessageBox.Show("NodeMouse:"+now_form.ToString());
-            //        break;
-            //    }
-            //}
         }
-
-        #region 프로젝트 폼 목록 읽어 오기
-        public static List<Form> GetAssemblyFormList()
-        {
-            List<Form> ltForm = new List<Form>();
-            foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
-            {
-                // 상속받는게 없기때문에 BaseType에서 오류가남.
-                // insaside = 싱글톤 에러
-                // interface = 생성자 에러
-                if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
-                {
-                    if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
-                    {
-                        object o = Activator.CreateInstance(t);
-                        MessageBox.Show(t.ToString());
-                        Form f = o as Form;
-                        ltForm.Add(f);
-                    }
-                }
-            }
-            return ltForm;
-        }
-        #endregion
 
         #region CRUD 버튼 클릭시
         private void button1_Click(object sender, EventArgs e)
@@ -173,7 +140,7 @@ namespace insaProjecct_v2
                 control.control_enabled(true);
 
                 // 인사기본사항 업데이트 누를 경우 사원 정보 불러옴
-                if(now_form == (now_form as insaBasic))
+                if (now_form == (now_form as insaBasic))
                 {
                     if (insaSide.select_empno == null)
                     {
