@@ -10,7 +10,7 @@ namespace _Database
 {
     public class _getMenu : OracleDBManager
     {
-        public void parent_menu(Object treeview)
+        public void parent_menu(TreeView treeview)
         {
             if (GetConnection() == true)
             {
@@ -25,7 +25,9 @@ namespace _Database
                         {
                             while (reader.Read())
                             {
-                                (treeview as TreeView).Nodes.Add(reader["menu_key"] as string, reader["menu_name"] as string);
+                                treeview.Nodes.Add(reader["menu_key"] as string, reader["menu_name"] as string);
+                                Console.WriteLine(reader["menu_key"] + ":" + reader["menu_name"]);
+
                             }
                         }
                     }
@@ -52,6 +54,7 @@ namespace _Database
                             }
                         }
 
+                        // 탭컨트롤 추가용.
                         if(treeview.GetType() == typeof(List<string>))
                         {
                             while (reader.Read())

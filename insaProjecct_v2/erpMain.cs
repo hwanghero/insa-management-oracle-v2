@@ -70,8 +70,9 @@ namespace insaProjecct_v2
 
                 _getMenu getMenu = new _getMenu();
                 getMenu.parent_menu(treeView1);
+                getMenu.child_menu(treeView1, "인사기초정보");
                 getMenu.child_menu(treeView1, "인사기록관리");
-
+                getMenu.child_menu(treeView1, "인사변동관리");
                 Enabled_Check = true;
             }
         }
