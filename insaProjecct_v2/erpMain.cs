@@ -41,14 +41,18 @@ namespace insaProjecct_v2
             form.TopLevel = false;
             form.Parent = this.panel1;
             form.Show();
+            MessageBox.Show("띄운다.");
+            now_form = form;
             saveform = form;
             control.get_control(form, false);
             control.control_enabled(false, false);
 
             // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
             // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
-            if (now_form != (now_form as insaBasic))
+            if (saveform != (saveform as insaBasic))
             {
+                control.get_control(form, true);
+                control.control_enabled(true, true);
                 CRUD_Hide(false);
             }
             else
@@ -73,6 +77,8 @@ namespace insaProjecct_v2
                 getMenu.child_menu(treeView1, "인사기초정보");
                 getMenu.child_menu(treeView1, "인사기록관리");
                 getMenu.child_menu(treeView1, "인사변동관리");
+                getMenu.child_menu(treeView1, "제증명서 발급");
+                getMenu.child_menu(treeView1, "현황 및 통계");
                 Enabled_Check = true;
             }
         }
@@ -81,11 +87,8 @@ namespace insaProjecct_v2
         {
             timerLabel.Text = String.Format("{0}시 {1:0#}분 {2}초", DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second.ToString().PadLeft(2, '0'));
         }
-
-
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            List<Form> ltForm = new List<Form>();
             foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
             {
                 // 상속받는게 없기때문에 BaseType에서 오류가남.
@@ -95,17 +98,15 @@ namespace insaProjecct_v2
                 {
                     if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
                     {
+                        // 같은 객체를 다 공유를 한다.
                         object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
                         Form f = o as Form;
-                        if (FormList.Count < 10) FormList.Add(f);
-                        now_form = f;
-
-                        Console.WriteLine("Assembly 목록: " + t.ToString());
+                        FormList.Add(f);
+                        Console.WriteLine("Assembly Form 목록: " + f.Name);
                         if (e.Node.Text.Equals(f.Tag))
                         {
-                            Console.WriteLine("NowForm 확정: " + now_form.ToString());
                             add_form(f);
-                            break;
+                            Console.WriteLine("NowForm 확정: " + now_form.ToString());
                         }
                     }
                 }
@@ -150,7 +151,6 @@ namespace insaProjecct_v2
                 }
             }
         }
-
         private void delete_btn_Click(object sender, EventArgs e)
         {
             if (now_form != null)
@@ -161,10 +161,6 @@ namespace insaProjecct_v2
                     if (insaSide.select_empno == null)
                     {
                         common.MsgboxShow("사원을 선택해주세요.");
-                    }
-                    else
-                    {
-                        common.MsgboxShow("사원을 여러개 및 한개 선택 후\nDelete키를 사용하시면 됩니다.");
                     }
                 }
                 else
@@ -212,6 +208,7 @@ namespace insaProjecct_v2
                 }
             }
         }
+
         private void cancel_btn_Click(object sender, EventArgs e)
         {
             APPLY_Enabled(false);
@@ -219,6 +216,7 @@ namespace insaProjecct_v2
             control.control_enabled(false, false);
             control.control_reset();
         }
+
         private void CRUD_Enabled(Boolean check)
         {
             insert_btn.Enabled = check;
@@ -238,14 +236,13 @@ namespace insaProjecct_v2
             side_form.TopLevel = false;
             side_form.Parent = this.panel2;
             side_form.Show();
-
             APPLY_Enabled(false);
             CRUD_Enabled(true);
         }
-
         public void CRUD_Hide(Boolean check)
         {
             update_btn.Visible = check;
+            delete_btn.Visible = check;
         }
     }
 }

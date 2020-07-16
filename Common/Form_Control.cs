@@ -77,12 +77,7 @@ namespace Common
                 {
                     if (b.GetType() == typeof(Button))
                     {
-                        (b as Button).Visible = false;
-                    }
-
-                    if (b.GetType() == typeof(DataGridView))
-                    {
-                        (b as DataGridView).Dock = DockStyle.Fill;
+                        (b as Button).Visible = check;
                     }
                 }
             }
@@ -100,14 +95,16 @@ namespace Common
                 foreach (Control a in form.Controls)
                 {
                     if (a.GetType() != typeof(TabControl))
+                    {
                         get_control_list.Add(a);
-                    Console.WriteLine("first " + form.Name + ": " + a.Name);
+                        Console.WriteLine("get_control_list ADD " + form.Name + ": " + a.Name);
+                    }
                     foreach (Control b in a.Controls)
                     {
                         if (allcheck)
                         {
                             get_control_list.Add(b);
-                            Console.WriteLine(form.Name + ": " + b.Name);
+                            Console.WriteLine("get_control_list ADD " + form.Name + ": " + b.Name);
                         }
                         else
                         {

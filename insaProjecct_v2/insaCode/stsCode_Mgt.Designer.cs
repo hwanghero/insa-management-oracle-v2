@@ -1,6 +1,6 @@
-﻿namespace insaProjecct_v2
+﻿namespace insaProjecct_v2.insaCode
 {
-    partial class insaSelect
+    partial class stsCode_Mgt
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // stsCode_Mgt
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(901, 553);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.Tag = "";
-            // 
-            // insaSelect
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 553);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1030, 691);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "insaSelect";
-            this.Tag = "인사기록 조회(통합)";
-            this.Text = "insaSelect";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insaSelect_FormClosed);
+            this.Name = "stsCode_Mgt";
+            this.Tag = "직책코드 관리";
+            this.Text = "stsCode_Mgt";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
     }
 }

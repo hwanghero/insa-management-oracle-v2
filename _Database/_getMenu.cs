@@ -18,7 +18,7 @@ namespace _Database
                 {
                     // 부모 따로, 자식 따로 불러와서 값 넣기
                     cmd.Connection = Connection;
-                    cmd.CommandText = "select * from menu_hwy where menu_parent='root'";
+                    cmd.CommandText = "select * from menu_hwy where menu_parent='root' order by menu_rank";
                     using (OracleDataReader reader = cmd.ExecuteReader())
                     {
                         if (treeview.GetType() == typeof(TreeView))

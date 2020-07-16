@@ -59,6 +59,36 @@
     <Compile Include="erpMain.Designer.cs">
       <DependentUpon>erpMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="insaCode\deptCode_Mgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCode\deptCode_Mgt.Designer.cs">
+      <DependentUpon>deptCode_Mgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCode\GroupCode_Mgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCode\GroupCode_Mgt.Designer.cs">
+      <DependentUpon>GroupCode_Mgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCode\insaCode_Mgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCode\insaCode_Mgt.Designer.cs">
+      <DependentUpon>insaCode_Mgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCode\posCode_Mgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCode\posCode_Mgt.Designer.cs">
+      <DependentUpon>posCode_Mgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCode\stsCode_Mgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCode\stsCode_Mgt.Designer.cs">
+      <DependentUpon>stsCode_Mgt.cs</DependentUpon>
+    </Compile>
     <Compile Include="insaRecord\insaBasic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +161,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="erpMain.resx">
       <DependentUpon>erpMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCode\deptCode_Mgt.resx">
+      <DependentUpon>deptCode_Mgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCode\GroupCode_Mgt.resx">
+      <DependentUpon>GroupCode_Mgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCode\insaCode_Mgt.resx">
+      <DependentUpon>insaCode_Mgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCode\posCode_Mgt.resx">
+      <DependentUpon>posCode_Mgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCode\stsCode_Mgt.resx">
+      <DependentUpon>stsCode_Mgt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaRecord\insaBasic.resx">
       <DependentUpon>insaBasic.cs</DependentUpon>

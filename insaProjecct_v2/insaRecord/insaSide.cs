@@ -56,9 +56,10 @@ namespace insaProjecct_v2
             if(erpMain.now_form != null)
             {
                 Type type = erpMain.now_form.GetType();
-
+                MessageBox.Show("start");
                 if (erpMain.now_form == (erpMain.now_form as insaBasic))
                 {
+                    MessageBox.Show("1");
                     MethodInfo method = type.GetMethod("Control_Input_Date");
                     method.Invoke(erpMain.now_form, null);
                     // 폼 컨트롤
@@ -68,11 +69,13 @@ namespace insaProjecct_v2
                 }
                 else if (erpMain.now_form == (erpMain.now_form as Iinsa_Interface))
                 {
+                    MessageBox.Show("2");
                     MethodInfo method = type.GetMethod("ShowData");
                     method.Invoke(erpMain.now_form, null);
                 }
                 else if (erpMain.now_form == (erpMain.now_form as insaSelect))
                 {
+                    MessageBox.Show("3");
                     MethodInfo method = type.GetMethod("LoadFormList");
                     method.Invoke(erpMain.now_form, null);
                 }

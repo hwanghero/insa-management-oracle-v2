@@ -25,7 +25,6 @@ namespace insaProjecct_v2
         Form_Control from_control = new Form_Control();
         _Common common = new _Common();
 
-
         public insaBasic()
         {
             InitializeComponent();
