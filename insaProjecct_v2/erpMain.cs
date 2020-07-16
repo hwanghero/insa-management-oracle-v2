@@ -44,20 +44,27 @@ namespace insaProjecct_v2
                 form.TopLevel = false;
                 form.Parent = this.panel1;
                 form.Show();
-                control.get_control(form, false);
-                control.control_enabled(false, false);
 
-                // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
-                // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
-                if (now_form != (now_form as insaBasic))
+                // 그냥 폼 확인해서 다 다르게 CRUD 주자.
+                if ((now_form as Form).Name.Contains("insa"))
                 {
-                    control.get_control(form, true);
-                    control.control_enabled(true, true);
-                    CRUD_Hide(false);
+                    control.get_control(form, false);
+                    control.control_enabled(false, false);
+                    if (now_form != (now_form as insaBasic))
+                    {
+                        control.get_control(form, true);
+                        control.control_enabled(true, true);
+                        CRUD_Hide(false);
+                    }
+                    else
+                    {
+                        CRUD_Hide(true);
+                    }
                 }
-                else
+                else if ((now_form as Form).Name.Contains("Code"))
                 {
-                    CRUD_Hide(true);
+                    CRUD_ALL_Hide(false);
+                    APPLY_Enabled(true);
                 }
             }
         }
@@ -72,13 +79,17 @@ namespace insaProjecct_v2
                 Login login = new Login(this);
                 login.Show();
 
+                // 메뉴 데이터베이스에서 가져오기
                 _getMenu getMenu = new _getMenu();
+                // 부모 트리부터 설치
                 getMenu.parent_menu(treeView1);
+                // 자식 트리 설치
                 getMenu.child_menu(treeView1, "인사기초정보");
                 getMenu.child_menu(treeView1, "인사기록관리");
                 getMenu.child_menu(treeView1, "인사변동관리");
                 getMenu.child_menu(treeView1, "제증명서 발급");
                 getMenu.child_menu(treeView1, "현황 및 통계");
+                // -> 완전히 자동화 쌉가능인데 시간없으니 일단 보류
                 Enabled_Check = true;
             }
         }
@@ -194,44 +205,67 @@ namespace insaProjecct_v2
         {
             if (now_form != null)
             {
-                if (insaSide.select_empno == null)
+                if ((now_form as Form).Name.Contains("insa"))
                 {
-                    common.MsgboxShow("사원을 선택해주세요.");
-                    return;
+                    if (insaSide.select_empno == null)
+                    {
+                        common.MsgboxShow("사원을 선택해주세요.");
+                        return;
+                    }
+                    else
+                    {
+                        Type type = now_form.GetType();
+                        MethodInfo method = type.GetMethod("null");
+                        if (mode.Equals("insert"))
+                        {
+                            method = type.GetMethod("DB_Insert");
+                        }
+                        else if (mode.Equals("update"))
+                        {
+                            method = type.GetMethod("DB_Update");
+                        }
+                        else if (mode.Equals("delete"))
+                        {
+                            method = type.GetMethod("DB_Delete");
+                        }
+                        method.Invoke(now_form, null);
+                        if (getResult == true)
+                        {
+                            APPLY_Enabled(false);
+                            CRUD_Enabled(true);
+                            control.control_enabled(false, false);
+                            control.control_reset();
+                            side_form.insaSide_Refresh();
+                        }
+                    }
                 }
-
-                Type type = now_form.GetType();
-                MethodInfo method = type.GetMethod("null");
-                if (mode.Equals("insert"))
+                if ((now_form as Form).Name.Contains("Code"))
                 {
-                    method = type.GetMethod("DB_Insert");
-                }
-                else if (mode.Equals("update"))
-                {
-                    method = type.GetMethod("DB_Update");
-                }
-                else if (mode.Equals("delete"))
-                {
-                    method = type.GetMethod("DB_Delete");
-                }
-                method.Invoke(now_form, null);
-                if (getResult == true)
-                {
-                    APPLY_Enabled(false);
-                    CRUD_Enabled(true);
-                    control.control_enabled(false, false);
-                    control.control_reset();
-                    side_form.insaSide_Refresh();
+                    Type type = now_form.GetType();
+                    MethodInfo method = type.GetMethod("null");
+                    method = type.GetMethod("Apply");
+                    method.Invoke(now_form, null);
                 }
             }
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
         {
-            APPLY_Enabled(false);
-            CRUD_Enabled(true);
-            control.control_enabled(false, false);
-            control.control_reset();
+            if ((now_form as Form).Name.Contains("insa"))
+            {
+                APPLY_Enabled(false);
+                CRUD_Enabled(true);
+                control.control_enabled(false, false);
+                control.control_reset();
+            }
+
+            if ((now_form as Form).Name.Contains("Code"))
+            {
+                Type type = now_form.GetType();
+                MethodInfo method = type.GetMethod("null");
+                method = type.GetMethod("ShowData");
+                method.Invoke(now_form, null);
+            }
         }
 
         private void CRUD_Enabled(Boolean check)
@@ -259,6 +293,14 @@ namespace insaProjecct_v2
         }
         public void CRUD_Hide(Boolean check)
         {
+            update_btn.Visible = check;
+            delete_btn.Visible = check;
+        }
+
+        // 코드관리
+        public void CRUD_ALL_Hide(Boolean check)
+        {
+            insert_btn.Visible = check;
             update_btn.Visible = check;
             delete_btn.Visible = check;
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace insaProjecct_v2
 {
-    public partial class insaCode_Mgt : Form
+    public partial class INSACode_Mgt : Form
     {
-        public insaCode_Mgt()
+        public INSACode_Mgt()
         {
             InitializeComponent();
         }

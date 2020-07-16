@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
@@ -29,7 +30,6 @@ namespace Common
             return stringBuilder.ToString();
         }
         #endregion
-
         #region 프로젝트 폼 목록 읽어 오기 (Load Failed)
         public static Form GetAssemblyForm(string strFormName)
         {
@@ -61,7 +61,7 @@ namespace Common
             return ltForm;
         }
         #endregion
-
+        #region string을 date format정해서 값 변환
         public DateTime ParseString(string data_string, string format)
         {
             DateTime result_time;
@@ -69,5 +69,8 @@ namespace Common
             else result_time = DateTime.ParseExact(data_string, format, CultureInfo.InvariantCulture);
             return result_time;
         }
+        #endregion
+
+
     }
 }

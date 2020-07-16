@@ -71,11 +71,12 @@
     <Compile Include="insaCode\GroupCode_Mgt.Designer.cs">
       <DependentUpon>GroupCode_Mgt.cs</DependentUpon>
     </Compile>
-    <Compile Include="insaCode\insaCode_Mgt.cs">
+    <Compile Include="insaCode\ICode_Interface.cs" />
+    <Compile Include="insaCode\INSA_Code_Mgt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="insaCode\insaCode_Mgt.Designer.cs">
-      <DependentUpon>insaCode_Mgt.cs</DependentUpon>
+    <Compile Include="insaCode\INSA_Code_Mgt.Designer.cs">
+      <DependentUpon>INSA_Code_Mgt.cs</DependentUpon>
     </Compile>
     <Compile Include="insaCode\posCode_Mgt.cs">
       <SubType>Form</SubType>
@@ -168,8 +169,8 @@
     <EmbeddedResource Include="insaCode\GroupCode_Mgt.resx">
       <DependentUpon>GroupCode_Mgt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="insaCode\insaCode_Mgt.resx">
-      <DependentUpon>insaCode_Mgt.cs</DependentUpon>
+    <EmbeddedResource Include="insaCode\INSA_Code_Mgt.resx">
+      <DependentUpon>INSA_Code_Mgt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaCode\posCode_Mgt.resx">
       <DependentUpon>posCode_Mgt.cs</DependentUpon>
