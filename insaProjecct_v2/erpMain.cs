@@ -27,6 +27,7 @@ namespace insaProjecct_v2
 
         // 통합에게 폼 보내기 - 통합은 맨 밑에 있어서 모든 폼을 불러오고 break를 함.
         public List<Form> FormList = new List<Form>();
+        static public List<Form> Send_FormList = new List<Form>();
 
         // 폼 여러개 추가
         public void add_form(Form form)
@@ -35,6 +36,7 @@ namespace insaProjecct_v2
             {
                 saveForm.Close();
             }
+
             if (form.IsDisposed == false)
             {
                 saveForm = form;
@@ -90,6 +92,7 @@ namespace insaProjecct_v2
             GetFormList();
             Form form = new Form();
             Boolean result = false;
+            Send_FormList = FormList.ToList();
             foreach (Form get in FormList)
             {
                 Console.WriteLine(get.Name);
@@ -122,31 +125,6 @@ namespace insaProjecct_v2
                         object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
                         Form f = o as Form;
                         FormList.Add(f);
-                    }
-                }
-            }
-        }
-
-        public void GetFormList_New(Form form)
-        {
-            foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
-            {
-                // 상속받는게 없기때문에 BaseType에서 오류가남.
-                // insaside = 싱글톤 에러
-                // interface = 생성자 에러
-                if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
-                {
-                    if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
-                    {
-                        // 같은 객체를 다 공유를 한다.
-                        object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
-                        Form f = o as Form;
-
-                        if (form.Tag.Equals(f.Tag))
-                        {
-                            FormList.Add(f);
-                            Console.WriteLine("새로 생성 목록: " + f.Tag);
-                        }
                     }
                 }
             }
