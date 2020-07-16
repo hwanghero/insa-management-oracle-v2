@@ -16,44 +16,20 @@ namespace insaProjecct_v2.insaCode
     public partial class GroupCode_Mgt : Form, ICode_Interface
     {
         OracleDBManager _DB = new OracleDBManager();
-        // 삭제 정보 저장
-        List<string> getDeleteREL = new List<string>();
+        
         dataGridView dgv = new dataGridView();
+
         public GroupCode_Mgt()
         {
             InitializeComponent();
-            ShowData();
+            // 데이터그리드뷰 set
+            dgv.SET(dataGridView1);
+            // 삭제 고유키 설정 (데이터그리드뷰 컬럼)
+            dgv.Delete_Column_set("코드");
+            // 이벤트 핸들러
+            dgv.DGV_EventHandler();
+            dgv.ShowData("tieas_cdg_hwy", "*");
         }
-
-        #region 데이터값 그리드뷰에 뿌려주기
-        public void ShowData()
-        {
-            if (dataGridView1.Rows.Count > 0)
-            {
-                dataGridView1.Rows.Clear();
-            }
-
-            if (_DB.GetConnection() == true)
-            {
-                using (OracleCommand cmd = new OracleCommand())
-                {
-                    cmd.Connection = _DB.Connection;
-                    cmd.CommandText = "select * from tieas_cdg_hwy";
-                    using (OracleDataReader reader = cmd.ExecuteReader())
-                    {
-                        Boolean check;
-                        while (reader.Read())
-                        {
-                            if (reader["CDG_USE"].Equals("Y")) check = true;
-                            else check = false;
-
-                            dataGridView1.Rows.Add(reader["CDG_GRPCD"], reader["CDG_GRPNM"], reader["CDG_DIGIT"], reader["CDG_LENGTH"], check, reader["CDG_KIND"], "");
-                        }
-                    }
-                }
-            }
-        }
-        #endregion
 
         #region 데이터값 상태 체크 후 입력, 수정, 삭제
         public void gird_data_binding()
@@ -70,19 +46,19 @@ namespace insaProjecct_v2.insaCode
 
                 if (check.Equals("Insert"))
                 {
-                    thrm_add(CDG_GRPCD, CDG_GRPNM, CDG_DIGIT, CDG_LENGTH, CDG_USE, CDG_KIND);
+                    thrm_add(CDG_GRPCD, CDG_GRPNM, CDG_DIGIT, CDG_LENGTH, dgv.CheckboxToString(CDG_USE), CDG_KIND);
                 }
                 else if (check.Equals("Update"))
                 {
-                    //thrm_update(insaSide.select_empno, EDU_LOE, common.ParseString(EDU_ENTDATE, "yyyyMMdd"), common.ParseString(EDU_GRADATE, "yyyyMMdd"), EDU_SCHNM, EDU_DEPT, EDU_DEGREE, EDU_GRADE, EDU_GRA, EDU_LAST);
+                    thrm_update(CDG_GRPCD, CDG_GRPNM, CDG_DIGIT, CDG_LENGTH, dgv.CheckboxToString(CDG_USE), CDG_KIND);
                 }
             }
 
-            if (getDeleteREL.Count != 0)
+            if (dgv.getDeleteREL.Count != 0)
             {
-                foreach (string getDeleteREL in getDeleteREL)
+                foreach (string getDeleteREL in dgv.getDeleteREL)
                 {
-                    //thrm_delete(insaSide.select_empno, getDeleteREL);
+                    thrm_delete(getDeleteREL);
                 }
             }
         }
@@ -122,7 +98,7 @@ namespace insaProjecct_v2.insaCode
             return check;
         }
 
-        public int thrm_update(String empno, String car_com, DateTime car_region, DateTime car_yyyymm_f, String car_yyyymm_t, String car_pos, String car_dept, String car_job, String car_reason, String award_dept)
+        public int thrm_update(params object[] val)
         {
             int check = 1;
             try
@@ -132,7 +108,7 @@ namespace insaProjecct_v2.insaCode
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
-                        comm.CommandText = @"update thrm_edu_hwy set EDU_LOE='" + car_com + "', EDU_ENTDATE='" + car_region.ToString("yyyyMMdd") + "', EDU_GRADATE='" + car_yyyymm_f.ToString("yyyyMMdd") + "', EDU_SCHNM='" + car_yyyymm_t + "', EDU_DEPT='" + car_pos + "', EDU_DEGREE='" + car_dept + "', EDU_GRADE='" + car_job + "', EDU_GRA='" + car_reason + "', EDU_LAST='" + award_dept + "' where EDU_EMPNO='" + empno + "' and EDU_SCHNM='" + car_yyyymm_t + "'";
+                        comm.CommandText = @"update tieas_cdg_hwy set CDG_GRPNM='" + val[1] + "', CDG_DIGIT='" + val[2] + "', CDG_LENGTH='" + val[3] + "', CDG_USE='" + val[4] + "', CDG_KIND='" + val[5] + "' where CDG_GRPCD='" + val[0] + "'";
                         var a = comm.ExecuteNonQuery();
                         check = 0;
                         Console.WriteLine(comm.CommandText);
@@ -147,7 +123,7 @@ namespace insaProjecct_v2.insaCode
             return check;
         }
 
-        public int thrm_delete(String empno, String CAR_COM)
+        public int thrm_delete(String empno)
         {
             int check = 1;
             try
@@ -157,7 +133,7 @@ namespace insaProjecct_v2.insaCode
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
-                        comm.CommandText = @"delete from thrm_edu_hwy where EDU_EMPNO='" + empno + "' and EDU_SCHNM='" + CAR_COM + "'";
+                        comm.CommandText = @"delete from tieas_cdg_hwy where CDG_GRPCD='" + empno + "'";
                         var a = comm.ExecuteNonQuery();
                         check = 0;
                         Console.WriteLine(comm.CommandText);
@@ -176,12 +152,12 @@ namespace insaProjecct_v2.insaCode
         public void Apply()
         {
             gird_data_binding();
-            ShowData();
+            dgv.ShowData("tieas_cdg_hwy", "*");
         }
 
         public void Cancel()
         {
-
+            dgv.ShowData("tieas_cdg_hwy", "*");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -192,7 +168,7 @@ namespace insaProjecct_v2.insaCode
         #region 추가버튼 누를시
         private void button1_Click(object sender, EventArgs e)
         {
-            dgv.ADD(dataGridView1, "", "", "", "", false, "", "");
+            dgv.ADD("", "", "", "", false, "", "");
         }
         #endregion
     }
