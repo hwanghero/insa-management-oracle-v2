@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using _Database;
@@ -11,13 +12,9 @@ namespace insaProjecct_v2
     {
         // 전체 폼을 불러올시 생성자가 계속 생성되기때문에 어쩔수없이 체크 넣어줌.
         static Boolean Enabled_Check = false;
-
-        // 패널에 띄울 폼, 리플랙션 할 오브젝트
-        Form saveform;
-
-        // 현재 폼 저장인데 판단이 이상하네?
+        // 현재 폼 저장
         static public object now_form;
-
+        Form saveForm;
         // CRUD MODE
         static public string mode { get; set; }
         // SIDE FORM (싱글톤 패턴)
@@ -29,42 +26,43 @@ namespace insaProjecct_v2
         _Common common = new _Common();
 
         // 통합에게 폼 보내기 - 통합은 맨 밑에 있어서 모든 폼을 불러오고 break를 함.
-        static public List<Form> FormList = new List<Form>();
+        public List<Form> FormList = new List<Form>();
 
         // 폼 여러개 추가
         public void add_form(Form form)
         {
-            if (saveform != null)
+            if (saveForm != null)
             {
-                saveform.Close();
+                saveForm.Close();
             }
-            form.TopLevel = false;
-            form.Parent = this.panel1;
-            form.Show();
-            MessageBox.Show("띄운다.");
-            now_form = form;
-            saveform = form;
-            control.get_control(form, false);
-            control.control_enabled(false, false);
+            if (form.IsDisposed == false)
+            {
+                saveForm = form;
+                now_form = form;
+                form.TopLevel = false;
+                form.Parent = this.panel1;
+                form.Show();
+                control.get_control(form, false);
+                control.control_enabled(false, false);
 
-            // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
-            // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
-            if (saveform != (saveform as insaBasic))
-            {
-                control.get_control(form, true);
-                control.control_enabled(true, true);
-                CRUD_Hide(false);
-            }
-            else
-            {
-                CRUD_Hide(true);
+                // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
+                // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
+                if (now_form != (now_form as insaBasic))
+                {
+                    control.get_control(form, true);
+                    control.control_enabled(true, true);
+                    CRUD_Hide(false);
+                }
+                else
+                {
+                    CRUD_Hide(true);
+                }
             }
         }
 
         public erpMain()
         {
             InitializeComponent();
-
             if (Enabled_Check != true)
             {
                 this.Enabled = false;
@@ -89,6 +87,28 @@ namespace insaProjecct_v2
         }
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            GetFormList();
+            Form form = new Form();
+            Boolean result = false;
+            foreach (Form get in FormList)
+            {
+                Console.WriteLine(get.Name);
+                if (e.Node.Text.Equals(get.Tag))
+                {
+                    form = get;
+                    result = true;
+                }
+            }
+            if (result)
+            {
+                add_form(form);
+                result = false;
+            }
+        }
+
+        public void GetFormList()
+        {
+            FormList.Clear();
             foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
             {
                 // 상속받는게 없기때문에 BaseType에서 오류가남.
@@ -102,11 +122,30 @@ namespace insaProjecct_v2
                         object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
                         Form f = o as Form;
                         FormList.Add(f);
-                        Console.WriteLine("Assembly Form 목록: " + f.Name);
-                        if (e.Node.Text.Equals(f.Tag))
+                    }
+                }
+            }
+        }
+
+        public void GetFormList_New(Form form)
+        {
+            foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
+            {
+                // 상속받는게 없기때문에 BaseType에서 오류가남.
+                // insaside = 싱글톤 에러
+                // interface = 생성자 에러
+                if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
+                {
+                    if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
+                    {
+                        // 같은 객체를 다 공유를 한다.
+                        object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
+                        Form f = o as Form;
+
+                        if (form.Tag.Equals(f.Tag))
                         {
-                            add_form(f);
-                            Console.WriteLine("NowForm 확정: " + now_form.ToString());
+                            FormList.Add(f);
+                            Console.WriteLine("새로 생성 목록: " + f.Tag);
                         }
                     }
                 }
@@ -238,6 +277,7 @@ namespace insaProjecct_v2
             side_form.Show();
             APPLY_Enabled(false);
             CRUD_Enabled(true);
+            GetFormList();
         }
         public void CRUD_Hide(Boolean check)
         {
