@@ -64,11 +64,16 @@ namespace insaProjecct_v2
                     // 폼 컨트롤
                     Form_Control control = new Form_Control();
                     control.get_control(erpMain.now_form as Form, true);
-                    control.control_enabled(true);
+                    control.control_enabled(true, false);
                 }
                 else if (erpMain.now_form == (erpMain.now_form as Iinsa_Interface))
                 {
                     MethodInfo method = type.GetMethod("ShowData");
+                    method.Invoke(erpMain.now_form, null);
+                }
+                else if (erpMain.now_form == (erpMain.now_form as insaSelect))
+                {
+                    MethodInfo method = type.GetMethod("LoadFormList");
                     method.Invoke(erpMain.now_form, null);
                 }
             }

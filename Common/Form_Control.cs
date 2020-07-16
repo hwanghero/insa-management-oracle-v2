@@ -51,23 +51,38 @@ namespace Common
         }
         #endregion
         #region 컨트롤 활성화/비활성화
-        public void control_enabled(Boolean check)
+        public void control_enabled(Boolean check, Boolean insaSelect_use)
         {
             foreach (Control b in get_control_list)
             {
                 b.Enabled = check;
-
-                if (b.GetType() == typeof(DateTimePicker))
+                if (!insaSelect_use)
                 {
-                    if (b.Enabled == false)
+                    if (b.GetType() == typeof(DateTimePicker))
                     {
-                        (b as DateTimePicker).CustomFormat = " ";
-                        (b as DateTimePicker).Format = DateTimePickerFormat.Custom;
+
+                        if (b.Enabled == false)
+                        {
+                            (b as DateTimePicker).CustomFormat = " ";
+                            (b as DateTimePicker).Format = DateTimePickerFormat.Custom;
+                        }
+                        else
+                        {
+                            (b as DateTimePicker).CustomFormat = "yyyy-MM-dd";
+                            (b as DateTimePicker).Format = DateTimePickerFormat.Custom;
+                        }
                     }
-                    else
+                }
+                else
+                {
+                    if (b.GetType() == typeof(Button))
                     {
-                        (b as DateTimePicker).CustomFormat = "yyyy-MM-dd";
-                        (b as DateTimePicker).Format = DateTimePickerFormat.Custom;
+                        (b as Button).Visible = false;
+                    }
+
+                    if (b.GetType() == typeof(DataGridView))
+                    {
+                        (b as DataGridView).Dock = DockStyle.Fill;
                     }
                 }
             }
@@ -84,11 +99,15 @@ namespace Common
             {
                 foreach (Control a in form.Controls)
                 {
+                    if (a.GetType() != typeof(TabControl))
+                        get_control_list.Add(a);
+                    Console.WriteLine("first " + form.Name + ": " + a.Name);
                     foreach (Control b in a.Controls)
                     {
                         if (allcheck)
                         {
                             get_control_list.Add(b);
+                            Console.WriteLine(form.Name + ": " + b.Name);
                         }
                         else
                         {

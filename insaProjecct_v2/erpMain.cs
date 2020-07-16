@@ -43,7 +43,7 @@ namespace insaProjecct_v2
             form.Show();
             saveform = form;
             control.get_control(form, false);
-            control.control_enabled(false);
+            control.control_enabled(false, false);
 
             // 현재 폼이 인사기본사항 아니면 수정/삭제 숨겨줌
             // 다른 폼 생겨서 수정/삭제 필요하면 적절하게 다시 제작
@@ -119,7 +119,7 @@ namespace insaProjecct_v2
                 mode = "insert";
                 CRUD_Enabled(false);
                 APPLY_Enabled(true);
-                control.control_enabled(true);
+                control.control_enabled(true, false);
                 if (now_form == (now_form as insaBasic))
                 {
                     if (insaSide.select_empno == null)
@@ -137,7 +137,7 @@ namespace insaProjecct_v2
                 mode = "update";
                 CRUD_Enabled(false);
                 APPLY_Enabled(true);
-                control.control_enabled(true);
+                control.control_enabled(true, false);
 
                 // 인사기본사항 업데이트 누를 경우 사원 정보 불러옴
                 if (now_form == (now_form as insaBasic))
@@ -171,7 +171,7 @@ namespace insaProjecct_v2
                     mode = "delete";
                     CRUD_Enabled(false);
                     APPLY_Enabled(true);
-                    control.control_enabled(true);
+                    control.control_enabled(true, false);
                 }
             }
         }
@@ -205,7 +205,7 @@ namespace insaProjecct_v2
                 {
                     APPLY_Enabled(false);
                     CRUD_Enabled(true);
-                    control.control_enabled(false);
+                    control.control_enabled(false, false);
                     control.control_reset();
                     side_form.insaSide_Refresh();
                 }
@@ -215,7 +215,7 @@ namespace insaProjecct_v2
         {
             APPLY_Enabled(false);
             CRUD_Enabled(true);
-            control.control_enabled(false);
+            control.control_enabled(false, false);
             control.control_reset();
         }
         private void CRUD_Enabled(Boolean check)

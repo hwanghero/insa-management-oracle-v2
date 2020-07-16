@@ -45,18 +45,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 7);
+            this.button2.Location = new System.Drawing.Point(103, 9);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 29);
             this.button2.TabIndex = 119;
             this.button2.Text = "삭제";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(9, 7);
+            this.button1.Location = new System.Drawing.Point(10, 9);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(86, 29);
             this.button1.TabIndex = 118;
             this.button1.Text = "추가";
             this.button1.UseVisualStyleBackColor = true;
@@ -77,12 +79,12 @@
             this.퇴직사유,
             this.정보상태});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 46);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 515);
+            this.dataGridView1.Size = new System.Drawing.Size(1030, 645);
             this.dataGridView1.TabIndex = 117;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -91,7 +93,9 @@
             // 근무처명
             // 
             this.근무처명.HeaderText = "근무처명";
+            this.근무처명.MinimumWidth = 6;
             this.근무처명.Name = "근무처명";
+            this.근무처명.Width = 125;
             // 
             // 최종직급
             // 
@@ -108,56 +112,72 @@
             "차장",
             "대리",
             "사원"});
+            this.최종직급.MinimumWidth = 6;
             this.최종직급.Name = "최종직급";
             this.최종직급.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.최종직급.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.최종직급.Width = 125;
             // 
             // 담당업무
             // 
             this.담당업무.HeaderText = "담당업무";
+            this.담당업무.MinimumWidth = 6;
             this.담당업무.Name = "담당업무";
+            this.담당업무.Width = 125;
             // 
             // 담당부서
             // 
             this.담당부서.HeaderText = "담당부서";
+            this.담당부서.MinimumWidth = 6;
             this.담당부서.Name = "담당부서";
+            this.담당부서.Width = 125;
             // 
             // 소재지
             // 
             this.소재지.HeaderText = "소재지";
+            this.소재지.MinimumWidth = 6;
             this.소재지.Name = "소재지";
+            this.소재지.Width = 125;
             // 
             // 근무시작월
             // 
             this.근무시작월.HeaderText = "근무시작월";
+            this.근무시작월.MinimumWidth = 6;
             this.근무시작월.Name = "근무시작월";
+            this.근무시작월.Width = 125;
             // 
             // 근무종료월
             // 
             this.근무종료월.HeaderText = "근무종료월";
+            this.근무종료월.MinimumWidth = 6;
             this.근무종료월.Name = "근무종료월";
+            this.근무종료월.Width = 125;
             // 
             // 퇴직사유
             // 
             this.퇴직사유.HeaderText = "퇴직/이직사유";
+            this.퇴직사유.MinimumWidth = 6;
             this.퇴직사유.Name = "퇴직사유";
             this.퇴직사유.Width = 300;
             // 
             // 정보상태
             // 
             this.정보상태.HeaderText = "정보상태";
+            this.정보상태.MinimumWidth = 6;
             this.정보상태.Name = "정보상태";
+            this.정보상태.Width = 125;
             // 
             // insaCareer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(901, 553);
+            this.ClientSize = new System.Drawing.Size(1030, 691);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "insaCareer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "경력사항";
