@@ -15,7 +15,6 @@ namespace Common
         {
             MessageBox.Show(msg, "인사관리프로그램 - ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         #region 암호화
         public string EncryptSHA512(string Data)
         {
@@ -70,7 +69,5 @@ namespace Common
             return result_time;
         }
         #endregion
-
-
     }
 }

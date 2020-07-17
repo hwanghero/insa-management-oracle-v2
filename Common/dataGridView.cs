@@ -21,7 +21,6 @@ namespace Common
         public string Delete_static;
         List<string> timepicker_col = new List<string>();
 
-
         #region 데이터그리드뷰 적용
         public void SET(object dataGridView)
         {
