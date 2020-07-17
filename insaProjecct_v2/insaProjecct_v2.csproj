@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.19.7.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
@@ -60,6 +63,18 @@
     </Compile>
     <Compile Include="erpMain.Designer.cs">
       <DependentUpon>erpMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCert\Career_Cert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCert\Career_Cert.Designer.cs">
+      <DependentUpon>Career_Cert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCert\Eng_Cert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCert\Eng_Cert.Designer.cs">
+      <DependentUpon>Eng_Cert.cs</DependentUpon>
     </Compile>
     <Compile Include="insaCert\Office_Cert.cs">
       <SubType>Form</SubType>
@@ -159,6 +174,12 @@
     <EmbeddedResource Include="erpMain.resx">
       <DependentUpon>erpMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="insaCert\Career_Cert.resx">
+      <DependentUpon>Career_Cert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCert\Eng_Cert.resx">
+      <DependentUpon>Eng_Cert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="insaCert\Office_Cert.resx">
       <DependentUpon>Office_Cert.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +257,9 @@
       <Project>{4a490a1e-c5f4-45b7-b93e-499c80119e27}</Project>
       <Name>_Database</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="insaState\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

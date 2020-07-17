@@ -1,6 +1,6 @@
 ﻿namespace insaProjecct_v2
 {
-    partial class Office_Cert
+    partial class Eng_Cert
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Office_Cert));
-            this.button3 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Eng_Cert));
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.nowtime_label = new System.Windows.Forms.Label();
             this.address_label = new System.Windows.Forms.Label();
             this.bth_label = new System.Windows.Forms.Label();
@@ -47,58 +47,25 @@
             this.start_label = new System.Windows.Forms.Label();
             this.dept_label = new System.Windows.Forms.Label();
             this.pos_label = new System.Windows.Forms.Label();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // printPreviewDialog1
             // 
-            this.button3.Location = new System.Drawing.Point(12, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "인쇄";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // tableLayoutPanel1
+            // printDocument1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.nowtime_label, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.address_label, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bth_label, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.name_label, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.phone_label, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.start_label, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dept_label, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pos_label, 3, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 54);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.8055F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41257F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.59136F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.04819F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.42169F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 499);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // nowtime_label
             // 
@@ -157,7 +124,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 43);
             this.label1.TabIndex = 3;
-            this.label1.Text = "성명";
+            this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -172,7 +139,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(225, 42);
             this.label2.TabIndex = 4;
-            this.label2.Text = "주소";
+            this.label2.Text = "Address";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -187,7 +154,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 47);
             this.label3.TabIndex = 5;
-            this.label3.Text = "연락처";
+            this.label3.Text = "Phone";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -202,7 +169,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 43);
             this.label4.TabIndex = 6;
-            this.label4.Text = "주민등록번호";
+            this.label4.Text = "Resident registration number";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -217,7 +184,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 47);
             this.label5.TabIndex = 7;
-            this.label5.Text = "담당";
+            this.label5.Text = "Assigned task";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -232,7 +199,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(225, 48);
             this.label6.TabIndex = 8;
-            this.label6.Text = "입사일자";
+            this.label6.Text = "Joining the company";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -247,7 +214,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(225, 48);
             this.label8.TabIndex = 10;
-            this.label8.Text = "직위";
+            this.label8.Text = "Position of company";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -260,7 +227,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(895, 95);
             this.label7.TabIndex = 11;
-            this.label7.Text = "회 사 명 :  IT콘텐츠\r\n\r\n부산경상대학교 총장\r\n";
+            this.label7.Text = "Company: IT Contents\r\n\r\nPresident of Pusan Kyungsang University\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // name_label
@@ -338,22 +305,55 @@
             this.pos_label.Text = " ";
             this.pos_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // printDocument1
+            // tableLayoutPanel1
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.nowtime_label, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.address_label, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.bth_label, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.name_label, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.phone_label, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.start_label, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dept_label, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pos_label, 3, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 54);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.8055F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41257F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.59136F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.04819F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.42169F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 499);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // printPreviewDialog1
+            // button3
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.button3.Location = new System.Drawing.Point(12, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "인쇄";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Office_Cert
+            // Eng_Cert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -361,11 +361,10 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Office_Cert";
-            this.Tag = "재직증명서";
-            this.Text = "Office_Cert";
-            this.Load += new System.EventHandler(this.Office_Cert_Load);
+            this.Name = "Eng_Cert";
+            this.Tag = "영문증명서";
+            this.Text = "Eng_Cert";
+            this.Load += new System.EventHandler(this.Eng_Cert_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -373,8 +372,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
+
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label nowtime_label;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label address_label;
+        private System.Windows.Forms.Label bth_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -382,16 +386,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label address_label;
-        private System.Windows.Forms.Label bth_label;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.Label phone_label;
         private System.Windows.Forms.Label start_label;
         private System.Windows.Forms.Label dept_label;
         private System.Windows.Forms.Label pos_label;
-        private System.Windows.Forms.Label nowtime_label;
-        private System.Windows.Forms.Label label7;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button3;
     }
 }
