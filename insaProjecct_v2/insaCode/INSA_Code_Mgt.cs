@@ -28,6 +28,8 @@ namespace insaProjecct_v2
             dgv.DGV_EventHandler();
             dgv.dgv_time_col_add("생성날짜");
             dgv.dgv_time_col_add("종료날짜");
+            dgv.Delete_Column_set("코드값");
+            dataGridView1.Columns[0].ReadOnly = true;
             button1.Visible = false;
             foreach (string item in _Code.GetCodeList()) { comboBox1.Items.Add(item); }
         }
@@ -61,7 +63,7 @@ namespace insaProjecct_v2
             {
                 foreach (string getDeleteREL in dgv.getDeleteREL)
                 {
-                    //thrm_delete(getDeleteREL);
+                    thrm_delete(combo_code, getDeleteREL);
                 }
             }
         }
@@ -109,6 +111,8 @@ namespace insaProjecct_v2
             {
                 if (_DB.GetConnection() == true)
                 {
+                    // 데이터 타입아니라고 오류뜸
+                    // 이유는 말그대로 데이터 타입 아닌 값을 넣고 toString 해서 그럼
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
@@ -128,7 +132,7 @@ namespace insaProjecct_v2
             return check;
         }
 
-        public int thrm_delete(String empno)
+        public int thrm_delete(String empno, String code_result)
         {
             int check = 1;
             try
@@ -138,7 +142,7 @@ namespace insaProjecct_v2
                     using (OracleCommand comm = new OracleCommand())
                     {
                         comm.Connection = _DB.Connection;
-                        comm.CommandText = @"delete from tieas_cdg_hwy where CDG_GRPCD='" + empno + "'";
+                        comm.CommandText = @"delete from tieas_cd_hwy where CD_GRPCD='" + empno + "' and CD_CODE='"+ code_result + "'";
                         var a = comm.ExecuteNonQuery();
                         check = 0;
                         Console.WriteLine(comm.CommandText);
@@ -165,7 +169,7 @@ namespace insaProjecct_v2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgv.ADD("", "", "", "", false, "", "");
+            dgv.ADD(combo_code, "", "", "", false, "", "");
         }
 
         public void Apply()
