@@ -61,6 +61,7 @@
             this.Controls.Add(this.pieChart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "new_State";
+            this.Tag = "입사인원 추이";
             this.Text = "new_State";
             this.Load += new System.EventHandler(this.new_State_Load);
             this.ResumeLayout(false);
