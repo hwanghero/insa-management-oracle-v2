@@ -114,6 +114,7 @@ namespace Common
                     dtp.Location = new Point(rect.X, rect.Y);
                     dtp.CloseUp += new EventHandler(dtp_CloseUp);
                     dtp.TextChanged += new EventHandler(dtp_OnTextChange);
+                    dtp.DragLeave += new EventHandler(dtp_CloseUp);
                     dataGridView1.Controls.Add(dtp);
                 }
             }
