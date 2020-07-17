@@ -28,15 +28,7 @@ namespace insaProjecct_v2.insaCode
         public deptCode_Mgt()
         {
             InitializeComponent();
-            // 데이터그리드뷰 set
-            dgv.SET(dataGridView1);
-            // 삭제 고유키 설정 (데이터그리드뷰 컬럼)
-            // 이벤트 핸들러
-            dgv.DGV_EventHandler();
-            dgv.dgv_time_col_add("생성날짜");
-            dgv.dgv_time_col_add("종료날짜");
-            dgv.ShowData("DEPT_CODE, DEPT_NAME, DEPT_SEQ, DEPT_SDATE, DEPT_EDATE", "thrm_dept_hwy");
-            dgv.Delete_Column_set("코드");
+
         }
 
 
@@ -176,6 +168,19 @@ namespace insaProjecct_v2.insaCode
         private void button1_Click(object sender, EventArgs e)
         {
             dgv.ADD("", "", "", "", "", "");
+        }
+
+        private void deptCode_Mgt_Load(object sender, EventArgs e)
+        {
+            // 데이터그리드뷰 set
+            dgv.SET(dataGridView1);
+            // 삭제 고유키 설정 (데이터그리드뷰 컬럼)
+            // 이벤트 핸들러
+            dgv.DGV_EventHandler();
+            dgv.dgv_time_col_add("생성날짜");
+            dgv.dgv_time_col_add("종료날짜");
+            dgv.ShowData("DEPT_CODE, DEPT_NAME, DEPT_SEQ, DEPT_SDATE, DEPT_EDATE", "thrm_dept_hwy");
+            dgv.Delete_Column_set("코드");
         }
     }
 }

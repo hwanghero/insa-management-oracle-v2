@@ -26,8 +26,6 @@ namespace insaProjecct_v2
         public insaPoint()
         {
             InitializeComponent();
-            if (insaSide.select_empno != null)
-                ShowData();
         }
 
         #region 데이터값 그리드뷰에 뿌려주기
@@ -267,6 +265,12 @@ namespace insaProjecct_v2
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void insaPoint_Load(object sender, EventArgs e)
+        {
+            if (insaSide.select_empno != null)
+                ShowData();
         }
     }
 }

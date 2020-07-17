@@ -24,8 +24,6 @@ namespace insaProjecct_v2
         public insaSchool()
         {
             InitializeComponent();
-            if (insaSide.select_empno != null)
-                ShowData();
         }
 
         #region 데이터값 그리드뷰에 뿌려주기
@@ -255,6 +253,12 @@ namespace insaProjecct_v2
         {
             DataGridViewRow row = dataGridView1.Rows[e.Row.Index];
             getDeleteREL.Add(row.Cells[4].Value.ToString());
+        }
+
+        private void insaSchool_Load(object sender, EventArgs e)
+        {
+            if (insaSide.select_empno != null)
+                ShowData();
         }
     }
 }

@@ -21,13 +21,7 @@ namespace insaProjecct_v2.insaCode
         public GroupCode_Mgt()
         {
             InitializeComponent();
-            // 데이터그리드뷰 set
-            dgv.SET(dataGridView1);
-            // 삭제 고유키 설정 (데이터그리드뷰 컬럼)
-            dgv.Delete_Column_set("코드");
-            // 이벤트 핸들러
-            dgv.DGV_EventHandler();
-            dgv.ShowData("*", "tieas_cdg_hwy");
+
         }
 
         #region 데이터값 상태 체크 후 입력, 수정, 삭제
@@ -165,5 +159,16 @@ namespace insaProjecct_v2.insaCode
             dgv.ADD("", "", "", "", false, "", "");
         }
         #endregion
+
+        private void GroupCode_Mgt_Load(object sender, EventArgs e)
+        {
+            // 데이터그리드뷰 set
+            dgv.SET(dataGridView1);
+            // 삭제 고유키 설정 (데이터그리드뷰 컬럼)
+            dgv.Delete_Column_set("코드");
+            // 이벤트 핸들러
+            dgv.DGV_EventHandler();
+            dgv.ShowData("*", "tieas_cdg_hwy");
+        }
     }
 }

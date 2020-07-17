@@ -179,6 +179,7 @@
             this.Name = "insaPoint";
             this.Tag = "상벌사항";
             this.Text = "insaPoint";
+            this.Load += new System.EventHandler(this.insaPoint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

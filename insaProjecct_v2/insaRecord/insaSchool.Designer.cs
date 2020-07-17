@@ -167,6 +167,7 @@
             this.Name = "insaSchool";
             this.Tag = "학력사항";
             this.Text = "insaSchool";
+            this.Load += new System.EventHandler(this.insaSchool_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

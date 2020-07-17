@@ -19,11 +19,7 @@ namespace insaProjecct_v2
         public insaSelect()
         {
             InitializeComponent();
-            if (insaSide.select_empno != null)
-            {
-                LoadFormList();
-                insaSide.select_empno = null;
-            }
+
         }
 
         // 렉이 너무 먹는다 ㅡㅡ;
@@ -90,6 +86,15 @@ namespace insaProjecct_v2
                     tabControl1.TabPages.Add(myTabPage);
                 }
                 catch { }
+            }
+        }
+
+        private void insaSelect_Load(object sender, EventArgs e)
+        {
+            if (insaSide.select_empno != null)
+            {
+                LoadFormList();
+                insaSide.select_empno = null;
             }
         }
     }

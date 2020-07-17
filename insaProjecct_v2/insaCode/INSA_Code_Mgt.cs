@@ -24,14 +24,7 @@ namespace insaProjecct_v2
         public INSACode_Mgt()
         {
             InitializeComponent();
-            dgv.SET(dataGridView1);
-            dgv.DGV_EventHandler();
-            dgv.dgv_time_col_add("생성날짜");
-            dgv.dgv_time_col_add("종료날짜");
-            dgv.Delete_Column_set("코드값");
-            dataGridView1.Columns[0].ReadOnly = true;
-            button1.Visible = false;
-            foreach (string item in _Code.GetCodeList()) { comboBox1.Items.Add(item); }
+
         }
 
         #region 데이터값 상태 체크 후 입력, 수정, 삭제
@@ -181,6 +174,18 @@ namespace insaProjecct_v2
         public void Cancel()
         {
             dgv.ShowData("CD_GRPCD, CD_CODE, CD_SEQ, CD_CODNMS, CD_USE, CD_SDATE, CD_EDATE", "tieas_cd_hwy where CD_GRPCD='" + combo_code + "'");
+        }
+
+        private void INSACode_Mgt_Load(object sender, EventArgs e)
+        {
+            dgv.SET(dataGridView1);
+            dgv.DGV_EventHandler();
+            dgv.dgv_time_col_add("생성날짜");
+            dgv.dgv_time_col_add("종료날짜");
+            dgv.Delete_Column_set("코드값");
+            dataGridView1.Columns[0].ReadOnly = true;
+            button1.Visible = false;
+            foreach (string item in _Code.GetCodeList()) { comboBox1.Items.Add(item); }
         }
     }
 }

@@ -24,8 +24,6 @@ namespace insaProjecct_v2
         public insaCareer()
         {
             InitializeComponent();
-            if (insaSide.select_empno != null)
-                ShowData();
         }
 
         #region 데이터값 그리드뷰에 뿌려주기
@@ -261,5 +259,11 @@ namespace insaProjecct_v2
             dataGridView1.Columns["정보상태"].ReadOnly = true;
         }
         #endregion
+
+        private void insaCareer_Load(object sender, EventArgs e)
+        {
+            if (insaSide.select_empno != null)
+                ShowData();
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.Name = "insaSelect";
             this.Tag = "인사기록 조회(통합)";
             this.Text = "insaSelect";
+            this.Load += new System.EventHandler(this.insaSelect_Load);
             this.ResumeLayout(false);
 
         }

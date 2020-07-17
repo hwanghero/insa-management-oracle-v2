@@ -28,11 +28,6 @@ namespace insaProjecct_v2
         public insaFamily()
         {
             InitializeComponent();
-
-            if (insaSide.select_empno != null)
-            {
-                ShowData();
-            }
         }
 
         #region 데이터값 그리드뷰에 뿌려주기
@@ -340,6 +335,12 @@ namespace insaProjecct_v2
         private void button2_Click(object sender, EventArgs e)
         {
             common.MsgboxShow("사원을 여러개 및 한개 선택 후\nDelete키를 사용하시면 됩니다.");
+        }
+
+        private void insaFamily_Load(object sender, EventArgs e)
+        {
+            if (insaSide.select_empno != null)
+                ShowData();
         }
     }
 }

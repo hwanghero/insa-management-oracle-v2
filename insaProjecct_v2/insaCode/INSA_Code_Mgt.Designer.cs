@@ -165,6 +165,7 @@
             this.Name = "INSACode_Mgt";
             this.Tag = "단위코드 관리";
             this.Text = "insaCode_Mgt";
+            this.Load += new System.EventHandler(this.INSACode_Mgt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
