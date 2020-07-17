@@ -32,19 +32,14 @@ namespace insaProjecct_v2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // 프린트 선택
-            printDialog1.ShowDialog();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            // 페이지 설정
-            pageSetupDialog1.PageSettings = printDocument1.DefaultPageSettings;
-            pageSetupDialog1.ShowDialog();
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            // 프린터 미리보기 / 인쇄
-            printPreviewDialog1.ShowDialog();
+            printPreviewDialog1.Show();
         }
 
         private Bitmap imageLoad() // 이미지를 불러오는 부분
@@ -57,9 +52,7 @@ namespace insaProjecct_v2
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(imageLoad(), 0, 0, 210, 297);
+            e.Graphics.DrawImage(imageLoad(), 0, 0);
         }
-
-        
     }
 }
