@@ -50,21 +50,29 @@ namespace insaProjecct_v2
                 {
                     control.get_control(form, false);
                     control.control_enabled(false, false);
+                    APPLY_Hide(true);
                     if (now_form != (now_form as insaBasic))
                     {
                         control.get_control(form, true);
                         control.control_enabled(true, true);
                         CRUD_Hide(false);
+
                     }
                     else
                     {
-                        CRUD_Hide(true);
+                        CRUD_ALL_Hide(true);
                     }
                 }
                 else if ((now_form as Form).Name.Contains("Code"))
                 {
                     CRUD_ALL_Hide(false);
+                    APPLY_Hide(true);
                     APPLY_Enabled(true);
+                }
+                else
+                {
+                    CRUD_ALL_Hide(false);
+                    APPLY_Hide(false);
                 }
             }
         }
@@ -303,6 +311,12 @@ namespace insaProjecct_v2
             insert_btn.Visible = check;
             update_btn.Visible = check;
             delete_btn.Visible = check;
+        }
+
+        public void APPLY_Hide(Boolean check)
+        {
+            apply_btn.Visible = check;
+            cancel_btn.Visible = check;
         }
     }
 }

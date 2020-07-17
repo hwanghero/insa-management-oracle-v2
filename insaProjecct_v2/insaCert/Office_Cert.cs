@@ -1,15 +1,33 @@
-﻿using System;
+﻿using insaRecord;
+using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace insaProjecct_v2
 {
-    public partial class Office_Cert : Form
+    public partial class Office_Cert : Form, Iinsa_Interface
     {
         public Office_Cert()
         {
             InitializeComponent();
+        }
+
+        public void DB_Delete()
+        {
+        }
+
+        public void DB_Insert()
+        {
+        }
+
+        public void DB_Update()
+        {
+        }
+
+        public void ShowData()
+        {
+            MessageBox.Show("hello");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,5 +59,7 @@ namespace insaProjecct_v2
         {
             e.Graphics.DrawImage(imageLoad(), 0, 0, 210, 297);
         }
+
+        
     }
 }
