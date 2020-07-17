@@ -186,6 +186,18 @@
     <Compile Include="insaState\dept_State.Designer.cs">
       <DependentUpon>dept_State.cs</DependentUpon>
     </Compile>
+    <Compile Include="insaState\new_State.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaState\new_State.Designer.cs">
+      <DependentUpon>new_State.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaState\pos_State.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaState\pos_State.Designer.cs">
+      <DependentUpon>pos_State.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insaState\dept_State.resx">
       <DependentUpon>dept_State.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaState\new_State.resx">
+      <DependentUpon>new_State.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaState\pos_State.resx">
+      <DependentUpon>pos_State.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

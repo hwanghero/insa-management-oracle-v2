@@ -1,6 +1,6 @@
-﻿namespace insaProjecct_v2.insaState
+﻿namespace insaProjecct_v2
 {
-    partial class dept_State
+    partial class new_State
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.label1 = new System.Windows.Forms.Label();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.SuspendLayout();
-            // 
-            // pieChart1
-            // 
-            this.pieChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pieChart1.Location = new System.Drawing.Point(0, 66);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(901, 487);
-            this.pieChart1.TabIndex = 0;
-            this.pieChart1.Text = "pieChart1";
             // 
             // label1
             // 
@@ -48,11 +39,20 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(901, 66);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "부서별 인원통계";
+            this.label1.TabIndex = 3;
+            this.label1.Text = "2020년도 입사인원";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dept_State
+            // pieChart1
+            // 
+            this.pieChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pieChart1.Location = new System.Drawing.Point(0, 66);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(901, 487);
+            this.pieChart1.TabIndex = 2;
+            this.pieChart1.Text = "pieChart1";
+            // 
+            // new_State
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -60,17 +60,16 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pieChart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "dept_State";
-            this.Tag = "부서별 인원현황";
-            this.Text = "dept_State";
-            this.Load += new System.EventHandler(this.dept_State_Load);
+            this.Name = "new_State";
+            this.Text = "new_State";
+            this.Load += new System.EventHandler(this.new_State_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private LiveCharts.WinForms.PieChart pieChart1;
         private System.Windows.Forms.Label label1;
+        private LiveCharts.WinForms.PieChart pieChart1;
     }
 }
