@@ -39,6 +39,7 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.19.7.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -51,6 +52,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="erpMain.cs">
@@ -58,6 +60,12 @@
     </Compile>
     <Compile Include="erpMain.Designer.cs">
       <DependentUpon>erpMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insaCert\Office_Cert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insaCert\Office_Cert.Designer.cs">
+      <DependentUpon>Office_Cert.cs</DependentUpon>
     </Compile>
     <Compile Include="insaCode\deptCode_Mgt.cs">
       <SubType>Form</SubType>
@@ -150,6 +158,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="erpMain.resx">
       <DependentUpon>erpMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insaCert\Office_Cert.resx">
+      <DependentUpon>Office_Cert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insaCode\deptCode_Mgt.resx">
       <DependentUpon>deptCode_Mgt.cs</DependentUpon>
