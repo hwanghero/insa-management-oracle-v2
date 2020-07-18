@@ -58,7 +58,6 @@ namespace insaProjecct_v2
                 Type type = erpMain.now_form.GetType();
                 if (erpMain.now_form == (erpMain.now_form as insaBasic))
                 {
-                    MessageBox.Show("1");
                     MethodInfo method = type.GetMethod("Control_Input_Date");
                     method.Invoke(erpMain.now_form, null);
                     // 폼 컨트롤

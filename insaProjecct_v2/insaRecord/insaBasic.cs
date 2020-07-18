@@ -399,6 +399,11 @@ namespace insaProjecct_v2
                     }
                 }
             }
+
+            if (insaSide.select_empno != null)
+            {
+                Control_Input_Date();
+            }
         }
         #endregion
         #region 콤보박스에 데이터베이스 넣기

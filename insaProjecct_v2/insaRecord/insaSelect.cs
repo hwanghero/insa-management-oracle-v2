@@ -94,7 +94,6 @@ namespace insaProjecct_v2
             if (insaSide.select_empno != null)
             {
                 LoadFormList();
-                insaSide.select_empno = null;
             }
         }
     }

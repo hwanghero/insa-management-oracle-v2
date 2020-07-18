@@ -34,7 +34,6 @@
             this.취득일 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.발급기관 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.정보상태 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +50,7 @@
             this.정보상태});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 37);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 23;
@@ -100,15 +99,6 @@
             this.정보상태.Name = "정보상태";
             this.정보상태.Width = 125;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(93, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 119;
-            this.button2.Text = "삭제";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 7);
@@ -125,7 +115,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 553);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "insaLanguage";
@@ -142,7 +131,6 @@
         #endregion
 
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn 외국어코드;
         private System.Windows.Forms.DataGridViewTextBoxColumn 점수;
