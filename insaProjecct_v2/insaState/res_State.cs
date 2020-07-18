@@ -12,15 +12,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace insaProjecct_v2
+namespace insaProjecct_v2.insaState
 {
-    public partial class new_State : Form
+    public partial class res_State : Form
     {
-        /*
-         *  년도수로 못불러옴 이건 따로 년도수를 저장을 또 list에 담고
-         *  콤보박스로 넣은다음에 (중복체크해서 DB에서)
-         *  그걸 누를경우 년도를 불러와서 지금 만든거를 다시 하면은 될듯
-         */
         OracleDBManager _DB = new OracleDBManager();
         List<PieSeries> Pie_List = new List<PieSeries>();
         List<string> Date_List = new List<String>();
@@ -41,7 +36,7 @@ namespace insaProjecct_v2
             "12"
         };
 
-        public new_State()
+        public res_State()
         {
             InitializeComponent();
         }
@@ -55,11 +50,11 @@ namespace insaProjecct_v2
             });
         }
 
-        private void new_State_Load(object sender, EventArgs e)
+        private void res_State_Load(object sender, EventArgs e)
         {
             // 데이터 가져와..
             PIE_ADD();
-  
+
             // 개수 가져와..
             Date_List.ForEach(delegate (String s)
             {
@@ -74,9 +69,9 @@ namespace insaProjecct_v2
             });
 
             int MM = 1;
-            foreach(int a in List_Count)
+            foreach (int a in List_Count)
             {
-                PieSeries_Add(MM+"월", a);
+                PieSeries_Add(MM + "월", a);
                 MM++;
             }
 
@@ -94,14 +89,14 @@ namespace insaProjecct_v2
                 using (OracleCommand cmd = new OracleCommand())
                 {
                     cmd.Connection = _DB.Connection;
-                    cmd.CommandText = @"select BAS_ENTDATE from thrm_bas_hwy";
+                    cmd.CommandText = @"select BAS_RESDATE from thrm_bas_hwy";
                     using (OracleDataReader reader = cmd.ExecuteReader())
                     {
                         // thrm_bas_hwy 의 bas_enddate를 다 불러옴
                         while (reader.Read())
                         {
                             // MM만 뽑았음
-                            String JoinDate = reader["BAS_ENTDATE"].ToString().Substring(4, 2);
+                            String JoinDate = reader["BAS_RESDATE"].ToString().Substring(4, 2);
                             // 개수를 뽑아야함. MM만 뽑았으니까 그거 count 돌리면될듯?
                             Date_List.Add(JoinDate);
                         }
