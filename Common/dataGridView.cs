@@ -119,8 +119,6 @@ namespace Common
                 }
             }
         }
-        #endregion
-
         private void dtp_OnTextChange(object sender, EventArgs e)
         {
             dataGridView1.CurrentCell.Value = dtp.Text.ToString();
@@ -129,13 +127,16 @@ namespace Common
         {
             dtp.Visible = false;
         }
+        #endregion
 
+        #region 이벤트 핸들러 
         public void DGV_EventHandler()
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(dgv_CellClick);
             dataGridView1.CellValueChanged += new DataGridViewCellEventHandler(CellValueChanged);
             dataGridView1.UserDeletingRow += new DataGridViewRowCancelEventHandler(UserDeletingRow);
         }
+
 
         private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -155,6 +156,8 @@ namespace Common
             DataGridViewRow row = dataGridView1.Rows[e.Row.Index];
             getDeleteREL.Add(row.Cells[Delete_static].Value.ToString());
         }
+
+        #endregion
 
         #region 삭제 고유키 컬럼을 설정
         public void Delete_Column_set(string delete_col)

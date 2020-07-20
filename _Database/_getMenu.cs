@@ -26,8 +26,6 @@ namespace _Database
                             while (reader.Read())
                             {
                                 treeview.Nodes.Add(reader["menu_key"] as string, reader["menu_name"] as string);
-                                Console.WriteLine(reader["menu_key"] + ":" + reader["menu_name"]);
-
                             }
                         }
                     }

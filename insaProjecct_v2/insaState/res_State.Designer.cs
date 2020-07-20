@@ -34,29 +34,33 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 18F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(901, 66);
+            this.label1.Size = new System.Drawing.Size(1030, 82);
             this.label1.TabIndex = 5;
             this.label1.Text = "2020년도 퇴사인원";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pieChart1
             // 
+            this.pieChart1.BackColor = System.Drawing.Color.White;
             this.pieChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pieChart1.Location = new System.Drawing.Point(0, 66);
+            this.pieChart1.Location = new System.Drawing.Point(0, 82);
+            this.pieChart1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(901, 487);
+            this.pieChart1.Size = new System.Drawing.Size(1030, 609);
             this.pieChart1.TabIndex = 4;
             this.pieChart1.Text = "pieChart1";
             // 
             // res_State
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 553);
+            this.ClientSize = new System.Drawing.Size(1030, 691);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pieChart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -91,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(254, 80);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1126, 691);
             this.panel1.TabIndex = 2;
@@ -101,7 +101,7 @@
             this.insert_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("insert_btn.BackgroundImage")));
             this.insert_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.insert_btn.Location = new System.Drawing.Point(275, 20);
-            this.insert_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insert_btn.Margin = new System.Windows.Forms.Padding(4);
             this.insert_btn.Name = "insert_btn";
             this.insert_btn.Size = new System.Drawing.Size(46, 42);
             this.insert_btn.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.update_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_btn.BackgroundImage")));
             this.update_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.update_btn.Location = new System.Drawing.Point(330, 20);
-            this.update_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.update_btn.Margin = new System.Windows.Forms.Padding(4);
             this.update_btn.Name = "update_btn";
             this.update_btn.Size = new System.Drawing.Size(42, 42);
             this.update_btn.TabIndex = 4;
@@ -125,7 +125,7 @@
             this.delete_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_btn.BackgroundImage")));
             this.delete_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.delete_btn.Location = new System.Drawing.Point(380, 20);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(4);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(44, 42);
             this.delete_btn.TabIndex = 4;
@@ -142,7 +142,7 @@
             this.apply_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("apply_btn.BackgroundImage")));
             this.apply_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.apply_btn.Location = new System.Drawing.Point(456, 20);
-            this.apply_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apply_btn.Margin = new System.Windows.Forms.Padding(4);
             this.apply_btn.Name = "apply_btn";
             this.apply_btn.Size = new System.Drawing.Size(44, 42);
             this.apply_btn.TabIndex = 4;
@@ -154,7 +154,7 @@
             this.cancel_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel_btn.BackgroundImage")));
             this.cancel_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cancel_btn.Location = new System.Drawing.Point(508, 20);
-            this.cancel_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel_btn.Margin = new System.Windows.Forms.Padding(4);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.Size = new System.Drawing.Size(44, 42);
             this.cancel_btn.TabIndex = 4;
@@ -165,7 +165,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(1380, 80);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 691);
             this.panel2.TabIndex = 5;

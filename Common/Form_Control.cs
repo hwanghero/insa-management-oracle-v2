@@ -97,14 +97,12 @@ namespace Common
                     if (a.GetType() != typeof(TabControl))
                     {
                         get_control_list.Add(a);
-                        Console.WriteLine("get_control_list ADD " + form.Name + ": " + a.Name);
                     }
                     foreach (Control b in a.Controls)
                     {
                         if (allcheck)
                         {
                             get_control_list.Add(b);
-                            Console.WriteLine("get_control_list ADD " + form.Name + ": " + b.Name);
                         }
                         else
                         {

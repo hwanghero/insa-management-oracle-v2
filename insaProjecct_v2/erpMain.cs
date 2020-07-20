@@ -97,7 +97,6 @@ namespace insaProjecct_v2
                 getMenu.child_menu(treeView1, "인사변동관리");
                 getMenu.child_menu(treeView1, "제증명서 발급");
                 getMenu.child_menu(treeView1, "현황 및 통계");
-                // -> 완전히 자동화 쌉가능인데 시간없으니 일단 보류
                 Enabled_Check = true;
             }
         }
@@ -114,7 +113,6 @@ namespace insaProjecct_v2
             Send_FormList = FormList.ToList();
             foreach (Form get in FormList)
             {
-                Console.WriteLine(get.Name);
                 if (e.Node.Text.Equals(get.Tag))
                 {
                     form = get;
@@ -133,15 +131,11 @@ namespace insaProjecct_v2
             FormList.Clear();
             foreach (Type t in System.Reflection.Assembly.GetExecutingAssembly().GetTypes())
             {
-                // 상속받는게 없기때문에 BaseType에서 오류가남.
-                // insaside = 싱글톤 에러
-                // interface = 생성자 에러
                 if (!t.ToString().Contains("Interface") && !t.ToString().Contains("insaSide"))
                 {
                     if (t.BaseType.FullName.ToString() == "System.Windows.Forms.Form")
                     {
-                        // 같은 객체를 다 공유를 한다.
-                        object o = Activator.CreateInstance(t); // 이벤트가 발생이 되는데?
+                        object o = Activator.CreateInstance(t);
                         Form f = o as Form;
                         FormList.Add(f);
                     }
@@ -160,10 +154,10 @@ namespace insaProjecct_v2
                 control.control_enabled(true, false);
                 if (now_form == (now_form as insaBasic))
                 {
-                    if (insaSide.select_empno == null)
-                    {
-                        common.MsgboxShow("사원을 선택해주세요.");
-                    }
+
+                    control.get_control(now_form as Form, false);
+                    control.control_reset();
+
                 }
             }
         }
